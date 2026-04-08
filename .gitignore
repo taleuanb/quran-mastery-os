@@ -1,0 +1,21 @@
+//(Pour ne pas polluer ton GitHub avec des fichiers inutiles)
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
