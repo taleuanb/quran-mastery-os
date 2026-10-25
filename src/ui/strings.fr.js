@@ -2,6 +2,13 @@
 // (noms de hizb, sourates) reste en arabe ; seuls les gabarits sont ici.
 export const STRINGS = {
   'app.title': 'Quran Mastery OS',
+  'app.saveError': "Impossible d'enregistrer sur cet appareil : exportez vos données dans Réglages.",
+  'app.crash.title': 'Un problème empêche l’affichage de l’application.',
+  'app.crash.body': 'Vos données sont toujours sur ce téléphone. Exportez-les avant toute autre action.',
+  'app.crash.export': 'Exporter mes données',
+  'app.crash.reset': 'Réinitialiser',
+  'app.crash.confirm': 'Effacer toutes les données de cet appareil ? Cette action est définitive.',
+  'app.crash.confirmReset': 'Oui, tout effacer',
 
   'tab.today': "Aujourd'hui",
   'tab.agenda': 'Agenda',

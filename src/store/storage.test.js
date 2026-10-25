@@ -9,6 +9,7 @@ import {
   loadState,
   migrate,
   saveState,
+  validateState,
 } from './storage.js';
 
 const refs = makeRefs();
@@ -66,14 +67,65 @@ describe('saveState / loadState', () => {
     expect(loadState(refs)).toEqual(createInitialState(refs));
   });
 
-  it('saveState ne lève jamais', () => {
+  it('saveState ne lève jamais et renvoie false en cas d’échec, true sinon', () => {
+    expect(saveState(makeState())).toBe(true);
     const orig = Storage.prototype.setItem;
     Storage.prototype.setItem = () => { throw new Error('quota'); };
     try {
       expect(() => saveState(makeState())).not.toThrow();
+      expect(saveState(makeState())).toBe(false);
     } finally {
       Storage.prototype.setItem = orig;
     }
+  });
+
+  it('{"schemaVersion":1} : état initial, sans exception', () => {
+    localStorage.setItem('qmos.state', '{"schemaVersion":1}');
+    expect(loadState(refs)).toEqual(createInitialState(refs));
+  });
+
+  it('thumun de forme invalide : état initial', () => {
+    const s = makeState();
+    s.thumuns['H02-T3'] = { status: 'acquis', scores: null };
+    localStorage.setItem('qmos.state', JSON.stringify(s));
+    expect(loadState(refs)).toEqual(createInitialState(refs));
+  });
+
+  it('learnQueue : un id inconnu est retiré, les autres gardés', () => {
+    const s = makeState();
+    s.learnQueue = ['H02-T1', 'H99-T9', 42, 'H03-T4'];
+    localStorage.setItem('qmos.state', JSON.stringify(s));
+    expect(loadState(refs).learnQueue).toEqual(['H02-T1', 'H03-T4']);
+  });
+
+  it('params absents ou partiels : fusionnés sur DEFAULT_PARAMS (multipliers et resetDays en profondeur)', () => {
+    const s = makeState();
+    delete s.params;
+    localStorage.setItem('qmos.state', JSON.stringify(s));
+    expect(loadState(refs).params).toEqual(DEFAULT_PARAMS);
+
+    const partial = makeState();
+    partial.params = { dailyReviewHizbs: 7, multipliers: { 5: 3 } };
+    localStorage.setItem('qmos.state', JSON.stringify(partial));
+    const p = loadState(refs).params;
+    expect(p).toEqual({ ...DEFAULT_PARAMS, dailyReviewHizbs: 7, multipliers: { 5: 3, 4: 2, 3: 1.3 } });
+  });
+});
+
+describe('validateState', () => {
+  it('accepte un état complet et le renvoie', () => {
+    const s = makeState({ acquis: [1] });
+    expect(validateState(s)).toEqual(s);
+  });
+
+  it.each([
+    ['non objet', () => 'x'],
+    ['journal non tableau', () => ({ ...makeState(), journal: {} })],
+    ['dayLog non objet', () => ({ ...makeState(), dayLog: [] })],
+    ['learnQueue non tableau', () => ({ ...makeState(), learnQueue: 'H01-T1' })],
+    ['entrée de journal invalide', () => ({ ...makeState(), journal: [null] })],
+  ])('%s : rejeté', (_n, make) => {
+    expect(() => validateState(make())).toThrow();
   });
 });
 
@@ -117,6 +169,13 @@ describe('exportState / importState', () => {
     const noThumuns = makeState();
     delete noThumuns.thumuns;
     expect(() => importState(JSON.stringify(noThumuns))).toThrow(UNREADABLE);
+  });
+
+  it('{"schemaVersion":1} ou learnQueue avec id inconnu : même validation que le chargement', () => {
+    expect(() => importState('{"schemaVersion":1}')).toThrow(UNREADABLE);
+    const s = makeState();
+    s.learnQueue = ['H99-T1', 'H01-T2'];
+    expect(importState(JSON.stringify(s)).learnQueue).toEqual(['H01-T2']);
   });
 
   it('version inconnue : message de version', () => {

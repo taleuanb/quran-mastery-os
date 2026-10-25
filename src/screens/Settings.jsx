@@ -5,6 +5,7 @@ import { exportState, importState } from '../store/storage';
 import BottomSheet from '../ui/components/BottomSheet';
 import HizbLabel from '../ui/components/HizbLabel';
 import ScorePills from '../ui/components/ScorePills';
+import { downloadText } from '../ui/download';
 import { t } from '../ui/strings.fr';
 
 const HISTORY_SIZE = 20;
@@ -75,15 +76,7 @@ export default function Settings({ state, dispatch, today }) {
 
   const exportBackup = () => {
     const { _undo, ...persisted } = state; // _undo n'est pas persisté
-    const blob = new Blob([exportState(persisted)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `qmos-${today}.json`;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
+    downloadText(exportState(persisted), `qmos-${today}.json`);
     dispatch({ type: 'MARK_BACKUP', day: today });
   };
 

@@ -252,4 +252,20 @@ describe('useAppStore', () => {
     expect(saved._undo).toBeUndefined();
     expect(result.current.refs).toHaveLength(480);
   });
+
+  it('saveError : faux si l’enregistrement réussit, vrai s’il échoue', () => {
+    const refs = makeRefs();
+    const { result } = renderHook(() => useAppStore(refs));
+    expect(result.current.saveError).toBe(false);
+    const orig = Storage.prototype.setItem;
+    Storage.prototype.setItem = () => { throw new Error('quota'); };
+    try {
+      act(() => result.current.dispatch({ type: 'KHATMA_INC' }));
+      expect(result.current.saveError).toBe(true);
+    } finally {
+      Storage.prototype.setItem = orig;
+    }
+    act(() => result.current.dispatch({ type: 'KHATMA_INC' }));
+    expect(result.current.saveError).toBe(false);
+  });
 });

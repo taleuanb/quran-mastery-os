@@ -1,7 +1,7 @@
 import { DEFAULT_PARAMS } from '../domain/params.js';
 import { diffDays } from '../domain/dates.js';
 
-const STORAGE_KEY = 'qmos.state';
+export const STORAGE_KEY = 'qmos.state';
 const UNREADABLE = "Fichier illisible : ce n'est pas une sauvegarde Quran Mastery OS";
 const UNKNOWN_VERSION = 'Version de sauvegarde non reconnue';
 
@@ -14,6 +14,7 @@ for (let hizb = 1; hizb <= 60; hizb++) {
     THUMUN_IDS.push(`H${String(hizb).padStart(2, '0')}-T${thumun}`);
   }
 }
+const KNOWN_IDS = new Set(THUMUN_IDS);
 
 /**
  * @param {import('../domain/types.js').Ref[]} refs
@@ -46,10 +47,64 @@ export function createInitialState(refs, params = DEFAULT_PARAMS) {
   };
 }
 
-/** v1 = identité ; toute autre version lève. @param {object} raw @returns {import('../domain/types.js').AppState} */
+/**
+ * v1 : paramètres fusionnés sur DEFAULT_PARAMS (multipliers et resetDays en profondeur) ;
+ * toute autre version lève. @param {object} raw @returns {import('../domain/types.js').AppState}
+ */
 export function migrate(raw) {
   if (!isObject(raw) || raw.schemaVersion !== 1) throw new Error(UNKNOWN_VERSION);
-  return raw;
+  const p = isObject(raw.params) ? raw.params : {};
+  const params = {
+    ...JSON.parse(JSON.stringify(DEFAULT_PARAMS)),
+    ...p,
+    multipliers: { ...DEFAULT_PARAMS.multipliers, ...(isObject(p.multipliers) ? p.multipliers : {}) },
+    resetDays: { ...DEFAULT_PARAMS.resetDays, ...(isObject(p.resetDays) ? p.resetDays : {}) },
+  };
+  return { ...raw, params };
+}
+
+const isDay = (v) => typeof v === 'string';
+const isDayOrNull = (v) => v === null || isDay(v);
+
+/** Forme d'un ThumunState. */
+function validThumun(t) {
+  return isObject(t)
+    && (t.status === 'acquis' || t.status === 'non_acquis')
+    && (t.track === null || t.track === 'base' || t.track === 'cible')
+    && Array.isArray(t.scores)
+    && t.scores.every((x) => isObject(x) && isDay(x.date) && Number.isFinite(x.score))
+    && isDayOrNull(t.lastReviewed) && Number.isFinite(t.interval) && isDayOrNull(t.due)
+    && typeof t.risk === 'boolean' && typeof t.fragileInitial === 'boolean'
+    && (t.journalFrom === undefined || Number.isInteger(t.journalFrom));
+}
+
+const validEntry = (e) => isObject(e) && isDay(e.date) && KNOWN_IDS.has(e.thumunId)
+  && Number.isFinite(e.score) && (e.pilier === 'hifdh' || e.pilier === 'revision');
+
+/**
+ * Validation commune au chargement et à l'import : version, 480 thumuns de forme valide, journal,
+ * dayLog, learnQueue (ids inconnus retirés), paramètres complétés. Lève si l'état est inutilisable.
+ * @param {unknown} obj
+ * @returns {import('../domain/types.js').AppState}
+ */
+export function validateState(obj) {
+  if (!isObject(obj)) throw new Error(UNREADABLE);
+  const state = migrate(obj);
+  const { thumuns, journal, dayLog, learnQueue } = state;
+  if (!isObject(thumuns)) throw new Error(UNREADABLE);
+  const ids = Object.keys(thumuns);
+  if (ids.length !== THUMUN_IDS.length || !THUMUN_IDS.every((id) => validThumun(thumuns[id]))) {
+    throw new Error(UNREADABLE);
+  }
+  if (!Array.isArray(journal) || !journal.every(validEntry)) throw new Error(UNREADABLE);
+  if (!isObject(dayLog) || !Object.values(dayLog).every(isObject)) throw new Error(UNREADABLE);
+  if (!Array.isArray(learnQueue)) throw new Error(UNREADABLE);
+  return {
+    ...state,
+    learnQueue: learnQueue.filter((id) => KNOWN_IDS.has(id)),
+    lastBackup: isDay(state.lastBackup) ? state.lastBackup : null,
+    khatma: Number.isFinite(state.khatma) ? state.khatma : 0,
+  };
 }
 
 /** @param {import('../domain/types.js').Ref[]} refs @returns {import('../domain/types.js').AppState} */
@@ -57,18 +112,22 @@ export function loadState(refs) {
   try {
     const text = localStorage.getItem(STORAGE_KEY);
     if (text === null) return createInitialState(refs);
-    return migrate(JSON.parse(text));
+    return validateState(JSON.parse(text));
   } catch {
     return createInitialState(refs);
   }
 }
 
-/** @param {import('../domain/types.js').AppState} state */
+/**
+ * @param {import('../domain/types.js').AppState} state
+ * @returns {boolean} faux si l'enregistrement a échoué (quota dépassé, stockage indisponible)
+ */
 export function saveState(state) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    return true;
   } catch {
-    // Quota dépassé ou stockage indisponible : on ignore.
+    return false;
   }
 }
 
@@ -86,13 +145,7 @@ export function importState(text) {
     throw new Error(UNREADABLE);
   }
   if (!isObject(parsed) || !('schemaVersion' in parsed)) throw new Error(UNREADABLE);
-  const state = migrate(parsed);
-  if (!isObject(state.thumuns)) throw new Error(UNREADABLE);
-  const ids = Object.keys(state.thumuns);
-  if (ids.length !== THUMUN_IDS.length || !THUMUN_IDS.every((id) => id in state.thumuns)) {
-    throw new Error(UNREADABLE);
-  }
-  return state;
+  return validateState(parsed);
 }
 
 /** Vrai si jamais sauvegardé ou si la dernière sauvegarde date de plus de `backupReminderDays` jours. */

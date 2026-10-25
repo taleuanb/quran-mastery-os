@@ -110,6 +110,21 @@ describe('Settings : sauvegarde', () => {
     expect(dispatch).toHaveBeenCalledWith({ type: 'MARK_BACKUP', day: TODAY });
   });
 
+  it('Exporter ne révoque l’URL du fichier qu’après 30 s (iOS)', () => {
+    vi.useFakeTimers();
+    try {
+      setup();
+      click('Exporter');
+      expect(URL.revokeObjectURL).not.toHaveBeenCalled();
+      vi.advanceTimersByTime(29_000);
+      expect(URL.revokeObjectURL).not.toHaveBeenCalled();
+      vi.advanceTimersByTime(1_000);
+      expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:qmos');
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it('affiche la dernière sauvegarde', () => {
     const state = makeState();
     state.lastBackup = '2026-10-22';
