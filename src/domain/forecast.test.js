@@ -39,6 +39,19 @@ describe('forecast', () => {
     expect(days[6].hizbs.find((h) => h.hizb === 26)).toMatchObject({ source: 'cible', focus: ['H26-T1'] });
   });
 
+  it('note tous les thumuns acquis d\'un hizb planifié, y compris un ciblé non échu', () => {
+    // H01-T3 ciblé, échu dans 5 jours ; le hizb 1 est planifié à J0 (base).
+    const s = makeState({
+      acquis: [1],
+      cible: { 'H01-T3': { due: addDays(DAY, 5), interval: 3, scores: [{ date: DAY, score: 3 }] } },
+    });
+    const plan = forecast(s, refs, DAY, 6, P);
+    expect(plan[0].hizbs.map((h) => h.hizb)).toEqual([1]);
+    expect(plan[0].hizbs[0].focus).toEqual([]);
+    // Noté 4 à J0 : intervalle 6, nouvelle échéance J6 (et non plus J5).
+    expect(plan[5].hizbs.flatMap((h) => h.focus)).not.toContain('H01-T3');
+  });
+
   it('ne modifie pas l\'état d\'entrée', () => {
     const s = makeState({ acquis: range(1, 25) });
     const before = JSON.stringify(s);

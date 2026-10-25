@@ -12,11 +12,12 @@ import { buildDailyPlan } from './plan.js';
  */
 function simulateDay(state, plan, p) {
   const thumuns = { ...state.thumuns };
-  for (const { hizb, focus } of plan.hizbs) {
+  // Comme REVIEW_HIZB : tous les thumuns acquis du hizb sont notés, quelle que soit leur piste.
+  for (const { hizb } of plan.hizbs) {
     for (let n = 1; n <= 8; n++) {
       const id = `H${String(hizb).padStart(2, '0')}-T${n}`;
       const t = thumuns[id];
-      if (t?.status === 'acquis' && (t.track === 'base' || focus.includes(id))) {
+      if (t?.status === 'acquis') {
         thumuns[id] = applyScore(t, 4, plan.day, p);
       }
     }
