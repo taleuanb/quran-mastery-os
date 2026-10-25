@@ -198,3 +198,18 @@ nav button{min-height:48px;justify-content:center}
 .empty-state{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .empty-state p{margin:0}
 fieldset.plain{border:0;margin:0;padding:0;min-width:0;flex:1}
+/* écran agenda */
+.agenda-view{display:flex;flex-direction:column;gap:14px}
+/* Jours passés : pas d'opacité réduite (contraste ≥ 4,5:1), fond plus discret à la place. */
+.day.past{opacity:1;background:var(--surface2);box-shadow:none}
+.c.g.solid{border-style:solid;background:var(--gold-soft)}
+/* Texte des pastilles de la bande : jetons --on-N (contraste validé), pas du blanc fixe. */
+.sd i.part{color:var(--on-gold)}.sd i.miss{color:var(--on-1)}
+.ib:disabled{opacity:.4;cursor:default}
+.ds .n{white-space:nowrap}
+.c.mk.done{background:var(--accent-soft);color:var(--accent)}
+.c.mk.part{background:var(--gold-soft);color:var(--gold)}
+.c.mk.miss{background:color-mix(in srgb,var(--s1) 16%,var(--surface));color:var(--s1-text)}
+.mc{font:inherit;color:var(--fg)}
+.mc.today small{color:var(--fg)}
+.ds .neutral{color:var(--muted);font-weight:700}
