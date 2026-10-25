@@ -31,7 +31,19 @@ describe('SET_ACQUIS', () => {
   it('0 remet à non acquis', () => {
     const a = reducer(fresh(), { type: 'SET_ACQUIS', changes: allAt(3, 1), day: DAY });
     const b = reducer(a, { type: 'SET_ACQUIS', changes: { 'H03-T1': 0 }, day: DAY });
-    expect(b.thumuns['H03-T1']).toEqual(fresh().thumuns['H03-T1']);
+    expect(b.thumuns['H03-T1']).toEqual({ ...fresh().thumuns['H03-T1'], journalFrom: 0 });
+  });
+
+  it('1 ou 2 sur un thumun déjà acquis (ciblé, avec historique) -> inchangé', () => {
+    const a = reducer(fresh(), { type: 'SET_ACQUIS', changes: allAt(3, 1), day: DAY });
+    const b = reducer(a, { type: 'SCORE_THUMUN', id: 'H03-T1', score: 1, day: DAY });
+    const before = b.thumuns['H03-T1'];
+    expect(before).toMatchObject({ track: 'cible', risk: true });
+    const c = reducer(b, { type: 'SET_ACQUIS', changes: { 'H03-T1': 1 }, day: '2026-10-26' });
+    expect(c.thumuns['H03-T1']).toEqual(before);
+    const d = reducer(b, { type: 'SET_ACQUIS', changes: { 'H03-T1': 2 }, day: '2026-10-26' });
+    expect(d.thumuns['H03-T1']).toEqual(before);
+    expect(d.thumuns['H03-T2']).toEqual(b.thumuns['H03-T2']);
   });
 
   it('étale lastReviewed des hizbs nouvellement acquis, le plus petit numéro le plus ancien', () => {
@@ -133,6 +145,24 @@ describe('EDIT_ENTRY', () => {
     const l = reducer(fresh(), { type: 'LEARN', id: 'H05-T1', score: 4, day: DAY });
     const m = reducer(l, { type: 'EDIT_ENTRY', entryId: l.journal[0].id, score: 2 });
     expect(m.thumuns['H05-T1']).toMatchObject({ status: 'acquis', track: 'cible', interval: 2 });
+  });
+
+  it('reset puis réacquisition puis édition : ignore les entrées antérieures au seed courant', () => {
+    let s = reducer(fresh(), { type: 'SET_ACQUIS', changes: { 'H03-T1': 1 }, day: DAY });
+    s = reducer(s, { type: 'SCORE_THUMUN', id: 'H03-T1', score: 1, day: DAY });
+    s = reducer(s, { type: 'SET_ACQUIS', changes: { 'H03-T1': 0 }, day: DAY });
+    s = reducer(s, { type: 'SET_ACQUIS', changes: { 'H03-T1': 1 }, day: '2026-10-26' });
+    s = reducer(s, { type: 'SCORE_THUMUN', id: 'H03-T1', score: 4, day: '2026-10-26' });
+    const entry = s.journal[1];
+    const e = reducer(s, { type: 'EDIT_ENTRY', entryId: entry.id, score: 5 });
+    expect(e.thumuns['H03-T1'].scores).toEqual([
+      { date: '2026-10-26', score: 3, seed: true },
+      { date: '2026-10-26', score: 5 },
+    ]);
+    expect(e.thumuns['H03-T1']).toMatchObject({ track: 'base', risk: false });
+    // éditer l'ancienne entrée (avant le reset) ne touche pas l'état courant
+    const old = reducer(s, { type: 'EDIT_ENTRY', entryId: s.journal[0].id, score: 5 });
+    expect(old.thumuns['H03-T1'].scores).toEqual(e.thumuns['H03-T1'].scores.map((x) => (x.seed ? x : { ...x, score: 4 })));
   });
 
   it('entrée inconnue : état inchangé', () => {

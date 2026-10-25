@@ -11,21 +11,21 @@ const hizbOf = (id) => Number(id.slice(1, 3));
 const hizbThumunIds = (hizb) => Array.from({ length: 8 }, (_, i) => `H${String(hizb).padStart(2, '0')}-T${i + 1}`);
 
 /** @returns {ThumunState} */
-function blankThumun() {
-  return { status: 'non_acquis', track: null, scores: [], lastReviewed: null, interval: 0, due: null, risk: false, fragileInitial: false };
+function blankThumun(journalFrom = 0) {
+  return { status: 'non_acquis', track: null, scores: [], lastReviewed: null, interval: 0, due: null, risk: false, fragileInitial: false, journalFrom };
 }
 
 /** @returns {ThumunState} */
-function seededThumun(value, day, lastReviewed) {
+function seededThumun(value, day, lastReviewed, journalFrom = 0) {
   if (value === 2) {
     return {
       status: 'acquis', track: 'cible', scores: [{ date: day, score: 2, seed: true }],
-      lastReviewed: day, interval: 2, due: day, risk: false, fragileInitial: true,
+      lastReviewed: day, interval: 2, due: day, risk: false, fragileInitial: true, journalFrom,
     };
   }
   return {
     status: 'acquis', track: 'base', scores: [{ date: day, score: 3, seed: true }],
-    lastReviewed, interval: 0, due: null, risk: false, fragileInitial: false,
+    lastReviewed, interval: 0, due: null, risk: false, fragileInitial: false, journalFrom,
   };
 }
 
@@ -41,11 +41,14 @@ function setAcquis(state, { changes, day }) {
   for (const [id, value] of Object.entries(changes)) {
     const prev = thumuns[id];
     if (!prev) continue;
+    const from = state.journal.length;
     if (value === 0) {
-      thumuns[id] = blankThumun();
+      thumuns[id] = blankThumun(from);
+    } else if (prev.status === 'acquis') {
+      // Idempotent : un thumun déjà acquis garde son historique (l'oubli passe par MARK_FORGOTTEN).
     } else if (value === 2) {
-      thumuns[id] = seededThumun(2, day, day);
-    } else if (value === 1 && !(prev.status === 'acquis' && prev.track === 'base')) {
+      thumuns[id] = seededThumun(2, day, day, from);
+    } else if (value === 1) {
       baseIds.push(id);
       newBaseHizbs.add(hizbOf(id));
     }
@@ -56,7 +59,7 @@ function setAcquis(state, { changes, day }) {
   sorted.forEach((h, i) => {
     lastByHizb[h] = addDays(day, -cycle + Math.floor((i * cycle) / sorted.length));
   });
-  for (const id of baseIds) thumuns[id] = seededThumun(1, day, lastByHizb[hizbOf(id)]);
+  for (const id of baseIds) thumuns[id] = seededThumun(1, day, lastByHizb[hizbOf(id)], state.journal.length);
   const { _undo, ...rest } = state;
   return { ...rest, thumuns };
 }
@@ -86,8 +89,9 @@ const withUndo = (state, next) => ({
 
 /** Reconstruit un thumun depuis son seed puis rejoue ses entrées de journal. */
 function replay(thumun, entries, params) {
+  const from = thumun.journalFrom ?? 0;
   const seed = thumun.scores.find((s) => s.seed);
-  let t = seed ? seededThumun(seed.score === 2 ? 2 : 1, seed.date, seed.date) : blankThumun();
+  let t = seed ? seededThumun(seed.score === 2 ? 2 : 1, seed.date, seed.date, from) : blankThumun(from);
   for (const e of entries) {
     t = e.pilier === 'hifdh' ? learnThumun(t, e.score, e.date, params) : applyScore(t, e.score, e.date, params);
   }
@@ -98,7 +102,8 @@ function editEntry(state, { entryId, score }) {
   const target = state.journal.find((e) => e.id === entryId);
   if (!target) return state;
   const journal = state.journal.map((e) => (e.id === entryId ? { ...e, score } : e));
-  const entries = journal.filter((e) => e.thumunId === target.thumunId);
+  const from = state.thumuns[target.thumunId].journalFrom ?? 0;
+  const entries = journal.filter((e, i) => i >= from && e.thumunId === target.thumunId);
   const thumuns = { ...state.thumuns, [target.thumunId]: replay(state.thumuns[target.thumunId], entries, state.params) };
   const { _undo, ...rest } = state;
   return { ...rest, thumuns, journal };
