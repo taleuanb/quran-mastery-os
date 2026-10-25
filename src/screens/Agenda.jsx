@@ -133,7 +133,7 @@ export default function Agenda({ state, refs, today }) {
   );
   const journal = useMemo(() => indexJournal(state.journal), [state.journal]);
 
-  /** Contenu d'un jour : passé lu dans dayLog et journal, aujourd'hui et futur dans la prévision. */
+  /** Contenu d'un jour : passé lu dans dayLog et journal, aujourd'hui (dayLog[today] s'il existe) et futur dans la prévision. */
   function dayInfo(day) {
     const kind = day < today ? 'past' : day === today ? 'today' : 'future';
     const log = state.dayLog[day];
@@ -142,8 +142,11 @@ export default function Agenda({ state, refs, today }) {
     const learn = [];
     const pushLearn = (id) => learn.push({ hizb: hizbOf(id), thumun: thumunOf(id) });
 
+    // Aujourd'hui, l'enregistrement du jour (Ruling 24) fait foi : ses hizbs viennent de la prévision
+    // (jour 0 = cet enregistrement), le journal ne sert qu'à l'apprentissage.
+    const recorded = kind === 'today' && Array.isArray(log?.hizbs);
     if (kind !== 'future') {
-      for (const [hizb, s] of j?.hizbs ?? []) hizbs.push({ hizb, source: s.base ? 'base' : 'cible' });
+      if (!recorded) for (const [hizb, s] of j?.hizbs ?? []) hizbs.push({ hizb, source: s.base ? 'base' : 'cible' });
       (j?.learn ?? []).forEach(pushLearn);
     }
     if (kind !== 'past') {

@@ -17,7 +17,7 @@ function validated(entry) {
  * est pardonné (et ne compte pas) s'il n'y a pas déjà `graceDaysPerWeek` jour(s) pardonné(s)
  * dans les 7 jours qui le suivent ; sinon la série s'arrête. Un jour antérieur à la
  * première entrée du journal termine la série.
- * @param {Object<string,{planned:number,done:number}>} dayLog
+ * @param {Object<string,import('./types.js').DayRecord>} dayLog
  * @param {string} today
  * @param {Params} p
  * @returns {number}
@@ -46,7 +46,7 @@ export function streak(dayLog, today, p) {
  * Part des jours validés parmi les `n` jours précédant aujourd'hui (aujourd'hui exclu), de 0 à 1.
  * Les jours antérieurs à la première entrée du journal ne sont ni validés ni comptés ;
  * 0 si aucun jour suivi n'est antérieur à aujourd'hui.
- * @param {Object<string,{planned:number,done:number}>} dayLog
+ * @param {Object<string,import('./types.js').DayRecord>} dayLog
  * @param {string} today
  * @param {number} [n]
  * @returns {number}

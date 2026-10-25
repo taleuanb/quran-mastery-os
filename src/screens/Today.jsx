@@ -107,10 +107,11 @@ function LearnCard({ id, ref_, learned, onLearn }) {
 
 /**
  * Écran « Aujourd'hui » : série, progression, apprentissage et cartes de révision.
- * Le plan est figé tant que le jour, les thumuns acquis et les paramètres ne changent pas
- * (le plan recalculé après une validation remplacerait sinon les hizbs faits par de nouveaux) ;
- * les hizbs déjà relus aujourd'hui (journal) sont réintégrés comme faits. Le toast « Annuler »
- * ne concerne que la dernière action notée depuis l'écran.
+ * `dayLog[today]` est l'enregistrement unique du jour (Ruling 24) : `hizbs` (liste ordonnée, écrite
+ * ici par SET_DAY_PLAN) et `reviewed` (hizbs validés par REVIEW_HIZB, seuls « faits »). Le plan frais
+ * est figé tant que le jour, les thumuns acquis et les paramètres ne changent pas (Ruling 17) ; les
+ * hizbs relus restent à leur place dans la liste. Le toast « Annuler » ne concerne que la dernière
+ * action notée depuis l'écran.
  */
 export default function Today({ state, dispatch, refs, today, onNavigate }) {
   // Plan figé tant que le jour, l'ensemble des acquis et les paramètres ne changent pas.
@@ -121,47 +122,48 @@ export default function Today({ state, dispatch, refs, today, onNavigate }) {
     snap.current = { key: planKey, plan: buildDailyPlan(state, refs, today, state.params) };
   }
   const plan = snap.current.plan;
-  const prevOrder = useRef([]);
 
-  // Faits du jour, d'après le journal.
-  const doneSource = new Map();
+  const log = state.dayLog[today];
+  const stored = log?.hizbs ?? [];
+  const reviewed = log?.reviewed ?? [];
+
+  // Source d'un hizb relu absent du plan frais : d'après les entrées de révision du jour.
+  const journalSource = (hizb) => (state.journal.some((e) => e.date === today && e.pilier === 'revision'
+    && hizbOf(e.thumunId) === hizb && e.source === 'base') ? 'base' : 'cible');
   const learnedToday = [];
   for (const e of state.journal) {
-    if (e.date !== today) continue;
-    if (e.pilier === 'revision') {
-      if (!doneSource.has(hizbOf(e.thumunId))) doneSource.set(hizbOf(e.thumunId), e.source === 'cible' ? 'cible' : 'base');
-    } else if (e.pilier === 'hifdh' && !learnedToday.includes(e.thumunId)) {
-      learnedToday.push(e.thumunId);
-    }
+    if (e.date === today && e.pilier === 'hifdh' && !learnedToday.includes(e.thumunId)) learnedToday.push(e.thumunId);
   }
 
-  // Liste = plan frais (hors faits, borné à sa taille moins les faits) + hizbs faits réintégrés
-  // à leur position précédente quand elle est connue.
+  // Liste = plan frais (hors relus, borné à sa taille moins les relus) + hizbs relus
+  // réintégrés à leur position dans l'enregistrement du jour.
   const inPlan = new Map(plan.hizbs.map((h) => [h.hizb, h]));
-  const undone = plan.hizbs.filter((h) => !doneSource.has(h.hizb))
-    .slice(0, Math.max(0, plan.hizbs.length - doneSource.size));
-  const doneCards = [...doneSource]
-    .map(([hizb, source]) => inPlan.get(hizb) ?? { hizb, source, focus: [], urgent: false })
-    .sort((x, y) => prevOrder.current.indexOf(x.hizb) - prevOrder.current.indexOf(y.hizb));
+  const undone = plan.hizbs.filter((h) => !reviewed.includes(h.hizb))
+    .slice(0, Math.max(0, plan.hizbs.length - reviewed.length));
+  const doneCards = reviewed
+    .map((hizb) => inPlan.get(hizb) ?? { hizb, source: journalSource(hizb), focus: [], urgent: false })
+    .sort((x, y) => stored.indexOf(x.hizb) - stored.indexOf(y.hizb));
   const cards = [...undone];
   for (const d of doneCards) {
-    const at = prevOrder.current.indexOf(d.hizb);
+    const at = stored.indexOf(d.hizb);
     cards.splice(at < 0 ? 0 : Math.min(at, cards.length), 0, d);
   }
-  prevOrder.current = cards.map((c) => c.hizb);
   const doneCount = doneCards.length;
   const total = cards.length;
+  const listKey = cards.map((c) => c.hizb).join(',');
 
   const learnIds = [...learnedToday, ...plan.learn.filter((id) => !learnedToday.includes(id))]
     .slice(0, Math.max(plan.learn.length, learnedToday.length));
 
   const hasAcquis = Object.values(state.thumuns).some((th) => th.status === 'acquis');
 
+  // Persiste la liste affichée comme plan du jour (SET_DAY_PLAN garde `reviewed`).
+  const storedKey = stored.join(',');
   useEffect(() => {
-    if ((state.dayLog[today]?.planned ?? 0) !== total) {
-      dispatch({ type: 'SET_PLANNED', day: today, planned: total });
+    if (storedKey !== listKey) {
+      dispatch({ type: 'SET_DAY_PLAN', day: today, hizbs: listKey ? listKey.split(',').map(Number) : [] });
     }
-  }, [state.dayLog, today, total, dispatch]);
+  }, [storedKey, listKey, today, dispatch]);
 
   const [sheetHizb, setSheetHizb] = useState(null);
   const [toast, setToast] = useState(null);
@@ -234,7 +236,7 @@ export default function Today({ state, dispatch, refs, today, onNavigate }) {
           <div className="sec"><span>{t('today.reviewSection')}</span><span>{t('today.reviewHint')}</span></div>
           <div className="tiles">
             {cards.map((c) => {
-              const done = doneSource.has(c.hizb);
+              const done = reviewed.includes(c.hizb);
               return (
                 <div key={c.hizb} className={`tile${c.source === 'cible' ? ' cible' : ''}${done ? ' done' : ''}`}>
                   <button type="button" className="tile-main" disabled={done}

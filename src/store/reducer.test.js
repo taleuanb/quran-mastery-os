@@ -171,15 +171,64 @@ describe('EDIT_ENTRY', () => {
   });
 });
 
+describe('dayLog : enregistrement unique du jour (Ruling 24)', () => {
+  const seeded = () => reducer(fresh(), { type: 'SET_ACQUIS', changes: { ...allAt(3, 1), ...allAt(4, 1), ...allAt(5, 1) }, day: DAY });
+  const planned = () => reducer(seeded(), { type: 'SET_DAY_PLAN', day: DAY, hizbs: [5, 3, 4] });
+
+  it('SET_DAY_PLAN pose la liste ordonnée, planned = longueur, reviewed vide', () => {
+    expect(planned().dayLog[DAY]).toEqual({ planned: 3, done: 0, hizbs: [5, 3, 4], reviewed: [] });
+  });
+
+  it('REVIEW_HIZB ajoute le hizb à reviewed, sans doublon ; done = reviewed.length', () => {
+    let s = reducer(planned(), { type: 'REVIEW_HIZB', hizb: 3, day: DAY, overrides: {} });
+    expect(s.dayLog[DAY]).toEqual({ planned: 3, done: 1, hizbs: [5, 3, 4], reviewed: [3] });
+    s = reducer(s, { type: 'REVIEW_HIZB', hizb: 3, day: DAY, overrides: {} });
+    expect(s.dayLog[DAY]).toEqual({ planned: 3, done: 1, hizbs: [5, 3, 4], reviewed: [3] });
+  });
+
+  it('REVIEW_HIZB d’un hizb hors liste l’ajoute aussi à la liste (done ≤ planned)', () => {
+    const s = reducer(fresh(), { type: 'REVIEW_HIZB', hizb: 3, day: DAY, overrides: {} });
+    expect(s.dayLog[DAY]).toEqual({ planned: 1, done: 1, hizbs: [3], reviewed: [3] });
+  });
+
+  it('MARK_FORGOTTEN, SCORE_THUMUN et LEARN ne comptent jamais comme fait', () => {
+    const before = planned();
+    let s = reducer(before, { type: 'MARK_FORGOTTEN', id: 'H03-T2', day: DAY });
+    s = reducer(s, { type: 'SCORE_THUMUN', id: 'H04-T1', score: 2, day: DAY });
+    s = reducer(s, { type: 'LEARN', id: 'H10-T1', score: 4, day: DAY });
+    expect(s.dayLog).toEqual(before.dayLog);
+  });
+
+  it('SET_DAY_PLAN garde reviewed et garde les hizbs relus dans la liste, à leur place', () => {
+    let s = reducer(planned(), { type: 'REVIEW_HIZB', hizb: 3, day: DAY, overrides: {} });
+    s = reducer(s, { type: 'SET_DAY_PLAN', day: DAY, hizbs: [5, 4, 6] });
+    expect(s.dayLog[DAY]).toEqual({ planned: 4, done: 1, hizbs: [5, 3, 4, 6], reviewed: [3] });
+  });
+
+  it('UNDO restaure l’enregistrement du jour', () => {
+    const before = planned();
+    const after = reducer(before, { type: 'REVIEW_HIZB', hizb: 4, day: DAY, overrides: {} });
+    expect(reducer(after, { type: 'UNDO' }).dayLog[DAY]).toEqual(before.dayLog[DAY]);
+  });
+
+  it('une ancienne entrée sans hizbs/reviewed ne fait pas planter', () => {
+    const old = { ...seeded(), dayLog: { [DAY]: { planned: 5, done: 2 } } };
+    const s = reducer(old, { type: 'REVIEW_HIZB', hizb: 3, day: DAY, overrides: {} });
+    expect(s.dayLog[DAY]).toEqual({ planned: 1, done: 1, hizbs: [3], reviewed: [3] });
+    expect(reducer(old, { type: 'SET_DAY_PLAN', day: DAY, hizbs: [4, 5] }).dayLog[DAY])
+      .toEqual({ planned: 2, done: 0, hizbs: [4, 5], reviewed: [] });
+  });
+});
+
 describe('actions simples', () => {
-  it('SET_PARAMS, SET_LEARN_QUEUE, SET_PLANNED, MARK_BACKUP, KHATMA_INC, IMPORT', () => {
+  it('SET_PARAMS, SET_LEARN_QUEUE, SET_DAY_PLAN, MARK_BACKUP, KHATMA_INC, IMPORT', () => {
     let s = fresh();
     s = reducer(s, { type: 'SET_PARAMS', patch: { dailyNewThumuns: 2 } });
     expect(s.params.dailyNewThumuns).toBe(2);
     s = reducer(s, { type: 'SET_LEARN_QUEUE', ids: ['H10-T1'] });
     expect(s.learnQueue).toEqual(['H10-T1']);
-    s = reducer(s, { type: 'SET_PLANNED', day: DAY, planned: 5 });
-    expect(s.dayLog[DAY]).toEqual({ planned: 5, done: 0 });
+    s = reducer(s, { type: 'SET_DAY_PLAN', day: DAY, hizbs: [1, 2, 3, 4, 5] });
+    expect(s.dayLog[DAY]).toEqual({ planned: 5, done: 0, hizbs: [1, 2, 3, 4, 5], reviewed: [] });
     s = reducer(s, { type: 'MARK_BACKUP', day: DAY });
     expect(s.lastBackup).toBe(DAY);
     s = reducer(s, { type: 'KHATMA_INC' });

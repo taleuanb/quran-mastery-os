@@ -4,6 +4,8 @@ import Agenda from './Agenda';
 import { makeRefs, makeState } from '../test/fixtures';
 import { addDays } from '../domain/dates';
 import { regularity } from '../domain/stats';
+import { buildDailyPlan } from '../domain/plan';
+import { reducer } from '../store/reducer';
 
 afterEach(cleanup);
 
@@ -73,6 +75,25 @@ describe('Agenda, vue semaine', () => {
     const { container } = renderAgenda(state);
     const today = rows(container)[0];
     expect(today.classList.contains('today')).toBe(true);
+    expect(within(today).getByText('2/5')).toBeInTheDocument();
+  });
+
+  it("aujourd'hui lit l'enregistrement du jour : mêmes hizbs et d/p après des révisions et un oubli", () => {
+    const start = futureCibleState();
+    const plan = buildDailyPlan(start, refs, TODAY, start.params).hizbs.map((h) => h.hizb);
+    let s = reducer(start, { type: 'SET_DAY_PLAN', day: TODAY, hizbs: plan });
+    const before = rows(renderAgenda(s).container).map((r) => r.querySelector('.dc').textContent);
+    cleanup();
+    s = reducer(s, { type: 'REVIEW_HIZB', hizb: plan[0], day: TODAY, overrides: {} });
+    s = reducer(s, { type: 'REVIEW_HIZB', hizb: plan[1], day: TODAY, overrides: {} });
+    // La prévision (aujourd'hui compris) ne bouge pas après deux révisions du plan.
+    const after = rows(renderAgenda(s).container).map((r) => r.querySelector('.dc').textContent);
+    expect(after).toEqual(before);
+    cleanup();
+    s = reducer(s, { type: 'MARK_FORGOTTEN', id: 'H20-T3', day: TODAY });
+    const today = rows(renderAgenda(s).container)[0];
+    const nums = [...today.querySelectorAll('.c.b, .c.g')].map((e) => Number(e.textContent));
+    expect([...nums].sort((a, b) => a - b)).toEqual([...plan].sort((a, b) => a - b));
     expect(within(today).getByText('2/5')).toBeInTheDocument();
   });
 

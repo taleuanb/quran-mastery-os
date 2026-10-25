@@ -4,6 +4,7 @@ import { buildDailyPlan } from './plan.js';
 import { DEFAULT_PARAMS as P } from './params.js';
 import { addDays } from './dates.js';
 import { makeRefs, makeState } from '../test/fixtures.js';
+import { reducer } from '../store/reducer.js';
 
 const DAY = '2026-10-25';
 const refs = makeRefs();
@@ -57,5 +58,37 @@ describe('forecast', () => {
     const before = JSON.stringify(s);
     forecast(s, refs, DAY, 7, P);
     expect(JSON.stringify(s)).toBe(before);
+  });
+});
+
+describe('forecast avec l’enregistrement du jour (Ruling 24)', () => {
+  const start = makeState({ acquis: range(1, 25) });
+  const planHizbs = buildDailyPlan(start, refs, DAY, P).hizbs.map((h) => h.hizb);
+  const planned = reducer(start, { type: 'SET_DAY_PLAN', day: DAY, hizbs: planHizbs });
+  const reviewed = [planHizbs[0], planHizbs[1]].reduce(
+    (s, hizb) => reducer(s, { type: 'REVIEW_HIZB', hizb, day: DAY, overrides: {} }),
+    planned,
+  );
+
+  it('jour 0 = l’enregistrement du jour (non recalculé), même après des révisions', () => {
+    const f = forecast(reviewed, refs, DAY, 2, P);
+    expect(f[0].hizbs.map((h) => h.hizb)).toEqual(planHizbs);
+    expect(f[0].hizbs.map((h) => h.source)).toEqual(['base', 'base', 'base', 'base', 'base']);
+    expect(f[0].predicted).toBe(false);
+  });
+
+  it('le lendemain ne dépend pas du nombre de hizbs déjà relus aujourd’hui', () => {
+    const before = forecast(planned, refs, DAY, 3, P);
+    const after = forecast(reviewed, refs, DAY, 3, P);
+    expect(after[1].hizbs).toEqual(before[1].hizbs);
+    expect(after[2].hizbs).toEqual(before[2].hizbs);
+    expect(baseOf(after[1])).toEqual([6, 7, 8, 9, 10]);
+  });
+
+  it('un thumun déjà appris aujourd’hui n’est pas reproposé ni re-simulé au jour 0', () => {
+    const learned = reducer(planned, { type: 'LEARN', id: 'H26-T1', score: 4, day: DAY });
+    const f = forecast(learned, refs, DAY, 2, P);
+    expect(f[0].learn).toEqual([]);
+    expect(f[1].learn).toEqual(['H26-T2']);
   });
 });

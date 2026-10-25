@@ -14,7 +14,7 @@ const SCREENS = { today: Today, agenda: Agenda, acquis: Acquis, stats: Stats, se
 const refs = loadRefs();
 /**
  * Badge de l'onglet Aujourd'hui : même source de vérité que l'écran (state.dayLog[today], tenu à jour
- * par Today : SET_PLANNED, REVIEW_HIZB). Repli sur le plan du jour tant que Today n'a rien écrit.
+ * par Today : SET_DAY_PLAN, REVIEW_HIZB ; planned/done). Repli sur le plan du jour tant que Today n'a rien écrit.
  */
 export function hasPendingHizbs(state, today, refsList = refs) {
   const log = state.dayLog[today];

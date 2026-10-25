@@ -1,6 +1,8 @@
+import React, { useReducer } from 'react';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { render, screen, fireEvent, cleanup, within } from '@testing-library/react';
+import { render, screen, fireEvent, cleanup, within, act } from '@testing-library/react';
 import Today from './Today';
+import { reducer } from '../store/reducer';
 import { makeRefs, makeState } from '../test/fixtures';
 
 afterEach(cleanup);
@@ -18,6 +20,14 @@ function setup(state, extra = {}) {
   return { dispatch, onNavigate, ...utils };
 }
 
+/** Today branché sur le vrai reducer ; `api` expose l'état et le dispatch courants. */
+function Harness({ initial, api }) {
+  const [state, dispatch] = useReducer(reducer, initial);
+  api.state = state;
+  api.dispatch = dispatch;
+  return <Today state={state} dispatch={dispatch} refs={refs} today={TODAY} onNavigate={() => {}} />;
+}
+
 const baseState = (over = {}) => ({ ...makeState({ acquis: ACQUIS }), lastBackup: TODAY, ...over });
 const checks = () => screen.getAllByRole('button', { name: /tout va bien/ });
 
@@ -30,14 +40,57 @@ describe('Today', () => {
     expect(screen.getByText('0/5')).toBeInTheDocument();
   });
 
-  it('dispatche SET_PLANNED au montage quand la valeur diffère', () => {
+  it('dispatche SET_DAY_PLAN au montage avec la liste ordonnée affichée', () => {
     const { dispatch } = setup(baseState());
-    expect(dispatch).toHaveBeenCalledWith({ type: 'SET_PLANNED', day: TODAY, planned: 5 });
+    const shown = checks().map((b) => Number(b.getAttribute('data-hizb')));
+    expect(shown).toHaveLength(5);
+    expect(dispatch).toHaveBeenCalledWith({ type: 'SET_DAY_PLAN', day: TODAY, hizbs: shown });
   });
 
-  it('ne dispatche pas SET_PLANNED quand la valeur est déjà celle du journal', () => {
-    const { dispatch } = setup(baseState({ dayLog: { [TODAY]: { planned: 5, done: 0 } } }));
-    expect(dispatch).not.toHaveBeenCalledWith(expect.objectContaining({ type: 'SET_PLANNED' }));
+  it('ne dispatche pas SET_DAY_PLAN quand la liste est déjà celle de dayLog', () => {
+    const shown = (() => {
+      const { unmount } = setup(baseState());
+      const h = checks().map((b) => Number(b.getAttribute('data-hizb')));
+      unmount();
+      return h;
+    })();
+    const { dispatch } = setup(baseState({ dayLog: { [TODAY]: { planned: 5, done: 0, hizbs: shown, reviewed: [] } } }));
+    expect(dispatch).not.toHaveBeenCalledWith(expect.objectContaining({ type: 'SET_DAY_PLAN' }));
+  });
+
+  it('oublier un thumun d’un hizb prévu (MARK_FORGOTTEN) ne le compte pas comme fait', () => {
+    const api = {};
+    render(<Harness initial={baseState()} api={api} />);
+    const shown = checks().map((b) => b.getAttribute('data-hizb'));
+    act(() => api.dispatch({ type: 'MARK_FORGOTTEN', id: `H${shown[0].padStart(2, '0')}-T2`, day: TODAY }));
+    expect(checks().map((b) => b.getAttribute('data-hizb'))).toEqual(shown);
+    expect(screen.getByText('0/5')).toBeInTheDocument();
+    expect(screen.queryByText('Fait')).toBeNull();
+    expect(api.state.dayLog[TODAY]).toMatchObject({ planned: 5, done: 0, reviewed: [] });
+  });
+
+  it('valider un hizb : anneau et dayLog concordent (1/5), la liste reste la même', () => {
+    const api = {};
+    render(<Harness initial={baseState()} api={api} />);
+    const shown = checks().map((b) => Number(b.getAttribute('data-hizb')));
+    fireEvent.click(checks()[2]);
+    expect(checks().map((b) => Number(b.getAttribute('data-hizb')))).toEqual(shown);
+    expect(screen.getByText('1/5')).toBeInTheDocument();
+    expect(api.state.dayLog[TODAY]).toEqual({ planned: 5, done: 1, hizbs: shown, reviewed: [shown[2]] });
+  });
+
+  it('au remontage, l’ordre et les faits sont relus dans dayLog (hizb relu gardé à sa place)', () => {
+    const api = {};
+    const first = render(<Harness initial={baseState()} api={api} />);
+    const shown = checks().map((b) => Number(b.getAttribute('data-hizb')));
+    fireEvent.click(checks()[3]);
+    const saved = api.state;
+    first.unmount();
+    const { dispatch } = setup(saved);
+    expect(checks().map((b) => Number(b.getAttribute('data-hizb')))).toEqual(shown);
+    expect(checks()[3]).toBeDisabled();
+    expect(screen.getByText('1/5')).toBeInTheDocument();
+    expect(dispatch).not.toHaveBeenCalledWith(expect.objectContaining({ type: 'SET_DAY_PLAN' }));
   });
 
   it('clic sur ✓ de la première carte : REVIEW_HIZB sans override, toast, puis Annuler → UNDO', () => {
@@ -63,6 +116,7 @@ describe('Today', () => {
     const withDone = {
       ...state,
       journal: [{ id: 'x', date: TODAY, thumunId: id, pilier: 'revision', score: 4, source: 'base' }],
+      dayLog: { [TODAY]: { planned: 1, done: 1, hizbs: [first], reviewed: [first] } },
     };
     setup(withDone);
     expect(screen.getByText('1/5')).toBeInTheDocument();
@@ -80,6 +134,7 @@ describe('Today', () => {
       ...state,
       thumuns: Object.fromEntries(Object.entries(state.thumuns).map(([id, th]) => [id, id.startsWith(`H${pad}-`) ? { ...th, lastReviewed: TODAY } : th])),
       journal: [{ id: 'x', date: TODAY, thumunId: `H${pad}-T1`, pilier: 'revision', score: 4, source: 'base' }],
+      dayLog: { [TODAY]: { planned: 5, done: 1, hizbs: hizbs.map(Number), reviewed: [Number(hizbs[0])] } },
     };
     rerender(<Today state={after} dispatch={dispatch} refs={refs} today={TODAY} onNavigate={onNavigate} />);
     expect(checks().map((b) => b.getAttribute('data-hizb'))).toEqual(hizbs);
@@ -179,10 +234,10 @@ describe('Today', () => {
     expect(checks()).toHaveLength(3);
   });
 
-  it('un planned stocké plus petit que le plan frais ne tronque pas la liste ; SET_PLANNED suit le total', () => {
+  it('une ancienne entrée (sans listes) ne tronque pas la liste ; SET_DAY_PLAN la remplace', () => {
     const { dispatch } = setup(baseState({ dayLog: { [TODAY]: { planned: 3, done: 0 } } }));
     expect(checks()).toHaveLength(5);
-    expect(dispatch).toHaveBeenCalledWith({ type: 'SET_PLANNED', day: TODAY, planned: 5 });
+    expect(dispatch).toHaveBeenCalledWith(expect.objectContaining({ type: 'SET_DAY_PLAN', day: TODAY }));
   });
 
   it('le toast Annuler disparaît dès qu’une autre action (apprentissage) est dispatchée', () => {

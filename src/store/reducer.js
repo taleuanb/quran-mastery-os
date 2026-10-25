@@ -81,6 +81,20 @@ function scored(state, day, notes) {
   return { thumuns, journal };
 }
 
+/**
+ * Enregistrement du jour (Ruling 24) : `hizbs` = plan ordonné, `reviewed` = hizbs relus via REVIEW_HIZB.
+ * Les anciennes entrées sans ces listes valent [].
+ */
+function dayRecord(state, day) {
+  const log = state.dayLog[day];
+  return { hizbs: log?.hizbs ?? [], reviewed: log?.reviewed ?? [] };
+}
+
+const withDayRecord = (state, day, hizbs, reviewed) => ({
+  ...state.dayLog,
+  [day]: { planned: hizbs.length, done: reviewed.length, hizbs, reviewed },
+});
+
 const withUndo = (state, next) => ({
   ...state,
   ...next,
@@ -125,8 +139,11 @@ export function reducer(state, action) {
         .filter((id) => state.thumuns[id].status === 'acquis')
         .map((id) => ({ id, score: overrides[id] ?? REVIEW_SCORE, pilier: 'revision' }));
       const next = scored(state, day, notes);
-      const log = state.dayLog[day] ?? { planned: 0, done: 0 };
-      return withUndo(state, { ...next, dayLog: { ...state.dayLog, [day]: { ...log, done: log.done + 1 } } });
+      // Seul REVIEW_HIZB compte comme « fait » (jamais MARK_FORGOTTEN, SCORE_THUMUN ni LEARN).
+      const { hizbs, reviewed } = dayRecord(state, day);
+      const nextHizbs = hizbs.includes(hizb) ? hizbs : [...hizbs, hizb];
+      const nextReviewed = reviewed.includes(hizb) ? reviewed : [...reviewed, hizb];
+      return withUndo(state, { ...next, dayLog: withDayRecord(state, day, nextHizbs, nextReviewed) });
     }
 
     case 'SCORE_THUMUN':
@@ -153,9 +170,16 @@ export function reducer(state, action) {
     case 'SET_LEARN_QUEUE':
       return { ...state, learnQueue: [...action.ids] };
 
-    case 'SET_PLANNED': {
-      const log = state.dayLog[action.day] ?? { planned: 0, done: 0 };
-      return { ...state, dayLog: { ...state.dayLog, [action.day]: { ...log, planned: action.planned } } };
+    case 'SET_DAY_PLAN': {
+      // Garde `reviewed` ; un hizb relu absent de la nouvelle liste y reste, à sa place précédente.
+      const { hizbs: old, reviewed } = dayRecord(state, action.day);
+      const hizbs = [...new Set(action.hizbs)];
+      for (const h of reviewed) {
+        if (hizbs.includes(h)) continue;
+        const at = old.indexOf(h);
+        hizbs.splice(at < 0 ? hizbs.length : Math.min(at, hizbs.length), 0, h);
+      }
+      return { ...state, dayLog: withDayRecord(state, action.day, hizbs, reviewed) };
     }
 
     case 'MARK_BACKUP':
