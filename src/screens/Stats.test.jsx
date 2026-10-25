@@ -37,6 +37,7 @@ describe('Stats', () => {
       id: `e${i}`, date: `2026-10-${String(10 + i).padStart(2, '0')}`, thumunId: `H0${(i % 4) + 1}-T1`,
       pilier: 'revision', score: 4, source: 'base',
     }));
+    state.dayLog = { '2026-10-11': { planned: 1, done: 1 } }; // suivi depuis 14 jours
     render(<Stats state={state} refs={refs} today={TODAY} />);
     expect(screen.getByText(/cycle de base/).closest('.card')).toHaveTextContent(/^8 j/);
   });

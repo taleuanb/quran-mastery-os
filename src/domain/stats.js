@@ -100,7 +100,7 @@ function trendOf(scores) {
  */
 export function topFragile(state, n = 10) {
   return acquired(state)
-    .filter(([, t]) => t.scores.length > 0)
+    .filter(([, t]) => t.scores.some((s) => !s.seed)) // les notes de départ seules ne disent rien
     .map(([id, t]) => {
       const scores = t.scores.map((s) => s.score);
       return { id, avg: mean(scores.slice(-5)), last: scores[scores.length - 1], trend: trendOf(scores) };
@@ -112,13 +112,18 @@ export function topFragile(state, n = 10) {
 
 /**
  * Durée réelle d'un cycle de base en jours : hizbs acquis ÷ hizbs de base révisés par jour
- * en moyenne sur les 14 derniers jours (aujourd'hui exclu). `null` si rien n'a été révisé.
+ * en moyenne sur les jours suivis des 14 derniers (aujourd'hui exclu ; comme `regularity`, les
+ * jours antérieurs à la première entrée de dayLog ne comptent pas). `null` si rien n'a été révisé.
  * @param {AppState} state
  * @param {string} today
  * @returns {number|null}
  */
 export function actualCycleDays(state, today) {
-  const window = 14;
+  const days = Object.keys(state.dayLog);
+  if (days.length === 0) return null;
+  const first = days.reduce((a, b) => (a < b ? a : b));
+  const window = Math.min(14, diffDays(today, first));
+  if (window < 1) return null;
   const hizbsByDay = new Map();
   for (const e of state.journal) {
     if (e.pilier !== 'revision' || e.source !== 'base') continue;

@@ -129,6 +129,13 @@ describe('distribution et topFragile', () => {
   it('ignore les thumuns non acquis', () => {
     expect(topFragile(makeState({}))).toEqual([]);
   });
+
+  it('ignore les thumuns qui n’ont que des notes de départ (seed)', () => {
+    const s = makeState({ acquis: [1, 2] });
+    expect(topFragile(s)).toEqual([]);
+    s.thumuns['H02-T4'].scores = [...s.thumuns['H02-T4'].scores, { date: TODAY, score: 2 }];
+    expect(topFragile(s).map((x) => x.id)).toEqual(['H02-T4']);
+  });
 });
 
 describe('actualCycleDays', () => {
@@ -136,6 +143,7 @@ describe('actualCycleDays', () => {
 
   it('hizbs acquis ÷ hizbs de base révisés par jour sur 14 jours', () => {
     const s = makeState({ acquis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }); // 80 thumuns acquis = 10 hizbs
+    s.dayLog = logFor([-20]);
     // 14 jours x 2 hizbs distincts (plusieurs thumuns d'un même hizb comptent une fois)
     for (let i = 1; i <= 14; i++) {
       const date = addDays(TODAY, -i);
@@ -151,10 +159,29 @@ describe('actualCycleDays', () => {
 
   it('arrondit, et renvoie null sans révision de base', () => {
     const s = makeState({ acquis: [1, 2, 3] });
+    s.dayLog = logFor([-14]);
     expect(actualCycleDays(s, TODAY)).toBeNull();
     s.journal.push(entry('x', addDays(TODAY, -1), 'H01-T1', 'revision', 'base'));
     // moyenne = 1/14 hizb par jour ; 3 / (1/14) = 42
     expect(actualCycleDays(s, TODAY)).toBe(42);
+  });
+
+  it('ignore les jours antérieurs au premier dayLog : moyenne sur les jours suivis (max 14)', () => {
+    const s = makeState({ acquis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] });
+    s.dayLog = logFor([-3, -2, -1]);
+    for (let i = 1; i <= 3; i++) {
+      for (const id of ['H01-T1', 'H02-T1']) s.journal.push(entry(`${i}-${id}`, addDays(TODAY, -i), id, 'revision', 'base'));
+    }
+    s.journal.push(entry('avant', addDays(TODAY, -5), 'H09-T1', 'revision', 'base'));
+    expect(actualCycleDays(s, TODAY)).toBe(5); // 2 hizbs par jour suivi : 10 / 2
+  });
+
+  it('null sans jour suivi avant aujourd’hui', () => {
+    const s = makeState({ acquis: [1] });
+    s.journal.push(entry('x', addDays(TODAY, -1), 'H01-T1', 'revision', 'base'));
+    expect(actualCycleDays(s, TODAY)).toBeNull();
+    s.dayLog = logFor([0]);
+    expect(actualCycleDays(s, TODAY)).toBeNull();
   });
 });
 
