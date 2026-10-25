@@ -1,0 +1,4802 @@
+[
+  {
+    "id": "H01-T1",
+    "hizb": 1,
+    "thumun": 1,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "الفاتحة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H01-T2",
+    "hizb": 1,
+    "thumun": 2,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 15,
+    "approx": true
+  },
+  {
+    "id": "H01-T3",
+    "hizb": 1,
+    "thumun": 3,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 26,
+    "approx": false
+  },
+  {
+    "id": "H01-T4",
+    "hizb": 1,
+    "thumun": 4,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 33,
+    "approx": true
+  },
+  {
+    "id": "H01-T5",
+    "hizb": 1,
+    "thumun": 5,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 44,
+    "approx": false
+  },
+  {
+    "id": "H01-T6",
+    "hizb": 1,
+    "thumun": 6,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 53,
+    "approx": true
+  },
+  {
+    "id": "H01-T7",
+    "hizb": 1,
+    "thumun": 7,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 60,
+    "approx": false
+  },
+  {
+    "id": "H01-T8",
+    "hizb": 1,
+    "thumun": 8,
+    "juz": 1,
+    "hizbName": "الفاتحة - الفاتحة",
+    "surah": "البقرة",
+    "ayah": 66,
+    "approx": true
+  },
+  {
+    "id": "H02-T1",
+    "hizb": 2,
+    "thumun": 1,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H02-T2",
+    "hizb": 2,
+    "thumun": 2,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 85,
+    "approx": true
+  },
+  {
+    "id": "H02-T3",
+    "hizb": 2,
+    "thumun": 3,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 92,
+    "approx": false
+  },
+  {
+    "id": "H02-T4",
+    "hizb": 2,
+    "thumun": 4,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 100,
+    "approx": true
+  },
+  {
+    "id": "H02-T5",
+    "hizb": 2,
+    "thumun": 5,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 106,
+    "approx": false
+  },
+  {
+    "id": "H02-T6",
+    "hizb": 2,
+    "thumun": 6,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 114,
+    "approx": true
+  },
+  {
+    "id": "H02-T7",
+    "hizb": 2,
+    "thumun": 7,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 124,
+    "approx": false
+  },
+  {
+    "id": "H02-T8",
+    "hizb": 2,
+    "thumun": 8,
+    "juz": 1,
+    "hizbName": "وإذا لقوا",
+    "surah": "البقرة",
+    "ayah": 133,
+    "approx": true
+  },
+  {
+    "id": "H03-T1",
+    "hizb": 3,
+    "thumun": 1,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 142,
+    "approx": false
+  },
+  {
+    "id": "H03-T2",
+    "hizb": 3,
+    "thumun": 2,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 147,
+    "approx": true
+  },
+  {
+    "id": "H03-T3",
+    "hizb": 3,
+    "thumun": 3,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 158,
+    "approx": false
+  },
+  {
+    "id": "H03-T4",
+    "hizb": 3,
+    "thumun": 4,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 167,
+    "approx": true
+  },
+  {
+    "id": "H03-T5",
+    "hizb": 3,
+    "thumun": 5,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 177,
+    "approx": false
+  },
+  {
+    "id": "H03-T6",
+    "hizb": 3,
+    "thumun": 6,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 184,
+    "approx": true
+  },
+  {
+    "id": "H03-T7",
+    "hizb": 3,
+    "thumun": 7,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 189,
+    "approx": false
+  },
+  {
+    "id": "H03-T8",
+    "hizb": 3,
+    "thumun": 8,
+    "juz": 2,
+    "hizbName": "سيقول السفهاء",
+    "surah": "البقرة",
+    "ayah": 196,
+    "approx": true
+  },
+  {
+    "id": "H04-T1",
+    "hizb": 4,
+    "thumun": 1,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 203,
+    "approx": false
+  },
+  {
+    "id": "H04-T2",
+    "hizb": 4,
+    "thumun": 2,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 213,
+    "approx": true
+  },
+  {
+    "id": "H04-T3",
+    "hizb": 4,
+    "thumun": 3,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 219,
+    "approx": false
+  },
+  {
+    "id": "H04-T4",
+    "hizb": 4,
+    "thumun": 4,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 227,
+    "approx": true
+  },
+  {
+    "id": "H04-T5",
+    "hizb": 4,
+    "thumun": 5,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 233,
+    "approx": false
+  },
+  {
+    "id": "H04-T6",
+    "hizb": 4,
+    "thumun": 6,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 235,
+    "approx": true
+  },
+  {
+    "id": "H04-T7",
+    "hizb": 4,
+    "thumun": 7,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 243,
+    "approx": false
+  },
+  {
+    "id": "H04-T8",
+    "hizb": 4,
+    "thumun": 8,
+    "juz": 2,
+    "hizbName": "واذكروا الله",
+    "surah": "البقرة",
+    "ayah": 248,
+    "approx": true
+  },
+  {
+    "id": "H05-T1",
+    "hizb": 5,
+    "thumun": 1,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 253,
+    "approx": false
+  },
+  {
+    "id": "H05-T2",
+    "hizb": 5,
+    "thumun": 2,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 258,
+    "approx": true
+  },
+  {
+    "id": "H05-T3",
+    "hizb": 5,
+    "thumun": 3,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 263,
+    "approx": false
+  },
+  {
+    "id": "H05-T4",
+    "hizb": 5,
+    "thumun": 4,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 266,
+    "approx": true
+  },
+  {
+    "id": "H05-T5",
+    "hizb": 5,
+    "thumun": 5,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 272,
+    "approx": false
+  },
+  {
+    "id": "H05-T6",
+    "hizb": 5,
+    "thumun": 6,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 279,
+    "approx": true
+  },
+  {
+    "id": "H05-T7",
+    "hizb": 5,
+    "thumun": 7,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "البقرة",
+    "ayah": 283,
+    "approx": false
+  },
+  {
+    "id": "H05-T8",
+    "hizb": 5,
+    "thumun": 8,
+    "juz": 3,
+    "hizbName": "تلك الرسل",
+    "surah": "آل عمران",
+    "ayah": 6,
+    "approx": true
+  },
+  {
+    "id": "H06-T1",
+    "hizb": 6,
+    "thumun": 1,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 15,
+    "approx": false
+  },
+  {
+    "id": "H06-T2",
+    "hizb": 6,
+    "thumun": 2,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 23,
+    "approx": true
+  },
+  {
+    "id": "H06-T3",
+    "hizb": 6,
+    "thumun": 3,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 33,
+    "approx": false
+  },
+  {
+    "id": "H06-T4",
+    "hizb": 6,
+    "thumun": 4,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 42,
+    "approx": true
+  },
+  {
+    "id": "H06-T5",
+    "hizb": 6,
+    "thumun": 5,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 52,
+    "approx": false
+  },
+  {
+    "id": "H06-T6",
+    "hizb": 6,
+    "thumun": 6,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 64,
+    "approx": true
+  },
+  {
+    "id": "H06-T7",
+    "hizb": 6,
+    "thumun": 7,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H06-T8",
+    "hizb": 6,
+    "thumun": 8,
+    "juz": 3,
+    "hizbName": "قل أؤنبئكم",
+    "surah": "آل عمران",
+    "ayah": 81,
+    "approx": true
+  },
+  {
+    "id": "H07-T1",
+    "hizb": 7,
+    "thumun": 1,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 93,
+    "approx": false
+  },
+  {
+    "id": "H07-T2",
+    "hizb": 7,
+    "thumun": 2,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 103,
+    "approx": true
+  },
+  {
+    "id": "H07-T3",
+    "hizb": 7,
+    "thumun": 3,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 113,
+    "approx": false
+  },
+  {
+    "id": "H07-T4",
+    "hizb": 7,
+    "thumun": 4,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 120,
+    "approx": true
+  },
+  {
+    "id": "H07-T5",
+    "hizb": 7,
+    "thumun": 5,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 133,
+    "approx": false
+  },
+  {
+    "id": "H07-T6",
+    "hizb": 7,
+    "thumun": 6,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 144,
+    "approx": true
+  },
+  {
+    "id": "H07-T7",
+    "hizb": 7,
+    "thumun": 7,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 153,
+    "approx": false
+  },
+  {
+    "id": "H07-T8",
+    "hizb": 7,
+    "thumun": 8,
+    "juz": 4,
+    "hizbName": "لن تنالوا البر",
+    "surah": "آل عمران",
+    "ayah": 159,
+    "approx": true
+  },
+  {
+    "id": "H08-T1",
+    "hizb": 8,
+    "thumun": 1,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "آل عمران",
+    "ayah": 171,
+    "approx": false
+  },
+  {
+    "id": "H08-T2",
+    "hizb": 8,
+    "thumun": 2,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "آل عمران",
+    "ayah": 179,
+    "approx": true
+  },
+  {
+    "id": "H08-T3",
+    "hizb": 8,
+    "thumun": 3,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "آل عمران",
+    "ayah": 186,
+    "approx": false
+  },
+  {
+    "id": "H08-T4",
+    "hizb": 8,
+    "thumun": 4,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "آل عمران",
+    "ayah": 193,
+    "approx": true
+  },
+  {
+    "id": "H08-T5",
+    "hizb": 8,
+    "thumun": 5,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "النساء",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H08-T6",
+    "hizb": 8,
+    "thumun": 6,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "النساء",
+    "ayah": 6,
+    "approx": true
+  },
+  {
+    "id": "H08-T7",
+    "hizb": 8,
+    "thumun": 7,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "النساء",
+    "ayah": 12,
+    "approx": false
+  },
+  {
+    "id": "H08-T8",
+    "hizb": 8,
+    "thumun": 8,
+    "juz": 4,
+    "hizbName": "يستبشرون بنعمة",
+    "surah": "النساء",
+    "ayah": 18,
+    "approx": true
+  },
+  {
+    "id": "H09-T1",
+    "hizb": 9,
+    "thumun": 1,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 24,
+    "approx": false
+  },
+  {
+    "id": "H09-T2",
+    "hizb": 9,
+    "thumun": 2,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 29,
+    "approx": true
+  },
+  {
+    "id": "H09-T3",
+    "hizb": 9,
+    "thumun": 3,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 36,
+    "approx": false
+  },
+  {
+    "id": "H09-T4",
+    "hizb": 9,
+    "thumun": 4,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 46,
+    "approx": true
+  },
+  {
+    "id": "H09-T5",
+    "hizb": 9,
+    "thumun": 5,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 58,
+    "approx": false
+  },
+  {
+    "id": "H09-T6",
+    "hizb": 9,
+    "thumun": 6,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 64,
+    "approx": true
+  },
+  {
+    "id": "H09-T7",
+    "hizb": 9,
+    "thumun": 7,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 74,
+    "approx": false
+  },
+  {
+    "id": "H09-T8",
+    "hizb": 9,
+    "thumun": 8,
+    "juz": 5,
+    "hizbName": "والمحصنات من النساء",
+    "surah": "النساء",
+    "ayah": 79,
+    "approx": true
+  },
+  {
+    "id": "H10-T1",
+    "hizb": 10,
+    "thumun": 1,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 88,
+    "approx": false
+  },
+  {
+    "id": "H10-T2",
+    "hizb": 10,
+    "thumun": 2,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 92,
+    "approx": true
+  },
+  {
+    "id": "H10-T3",
+    "hizb": 10,
+    "thumun": 3,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 100,
+    "approx": false
+  },
+  {
+    "id": "H10-T4",
+    "hizb": 10,
+    "thumun": 4,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 104,
+    "approx": true
+  },
+  {
+    "id": "H10-T5",
+    "hizb": 10,
+    "thumun": 5,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 114,
+    "approx": false
+  },
+  {
+    "id": "H10-T6",
+    "hizb": 10,
+    "thumun": 6,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 125,
+    "approx": true
+  },
+  {
+    "id": "H10-T7",
+    "hizb": 10,
+    "thumun": 7,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 135,
+    "approx": false
+  },
+  {
+    "id": "H10-T8",
+    "hizb": 10,
+    "thumun": 8,
+    "juz": 5,
+    "hizbName": "الله لا إله إلا هو",
+    "surah": "النساء",
+    "ayah": 140,
+    "approx": true
+  },
+  {
+    "id": "H11-T1",
+    "hizb": 11,
+    "thumun": 1,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "النساء",
+    "ayah": 148,
+    "approx": false
+  },
+  {
+    "id": "H11-T2",
+    "hizb": 11,
+    "thumun": 2,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "النساء",
+    "ayah": 155,
+    "approx": true
+  },
+  {
+    "id": "H11-T3",
+    "hizb": 11,
+    "thumun": 3,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "النساء",
+    "ayah": 163,
+    "approx": false
+  },
+  {
+    "id": "H11-T4",
+    "hizb": 11,
+    "thumun": 4,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "النساء",
+    "ayah": 171,
+    "approx": true
+  },
+  {
+    "id": "H11-T5",
+    "hizb": 11,
+    "thumun": 5,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "المائدة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H11-T6",
+    "hizb": 11,
+    "thumun": 6,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "المائدة",
+    "ayah": 5,
+    "approx": true
+  },
+  {
+    "id": "H11-T7",
+    "hizb": 11,
+    "thumun": 7,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "المائدة",
+    "ayah": 12,
+    "approx": false
+  },
+  {
+    "id": "H11-T8",
+    "hizb": 11,
+    "thumun": 8,
+    "juz": 6,
+    "hizbName": "لا يحب الله الجهر",
+    "surah": "المائدة",
+    "ayah": 17,
+    "approx": true
+  },
+  {
+    "id": "H12-T1",
+    "hizb": 12,
+    "thumun": 1,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 27,
+    "approx": false
+  },
+  {
+    "id": "H12-T2",
+    "hizb": 12,
+    "thumun": 2,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 33,
+    "approx": true
+  },
+  {
+    "id": "H12-T3",
+    "hizb": 12,
+    "thumun": 3,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 41,
+    "approx": false
+  },
+  {
+    "id": "H12-T4",
+    "hizb": 12,
+    "thumun": 4,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 45,
+    "approx": true
+  },
+  {
+    "id": "H12-T5",
+    "hizb": 12,
+    "thumun": 5,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H12-T6",
+    "hizb": 12,
+    "thumun": 6,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 59,
+    "approx": true
+  },
+  {
+    "id": "H12-T7",
+    "hizb": 12,
+    "thumun": 7,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 67,
+    "approx": false
+  },
+  {
+    "id": "H12-T8",
+    "hizb": 12,
+    "thumun": 8,
+    "juz": 6,
+    "hizbName": "قال رجلان",
+    "surah": "المائدة",
+    "ayah": 73,
+    "approx": true
+  },
+  {
+    "id": "H13-T1",
+    "hizb": 13,
+    "thumun": 1,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "المائدة",
+    "ayah": 82,
+    "approx": false
+  },
+  {
+    "id": "H13-T2",
+    "hizb": 13,
+    "thumun": 2,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "المائدة",
+    "ayah": 90,
+    "approx": true
+  },
+  {
+    "id": "H13-T3",
+    "hizb": 13,
+    "thumun": 3,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "المائدة",
+    "ayah": 97,
+    "approx": false
+  },
+  {
+    "id": "H13-T4",
+    "hizb": 13,
+    "thumun": 4,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "المائدة",
+    "ayah": 104,
+    "approx": true
+  },
+  {
+    "id": "H13-T5",
+    "hizb": 13,
+    "thumun": 5,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "المائدة",
+    "ayah": 109,
+    "approx": false
+  },
+  {
+    "id": "H13-T6",
+    "hizb": 13,
+    "thumun": 6,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "المائدة",
+    "ayah": 117,
+    "approx": true
+  },
+  {
+    "id": "H13-T7",
+    "hizb": 13,
+    "thumun": 7,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "الأنعام",
+    "ayah": 13,
+    "approx": false
+  },
+  {
+    "id": "H13-T8",
+    "hizb": 13,
+    "thumun": 8,
+    "juz": 7,
+    "hizbName": "لتجدن أشد الناس",
+    "surah": "الأنعام",
+    "ayah": 25,
+    "approx": true
+  },
+  {
+    "id": "H14-T1",
+    "hizb": 14,
+    "thumun": 1,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 36,
+    "approx": false
+  },
+  {
+    "id": "H14-T2",
+    "hizb": 14,
+    "thumun": 2,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 48,
+    "approx": true
+  },
+  {
+    "id": "H14-T3",
+    "hizb": 14,
+    "thumun": 3,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 59,
+    "approx": false
+  },
+  {
+    "id": "H14-T4",
+    "hizb": 14,
+    "thumun": 4,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 68,
+    "approx": true
+  },
+  {
+    "id": "H14-T5",
+    "hizb": 14,
+    "thumun": 5,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 74,
+    "approx": false
+  },
+  {
+    "id": "H14-T6",
+    "hizb": 14,
+    "thumun": 6,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 87,
+    "approx": true
+  },
+  {
+    "id": "H14-T7",
+    "hizb": 14,
+    "thumun": 7,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 95,
+    "approx": false
+  },
+  {
+    "id": "H14-T8",
+    "hizb": 14,
+    "thumun": 8,
+    "juz": 7,
+    "hizbName": "إنما يستجيب",
+    "surah": "الأنعام",
+    "ayah": 101,
+    "approx": true
+  },
+  {
+    "id": "H15-T1",
+    "hizb": 15,
+    "thumun": 1,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 111,
+    "approx": false
+  },
+  {
+    "id": "H15-T2",
+    "hizb": 15,
+    "thumun": 2,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 119,
+    "approx": true
+  },
+  {
+    "id": "H15-T3",
+    "hizb": 15,
+    "thumun": 3,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 127,
+    "approx": false
+  },
+  {
+    "id": "H15-T4",
+    "hizb": 15,
+    "thumun": 4,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 135,
+    "approx": true
+  },
+  {
+    "id": "H15-T5",
+    "hizb": 15,
+    "thumun": 5,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 141,
+    "approx": false
+  },
+  {
+    "id": "H15-T6",
+    "hizb": 15,
+    "thumun": 6,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 145,
+    "approx": true
+  },
+  {
+    "id": "H15-T7",
+    "hizb": 15,
+    "thumun": 7,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 151,
+    "approx": false
+  },
+  {
+    "id": "H15-T8",
+    "hizb": 15,
+    "thumun": 8,
+    "juz": 8,
+    "hizbName": "ولو أننا نزلنا",
+    "surah": "الأنعام",
+    "ayah": 157,
+    "approx": true
+  },
+  {
+    "id": "H16-T1",
+    "hizb": 16,
+    "thumun": 1,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H16-T2",
+    "hizb": 16,
+    "thumun": 2,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 20,
+    "approx": true
+  },
+  {
+    "id": "H16-T3",
+    "hizb": 16,
+    "thumun": 3,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 31,
+    "approx": false
+  },
+  {
+    "id": "H16-T4",
+    "hizb": 16,
+    "thumun": 4,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 38,
+    "approx": true
+  },
+  {
+    "id": "H16-T5",
+    "hizb": 16,
+    "thumun": 5,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 47,
+    "approx": false
+  },
+  {
+    "id": "H16-T6",
+    "hizb": 16,
+    "thumun": 6,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 54,
+    "approx": true
+  },
+  {
+    "id": "H16-T7",
+    "hizb": 16,
+    "thumun": 7,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 65,
+    "approx": false
+  },
+  {
+    "id": "H16-T8",
+    "hizb": 16,
+    "thumun": 8,
+    "juz": 8,
+    "hizbName": "فما كان",
+    "surah": "الأعراف",
+    "ayah": 75,
+    "approx": true
+  },
+  {
+    "id": "H17-T1",
+    "hizb": 17,
+    "thumun": 1,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 88,
+    "approx": false
+  },
+  {
+    "id": "H17-T2",
+    "hizb": 17,
+    "thumun": 2,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 99,
+    "approx": true
+  },
+  {
+    "id": "H17-T3",
+    "hizb": 17,
+    "thumun": 3,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 117,
+    "approx": false
+  },
+  {
+    "id": "H17-T4",
+    "hizb": 17,
+    "thumun": 4,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 131,
+    "approx": true
+  },
+  {
+    "id": "H17-T5",
+    "hizb": 17,
+    "thumun": 5,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 142,
+    "approx": false
+  },
+  {
+    "id": "H17-T6",
+    "hizb": 17,
+    "thumun": 6,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 148,
+    "approx": true
+  },
+  {
+    "id": "H17-T7",
+    "hizb": 17,
+    "thumun": 7,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 156,
+    "approx": false
+  },
+  {
+    "id": "H17-T8",
+    "hizb": 17,
+    "thumun": 8,
+    "juz": 9,
+    "hizbName": "قال الملأ",
+    "surah": "الأعراف",
+    "ayah": 161,
+    "approx": true
+  },
+  {
+    "id": "H18-T1",
+    "hizb": 18,
+    "thumun": 1,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأعراف",
+    "ayah": 171,
+    "approx": false
+  },
+  {
+    "id": "H18-T2",
+    "hizb": 18,
+    "thumun": 2,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأعراف",
+    "ayah": 179,
+    "approx": true
+  },
+  {
+    "id": "H18-T3",
+    "hizb": 18,
+    "thumun": 3,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأعراف",
+    "ayah": 189,
+    "approx": false
+  },
+  {
+    "id": "H18-T4",
+    "hizb": 18,
+    "thumun": 4,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأعراف",
+    "ayah": 197,
+    "approx": true
+  },
+  {
+    "id": "H18-T5",
+    "hizb": 18,
+    "thumun": 5,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأنفال",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H18-T6",
+    "hizb": 18,
+    "thumun": 6,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأنفال",
+    "ayah": 11,
+    "approx": true
+  },
+  {
+    "id": "H18-T7",
+    "hizb": 18,
+    "thumun": 7,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأنفال",
+    "ayah": 22,
+    "approx": false
+  },
+  {
+    "id": "H18-T8",
+    "hizb": 18,
+    "thumun": 8,
+    "juz": 9,
+    "hizbName": "وإذ نتقنا",
+    "surah": "الأنفال",
+    "ayah": 31,
+    "approx": true
+  },
+  {
+    "id": "H19-T1",
+    "hizb": 19,
+    "thumun": 1,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "الأنفال",
+    "ayah": 41,
+    "approx": false
+  },
+  {
+    "id": "H19-T2",
+    "hizb": 19,
+    "thumun": 2,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "الأنفال",
+    "ayah": 48,
+    "approx": true
+  },
+  {
+    "id": "H19-T3",
+    "hizb": 19,
+    "thumun": 3,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "الأنفال",
+    "ayah": 61,
+    "approx": false
+  },
+  {
+    "id": "H19-T4",
+    "hizb": 19,
+    "thumun": 4,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "الأنفال",
+    "ayah": 70,
+    "approx": true
+  },
+  {
+    "id": "H19-T5",
+    "hizb": 19,
+    "thumun": 5,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "التوبة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H19-T6",
+    "hizb": 19,
+    "thumun": 6,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "التوبة",
+    "ayah": 9,
+    "approx": true
+  },
+  {
+    "id": "H19-T7",
+    "hizb": 19,
+    "thumun": 7,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "التوبة",
+    "ayah": 19,
+    "approx": false
+  },
+  {
+    "id": "H19-T8",
+    "hizb": 19,
+    "thumun": 8,
+    "juz": 10,
+    "hizbName": "واعلموا",
+    "surah": "التوبة",
+    "ayah": 26,
+    "approx": true
+  },
+  {
+    "id": "H20-T1",
+    "hizb": 20,
+    "thumun": 1,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 34,
+    "approx": false
+  },
+  {
+    "id": "H20-T2",
+    "hizb": 20,
+    "thumun": 2,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 38,
+    "approx": true
+  },
+  {
+    "id": "H20-T3",
+    "hizb": 20,
+    "thumun": 3,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 46,
+    "approx": false
+  },
+  {
+    "id": "H20-T4",
+    "hizb": 20,
+    "thumun": 4,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 52,
+    "approx": true
+  },
+  {
+    "id": "H20-T5",
+    "hizb": 20,
+    "thumun": 5,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 60,
+    "approx": false
+  },
+  {
+    "id": "H20-T6",
+    "hizb": 20,
+    "thumun": 6,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 69,
+    "approx": true
+  },
+  {
+    "id": "H20-T7",
+    "hizb": 20,
+    "thumun": 7,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H20-T8",
+    "hizb": 20,
+    "thumun": 8,
+    "juz": 10,
+    "hizbName": "يا أيها الذين",
+    "surah": "التوبة",
+    "ayah": 84,
+    "approx": true
+  },
+  {
+    "id": "H21-T1",
+    "hizb": 21,
+    "thumun": 1,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "التوبة",
+    "ayah": 93,
+    "approx": false
+  },
+  {
+    "id": "H21-T2",
+    "hizb": 21,
+    "thumun": 2,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "التوبة",
+    "ayah": 101,
+    "approx": true
+  },
+  {
+    "id": "H21-T3",
+    "hizb": 21,
+    "thumun": 3,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "التوبة",
+    "ayah": 111,
+    "approx": false
+  },
+  {
+    "id": "H21-T4",
+    "hizb": 21,
+    "thumun": 4,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "التوبة",
+    "ayah": 116,
+    "approx": true
+  },
+  {
+    "id": "H21-T5",
+    "hizb": 21,
+    "thumun": 5,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "التوبة",
+    "ayah": 122,
+    "approx": false
+  },
+  {
+    "id": "H21-T6",
+    "hizb": 21,
+    "thumun": 6,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "يونس",
+    "ayah": 2,
+    "approx": true
+  },
+  {
+    "id": "H21-T7",
+    "hizb": 21,
+    "thumun": 7,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "يونس",
+    "ayah": 11,
+    "approx": false
+  },
+  {
+    "id": "H21-T8",
+    "hizb": 21,
+    "thumun": 8,
+    "juz": 11,
+    "hizbName": "إنما السبيل",
+    "surah": "يونس",
+    "ayah": 19,
+    "approx": true
+  },
+  {
+    "id": "H22-T1",
+    "hizb": 22,
+    "thumun": 1,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 26,
+    "approx": false
+  },
+  {
+    "id": "H22-T2",
+    "hizb": 22,
+    "thumun": 2,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 37,
+    "approx": true
+  },
+  {
+    "id": "H22-T3",
+    "hizb": 22,
+    "thumun": 3,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 53,
+    "approx": false
+  },
+  {
+    "id": "H22-T4",
+    "hizb": 22,
+    "thumun": 4,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 61,
+    "approx": true
+  },
+  {
+    "id": "H22-T5",
+    "hizb": 22,
+    "thumun": 5,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 71,
+    "approx": false
+  },
+  {
+    "id": "H22-T6",
+    "hizb": 22,
+    "thumun": 6,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 79,
+    "approx": true
+  },
+  {
+    "id": "H22-T7",
+    "hizb": 22,
+    "thumun": 7,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 90,
+    "approx": false
+  },
+  {
+    "id": "H22-T8",
+    "hizb": 22,
+    "thumun": 8,
+    "juz": 11,
+    "hizbName": "للذين أحسنوا",
+    "surah": "يونس",
+    "ayah": 102,
+    "approx": true
+  },
+  {
+    "id": "H23-T1",
+    "hizb": 23,
+    "thumun": 1,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 6,
+    "approx": false
+  },
+  {
+    "id": "H23-T2",
+    "hizb": 23,
+    "thumun": 2,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 15,
+    "approx": true
+  },
+  {
+    "id": "H23-T3",
+    "hizb": 23,
+    "thumun": 3,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 24,
+    "approx": false
+  },
+  {
+    "id": "H23-T4",
+    "hizb": 23,
+    "thumun": 4,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 31,
+    "approx": true
+  },
+  {
+    "id": "H23-T5",
+    "hizb": 23,
+    "thumun": 5,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 41,
+    "approx": false
+  },
+  {
+    "id": "H23-T6",
+    "hizb": 23,
+    "thumun": 6,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 50,
+    "approx": true
+  },
+  {
+    "id": "H23-T7",
+    "hizb": 23,
+    "thumun": 7,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 61,
+    "approx": false
+  },
+  {
+    "id": "H23-T8",
+    "hizb": 23,
+    "thumun": 8,
+    "juz": 12,
+    "hizbName": "وما من دابة",
+    "surah": "هود",
+    "ayah": 71,
+    "approx": true
+  },
+  {
+    "id": "H24-T1",
+    "hizb": 24,
+    "thumun": 1,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "هود",
+    "ayah": 84,
+    "approx": false
+  },
+  {
+    "id": "H24-T2",
+    "hizb": 24,
+    "thumun": 2,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "هود",
+    "ayah": 93,
+    "approx": true
+  },
+  {
+    "id": "H24-T3",
+    "hizb": 24,
+    "thumun": 3,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "هود",
+    "ayah": 108,
+    "approx": false
+  },
+  {
+    "id": "H24-T4",
+    "hizb": 24,
+    "thumun": 4,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "هود",
+    "ayah": 118,
+    "approx": true
+  },
+  {
+    "id": "H24-T5",
+    "hizb": 24,
+    "thumun": 5,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "يوسف",
+    "ayah": 7,
+    "approx": false
+  },
+  {
+    "id": "H24-T6",
+    "hizb": 24,
+    "thumun": 6,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "يوسف",
+    "ayah": 19,
+    "approx": true
+  },
+  {
+    "id": "H24-T7",
+    "hizb": 24,
+    "thumun": 7,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "يوسف",
+    "ayah": 30,
+    "approx": false
+  },
+  {
+    "id": "H24-T8",
+    "hizb": 24,
+    "thumun": 8,
+    "juz": 12,
+    "hizbName": "وإلى مدين",
+    "surah": "يوسف",
+    "ayah": 40,
+    "approx": true
+  },
+  {
+    "id": "H25-T1",
+    "hizb": 25,
+    "thumun": 1,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "يوسف",
+    "ayah": 53,
+    "approx": false
+  },
+  {
+    "id": "H25-T2",
+    "hizb": 25,
+    "thumun": 2,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "يوسف",
+    "ayah": 65,
+    "approx": true
+  },
+  {
+    "id": "H25-T3",
+    "hizb": 25,
+    "thumun": 3,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "يوسف",
+    "ayah": 77,
+    "approx": false
+  },
+  {
+    "id": "H25-T4",
+    "hizb": 25,
+    "thumun": 4,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "يوسف",
+    "ayah": 88,
+    "approx": true
+  },
+  {
+    "id": "H25-T5",
+    "hizb": 25,
+    "thumun": 5,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "يوسف",
+    "ayah": 101,
+    "approx": false
+  },
+  {
+    "id": "H25-T6",
+    "hizb": 25,
+    "thumun": 6,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "يوسف",
+    "ayah": 110,
+    "approx": true
+  },
+  {
+    "id": "H25-T7",
+    "hizb": 25,
+    "thumun": 7,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "الرعد",
+    "ayah": 5,
+    "approx": false
+  },
+  {
+    "id": "H25-T8",
+    "hizb": 25,
+    "thumun": 8,
+    "juz": 13,
+    "hizbName": "وما أبرئ",
+    "surah": "الرعد",
+    "ayah": 14,
+    "approx": true
+  },
+  {
+    "id": "H26-T1",
+    "hizb": 26,
+    "thumun": 1,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "الرعد",
+    "ayah": 19,
+    "approx": false
+  },
+  {
+    "id": "H26-T2",
+    "hizb": 26,
+    "thumun": 2,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "الرعد",
+    "ayah": 28,
+    "approx": true
+  },
+  {
+    "id": "H26-T3",
+    "hizb": 26,
+    "thumun": 3,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "الرعد",
+    "ayah": 35,
+    "approx": false
+  },
+  {
+    "id": "H26-T4",
+    "hizb": 26,
+    "thumun": 4,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "ابراهيم",
+    "ayah": 1,
+    "approx": true
+  },
+  {
+    "id": "H26-T5",
+    "hizb": 26,
+    "thumun": 5,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "ابراهيم",
+    "ayah": 10,
+    "approx": false
+  },
+  {
+    "id": "H26-T6",
+    "hizb": 26,
+    "thumun": 6,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "ابراهيم",
+    "ayah": 19,
+    "approx": true
+  },
+  {
+    "id": "H26-T7",
+    "hizb": 26,
+    "thumun": 7,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "ابراهيم",
+    "ayah": 28,
+    "approx": false
+  },
+  {
+    "id": "H26-T8",
+    "hizb": 26,
+    "thumun": 8,
+    "juz": 13,
+    "hizbName": "أفمن يعلم",
+    "surah": "ابراهيم",
+    "ayah": 39,
+    "approx": true
+  },
+  {
+    "id": "H27-T1",
+    "hizb": 27,
+    "thumun": 1,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "الحجر",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H27-T2",
+    "hizb": 27,
+    "thumun": 2,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "الحجر",
+    "ayah": 22,
+    "approx": true
+  },
+  {
+    "id": "H27-T3",
+    "hizb": 27,
+    "thumun": 3,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "الحجر",
+    "ayah": 49,
+    "approx": false
+  },
+  {
+    "id": "H27-T4",
+    "hizb": 27,
+    "thumun": 4,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "الحجر",
+    "ayah": 74,
+    "approx": true
+  },
+  {
+    "id": "H27-T5",
+    "hizb": 27,
+    "thumun": 5,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "النحل",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H27-T6",
+    "hizb": 27,
+    "thumun": 6,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "النحل",
+    "ayah": 15,
+    "approx": true
+  },
+  {
+    "id": "H27-T7",
+    "hizb": 27,
+    "thumun": 7,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "النحل",
+    "ayah": 30,
+    "approx": false
+  },
+  {
+    "id": "H27-T8",
+    "hizb": 27,
+    "thumun": 8,
+    "juz": 14,
+    "hizbName": "الحجر",
+    "surah": "النحل",
+    "ayah": 38,
+    "approx": true
+  },
+  {
+    "id": "H28-T1",
+    "hizb": 28,
+    "thumun": 1,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H28-T2",
+    "hizb": 28,
+    "thumun": 2,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 64,
+    "approx": true
+  },
+  {
+    "id": "H28-T3",
+    "hizb": 28,
+    "thumun": 3,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H28-T4",
+    "hizb": 28,
+    "thumun": 4,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 81,
+    "approx": true
+  },
+  {
+    "id": "H28-T5",
+    "hizb": 28,
+    "thumun": 5,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 90,
+    "approx": false
+  },
+  {
+    "id": "H28-T6",
+    "hizb": 28,
+    "thumun": 6,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 99,
+    "approx": true
+  },
+  {
+    "id": "H28-T7",
+    "hizb": 28,
+    "thumun": 7,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 111,
+    "approx": false
+  },
+  {
+    "id": "H28-T8",
+    "hizb": 28,
+    "thumun": 8,
+    "juz": 14,
+    "hizbName": "وقال الله لا تتخذوا",
+    "surah": "النحل",
+    "ayah": 119,
+    "approx": true
+  },
+  {
+    "id": "H29-T1",
+    "hizb": 29,
+    "thumun": 1,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H29-T2",
+    "hizb": 29,
+    "thumun": 2,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 11,
+    "approx": true
+  },
+  {
+    "id": "H29-T3",
+    "hizb": 29,
+    "thumun": 3,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 23,
+    "approx": false
+  },
+  {
+    "id": "H29-T4",
+    "hizb": 29,
+    "thumun": 4,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 36,
+    "approx": true
+  },
+  {
+    "id": "H29-T5",
+    "hizb": 29,
+    "thumun": 5,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 50,
+    "approx": false
+  },
+  {
+    "id": "H29-T6",
+    "hizb": 29,
+    "thumun": 6,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 60,
+    "approx": true
+  },
+  {
+    "id": "H29-T7",
+    "hizb": 29,
+    "thumun": 7,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 70,
+    "approx": false
+  },
+  {
+    "id": "H29-T8",
+    "hizb": 29,
+    "thumun": 8,
+    "juz": 15,
+    "hizbName": "الإسراء",
+    "surah": "الإسراء",
+    "ayah": 85,
+    "approx": true
+  },
+  {
+    "id": "H30-T1",
+    "hizb": 30,
+    "thumun": 1,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الإسراء",
+    "ayah": 99,
+    "approx": false
+  },
+  {
+    "id": "H30-T2",
+    "hizb": 30,
+    "thumun": 2,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الإسراء",
+    "ayah": 111,
+    "approx": true
+  },
+  {
+    "id": "H30-T3",
+    "hizb": 30,
+    "thumun": 3,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الكهف",
+    "ayah": 17,
+    "approx": false
+  },
+  {
+    "id": "H30-T4",
+    "hizb": 30,
+    "thumun": 4,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الكهف",
+    "ayah": 22,
+    "approx": true
+  },
+  {
+    "id": "H30-T5",
+    "hizb": 30,
+    "thumun": 5,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الكهف",
+    "ayah": 32,
+    "approx": false
+  },
+  {
+    "id": "H30-T6",
+    "hizb": 30,
+    "thumun": 6,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الكهف",
+    "ayah": 43,
+    "approx": true
+  },
+  {
+    "id": "H30-T7",
+    "hizb": 30,
+    "thumun": 7,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الكهف",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H30-T8",
+    "hizb": 30,
+    "thumun": 8,
+    "juz": 15,
+    "hizbName": "أولم يروا",
+    "surah": "الكهف",
+    "ayah": 60,
+    "approx": true
+  },
+  {
+    "id": "H31-T1",
+    "hizb": 31,
+    "thumun": 1,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "الكهف",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H31-T2",
+    "hizb": 31,
+    "thumun": 2,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "الكهف",
+    "ayah": 86,
+    "approx": true
+  },
+  {
+    "id": "H31-T3",
+    "hizb": 31,
+    "thumun": 3,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "الكهف",
+    "ayah": 99,
+    "approx": false
+  },
+  {
+    "id": "H31-T4",
+    "hizb": 31,
+    "thumun": 4,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "مريم",
+    "ayah": 4,
+    "approx": true
+  },
+  {
+    "id": "H31-T5",
+    "hizb": 31,
+    "thumun": 5,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "مريم",
+    "ayah": 22,
+    "approx": false
+  },
+  {
+    "id": "H31-T6",
+    "hizb": 31,
+    "thumun": 6,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "مريم",
+    "ayah": 41,
+    "approx": true
+  },
+  {
+    "id": "H31-T7",
+    "hizb": 31,
+    "thumun": 7,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "مريم",
+    "ayah": 59,
+    "approx": false
+  },
+  {
+    "id": "H31-T8",
+    "hizb": 31,
+    "thumun": 8,
+    "juz": 16,
+    "hizbName": "قال ألم أقل لك",
+    "surah": "مريم",
+    "ayah": 75,
+    "approx": true
+  },
+  {
+    "id": "H32-T1",
+    "hizb": 32,
+    "thumun": 1,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H32-T2",
+    "hizb": 32,
+    "thumun": 2,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 33,
+    "approx": true
+  },
+  {
+    "id": "H32-T3",
+    "hizb": 32,
+    "thumun": 3,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 55,
+    "approx": false
+  },
+  {
+    "id": "H32-T4",
+    "hizb": 32,
+    "thumun": 4,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 71,
+    "approx": true
+  },
+  {
+    "id": "H32-T5",
+    "hizb": 32,
+    "thumun": 5,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 83,
+    "approx": false
+  },
+  {
+    "id": "H32-T6",
+    "hizb": 32,
+    "thumun": 6,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 96,
+    "approx": true
+  },
+  {
+    "id": "H32-T7",
+    "hizb": 32,
+    "thumun": 7,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 111,
+    "approx": false
+  },
+  {
+    "id": "H32-T8",
+    "hizb": 32,
+    "thumun": 8,
+    "juz": 16,
+    "hizbName": "طه",
+    "surah": "طه",
+    "ayah": 124,
+    "approx": true
+  },
+  {
+    "id": "H33-T1",
+    "hizb": 33,
+    "thumun": 1,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H33-T2",
+    "hizb": 33,
+    "thumun": 2,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 15,
+    "approx": true
+  },
+  {
+    "id": "H33-T3",
+    "hizb": 33,
+    "thumun": 3,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 29,
+    "approx": false
+  },
+  {
+    "id": "H33-T4",
+    "hizb": 33,
+    "thumun": 4,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 40,
+    "approx": true
+  },
+  {
+    "id": "H33-T5",
+    "hizb": 33,
+    "thumun": 5,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H33-T6",
+    "hizb": 33,
+    "thumun": 6,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 70,
+    "approx": true
+  },
+  {
+    "id": "H33-T7",
+    "hizb": 33,
+    "thumun": 7,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 83,
+    "approx": false
+  },
+  {
+    "id": "H33-T8",
+    "hizb": 33,
+    "thumun": 8,
+    "juz": 17,
+    "hizbName": "الأنبياء",
+    "surah": "الأنبياء",
+    "ayah": 97,
+    "approx": true
+  },
+  {
+    "id": "H34-T1",
+    "hizb": 34,
+    "thumun": 1,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H34-T2",
+    "hizb": 34,
+    "thumun": 2,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 10,
+    "approx": true
+  },
+  {
+    "id": "H34-T3",
+    "hizb": 34,
+    "thumun": 3,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 19,
+    "approx": false
+  },
+  {
+    "id": "H34-T4",
+    "hizb": 34,
+    "thumun": 4,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 29,
+    "approx": true
+  },
+  {
+    "id": "H34-T5",
+    "hizb": 34,
+    "thumun": 5,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 38,
+    "approx": false
+  },
+  {
+    "id": "H34-T6",
+    "hizb": 34,
+    "thumun": 6,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 48,
+    "approx": true
+  },
+  {
+    "id": "H34-T7",
+    "hizb": 34,
+    "thumun": 7,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 60,
+    "approx": false
+  },
+  {
+    "id": "H34-T8",
+    "hizb": 34,
+    "thumun": 8,
+    "juz": 17,
+    "hizbName": "الحج",
+    "surah": "الحج",
+    "ayah": 71,
+    "approx": true
+  },
+  {
+    "id": "H35-T1",
+    "hizb": 35,
+    "thumun": 1,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "المؤمنون",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H35-T2",
+    "hizb": 35,
+    "thumun": 2,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "المؤمنون",
+    "ayah": 23,
+    "approx": true
+  },
+  {
+    "id": "H35-T3",
+    "hizb": 35,
+    "thumun": 3,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "المؤمنون",
+    "ayah": 36,
+    "approx": false
+  },
+  {
+    "id": "H35-T4",
+    "hizb": 35,
+    "thumun": 4,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "المؤمنون",
+    "ayah": 55,
+    "approx": true
+  },
+  {
+    "id": "H35-T5",
+    "hizb": 35,
+    "thumun": 5,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "المؤمنون",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H35-T6",
+    "hizb": 35,
+    "thumun": 6,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "المؤمنون",
+    "ayah": 97,
+    "approx": true
+  },
+  {
+    "id": "H35-T7",
+    "hizb": 35,
+    "thumun": 7,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "النور",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H35-T8",
+    "hizb": 35,
+    "thumun": 8,
+    "juz": 18,
+    "hizbName": "المؤمنون",
+    "surah": "النور",
+    "ayah": 10,
+    "approx": true
+  },
+  {
+    "id": "H36-T1",
+    "hizb": 36,
+    "thumun": 1,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "النور",
+    "ayah": 21,
+    "approx": false
+  },
+  {
+    "id": "H36-T2",
+    "hizb": 36,
+    "thumun": 2,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "النور",
+    "ayah": 30,
+    "approx": true
+  },
+  {
+    "id": "H36-T3",
+    "hizb": 36,
+    "thumun": 3,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "النور",
+    "ayah": 35,
+    "approx": false
+  },
+  {
+    "id": "H36-T4",
+    "hizb": 36,
+    "thumun": 4,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "النور",
+    "ayah": 42,
+    "approx": true
+  },
+  {
+    "id": "H36-T5",
+    "hizb": 36,
+    "thumun": 5,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "النور",
+    "ayah": 53,
+    "approx": false
+  },
+  {
+    "id": "H36-T6",
+    "hizb": 36,
+    "thumun": 6,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "النور",
+    "ayah": 60,
+    "approx": true
+  },
+  {
+    "id": "H36-T7",
+    "hizb": 36,
+    "thumun": 7,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "الفرقان",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H36-T8",
+    "hizb": 36,
+    "thumun": 8,
+    "juz": 18,
+    "hizbName": "يا أيها الذين آمنوا (النور)",
+    "surah": "الفرقان",
+    "ayah": 10,
+    "approx": true
+  },
+  {
+    "id": "H37-T1",
+    "hizb": 37,
+    "thumun": 1,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الفرقان",
+    "ayah": 21,
+    "approx": false
+  },
+  {
+    "id": "H37-T2",
+    "hizb": 37,
+    "thumun": 2,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الفرقان",
+    "ayah": 36,
+    "approx": true
+  },
+  {
+    "id": "H37-T3",
+    "hizb": 37,
+    "thumun": 3,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الفرقان",
+    "ayah": 53,
+    "approx": false
+  },
+  {
+    "id": "H37-T4",
+    "hizb": 37,
+    "thumun": 4,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الفرقان",
+    "ayah": 65,
+    "approx": true
+  },
+  {
+    "id": "H37-T5",
+    "hizb": 37,
+    "thumun": 5,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الشعراء",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H37-T6",
+    "hizb": 37,
+    "thumun": 6,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الشعراء",
+    "ayah": 27,
+    "approx": true
+  },
+  {
+    "id": "H37-T7",
+    "hizb": 37,
+    "thumun": 7,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الشعراء",
+    "ayah": 52,
+    "approx": false
+  },
+  {
+    "id": "H37-T8",
+    "hizb": 37,
+    "thumun": 8,
+    "juz": 19,
+    "hizbName": "وقال الذين (الفرقان)",
+    "surah": "الشعراء",
+    "ayah": 80,
+    "approx": true
+  },
+  {
+    "id": "H38-T1",
+    "hizb": 38,
+    "thumun": 1,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "الشعراء",
+    "ayah": 111,
+    "approx": false
+  },
+  {
+    "id": "H38-T2",
+    "hizb": 38,
+    "thumun": 2,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "الشعراء",
+    "ayah": 146,
+    "approx": true
+  },
+  {
+    "id": "H38-T3",
+    "hizb": 38,
+    "thumun": 3,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "الشعراء",
+    "ayah": 181,
+    "approx": false
+  },
+  {
+    "id": "H38-T4",
+    "hizb": 38,
+    "thumun": 4,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "الشعراء",
+    "ayah": 203,
+    "approx": true
+  },
+  {
+    "id": "H38-T5",
+    "hizb": 38,
+    "thumun": 5,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "النمل",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H38-T6",
+    "hizb": 38,
+    "thumun": 6,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "النمل",
+    "ayah": 15,
+    "approx": true
+  },
+  {
+    "id": "H38-T7",
+    "hizb": 38,
+    "thumun": 7,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "النمل",
+    "ayah": 27,
+    "approx": false
+  },
+  {
+    "id": "H38-T8",
+    "hizb": 38,
+    "thumun": 8,
+    "juz": 19,
+    "hizbName": "قالوا أنؤمن",
+    "surah": "النمل",
+    "ayah": 41,
+    "approx": true
+  },
+  {
+    "id": "H39-T1",
+    "hizb": 39,
+    "thumun": 1,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "النمل",
+    "ayah": 56,
+    "approx": false
+  },
+  {
+    "id": "H39-T2",
+    "hizb": 39,
+    "thumun": 2,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "النمل",
+    "ayah": 65,
+    "approx": true
+  },
+  {
+    "id": "H39-T3",
+    "hizb": 39,
+    "thumun": 3,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "النمل",
+    "ayah": 82,
+    "approx": false
+  },
+  {
+    "id": "H39-T4",
+    "hizb": 39,
+    "thumun": 4,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "النمل",
+    "ayah": 93,
+    "approx": true
+  },
+  {
+    "id": "H39-T5",
+    "hizb": 39,
+    "thumun": 5,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "القصص",
+    "ayah": 12,
+    "approx": false
+  },
+  {
+    "id": "H39-T6",
+    "hizb": 39,
+    "thumun": 6,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "القصص",
+    "ayah": 20,
+    "approx": true
+  },
+  {
+    "id": "H39-T7",
+    "hizb": 39,
+    "thumun": 7,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "القصص",
+    "ayah": 29,
+    "approx": false
+  },
+  {
+    "id": "H39-T8",
+    "hizb": 39,
+    "thumun": 8,
+    "juz": 20,
+    "hizbName": "فما كان (النمل)",
+    "surah": "القصص",
+    "ayah": 39,
+    "approx": true
+  },
+  {
+    "id": "H40-T1",
+    "hizb": 40,
+    "thumun": 1,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "القصص",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H40-T2",
+    "hizb": 40,
+    "thumun": 2,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "القصص",
+    "ayah": 62,
+    "approx": true
+  },
+  {
+    "id": "H40-T3",
+    "hizb": 40,
+    "thumun": 3,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "القصص",
+    "ayah": 76,
+    "approx": false
+  },
+  {
+    "id": "H40-T4",
+    "hizb": 40,
+    "thumun": 4,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "القصص",
+    "ayah": 81,
+    "approx": true
+  },
+  {
+    "id": "H40-T5",
+    "hizb": 40,
+    "thumun": 5,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "العنكبوت",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H40-T6",
+    "hizb": 40,
+    "thumun": 6,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "العنكبوت",
+    "ayah": 14,
+    "approx": true
+  },
+  {
+    "id": "H40-T7",
+    "hizb": 40,
+    "thumun": 7,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "العنكبوت",
+    "ayah": 26,
+    "approx": false
+  },
+  {
+    "id": "H40-T8",
+    "hizb": 40,
+    "thumun": 8,
+    "juz": 20,
+    "hizbName": "ولقد وصلنا",
+    "surah": "العنكبوت",
+    "ayah": 36,
+    "approx": true
+  },
+  {
+    "id": "H41-T1",
+    "hizb": 41,
+    "thumun": 1,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "العنكبوت",
+    "ayah": 46,
+    "approx": false
+  },
+  {
+    "id": "H41-T2",
+    "hizb": 41,
+    "thumun": 2,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "العنكبوت",
+    "ayah": 57,
+    "approx": true
+  },
+  {
+    "id": "H41-T3",
+    "hizb": 41,
+    "thumun": 3,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "الروم",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H41-T4",
+    "hizb": 41,
+    "thumun": 4,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "الروم",
+    "ayah": 19,
+    "approx": true
+  },
+  {
+    "id": "H41-T5",
+    "hizb": 41,
+    "thumun": 5,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "الروم",
+    "ayah": 31,
+    "approx": false
+  },
+  {
+    "id": "H41-T6",
+    "hizb": 41,
+    "thumun": 6,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "الروم",
+    "ayah": 42,
+    "approx": true
+  },
+  {
+    "id": "H41-T7",
+    "hizb": 41,
+    "thumun": 7,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "الروم",
+    "ayah": 54,
+    "approx": false
+  },
+  {
+    "id": "H41-T8",
+    "hizb": 41,
+    "thumun": 8,
+    "juz": 21,
+    "hizbName": "ولا تجادلوا",
+    "surah": "لقمان",
+    "ayah": 10,
+    "approx": true
+  },
+  {
+    "id": "H42-T1",
+    "hizb": 42,
+    "thumun": 1,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "لقمان",
+    "ayah": 22,
+    "approx": false
+  },
+  {
+    "id": "H42-T2",
+    "hizb": 42,
+    "thumun": 2,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "لقمان",
+    "ayah": 32,
+    "approx": true
+  },
+  {
+    "id": "H42-T3",
+    "hizb": 42,
+    "thumun": 3,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "السجدة",
+    "ayah": 11,
+    "approx": false
+  },
+  {
+    "id": "H42-T4",
+    "hizb": 42,
+    "thumun": 4,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "السجدة",
+    "ayah": 20,
+    "approx": true
+  },
+  {
+    "id": "H42-T5",
+    "hizb": 42,
+    "thumun": 5,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "الأحزاب",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H42-T6",
+    "hizb": 42,
+    "thumun": 6,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "الأحزاب",
+    "ayah": 8,
+    "approx": true
+  },
+  {
+    "id": "H42-T7",
+    "hizb": 42,
+    "thumun": 7,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "الأحزاب",
+    "ayah": 18,
+    "approx": false
+  },
+  {
+    "id": "H42-T8",
+    "hizb": 42,
+    "thumun": 8,
+    "juz": 21,
+    "hizbName": "ومن يسلم",
+    "surah": "الأحزاب",
+    "ayah": 23,
+    "approx": true
+  },
+  {
+    "id": "H43-T1",
+    "hizb": 43,
+    "thumun": 1,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "الأحزاب",
+    "ayah": 31,
+    "approx": false
+  },
+  {
+    "id": "H43-T2",
+    "hizb": 43,
+    "thumun": 2,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "الأحزاب",
+    "ayah": 38,
+    "approx": true
+  },
+  {
+    "id": "H43-T3",
+    "hizb": 43,
+    "thumun": 3,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "الأحزاب",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H43-T4",
+    "hizb": 43,
+    "thumun": 4,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "الأحزاب",
+    "ayah": 53,
+    "approx": true
+  },
+  {
+    "id": "H43-T5",
+    "hizb": 43,
+    "thumun": 5,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "الأحزاب",
+    "ayah": 60,
+    "approx": false
+  },
+  {
+    "id": "H43-T6",
+    "hizb": 43,
+    "thumun": 6,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "الأحزاب",
+    "ayah": 73,
+    "approx": true
+  },
+  {
+    "id": "H43-T7",
+    "hizb": 43,
+    "thumun": 7,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "سبإ",
+    "ayah": 10,
+    "approx": false
+  },
+  {
+    "id": "H43-T8",
+    "hizb": 43,
+    "thumun": 8,
+    "juz": 22,
+    "hizbName": "ومن يقنت",
+    "surah": "سبإ",
+    "ayah": 16,
+    "approx": true
+  },
+  {
+    "id": "H44-T1",
+    "hizb": 44,
+    "thumun": 1,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "سبإ",
+    "ayah": 24,
+    "approx": false
+  },
+  {
+    "id": "H44-T2",
+    "hizb": 44,
+    "thumun": 2,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "سبإ",
+    "ayah": 34,
+    "approx": true
+  },
+  {
+    "id": "H44-T3",
+    "hizb": 44,
+    "thumun": 3,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "سبإ",
+    "ayah": 46,
+    "approx": false
+  },
+  {
+    "id": "H44-T4",
+    "hizb": 44,
+    "thumun": 4,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "فاطر",
+    "ayah": 6,
+    "approx": true
+  },
+  {
+    "id": "H44-T5",
+    "hizb": 44,
+    "thumun": 5,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "فاطر",
+    "ayah": 15,
+    "approx": false
+  },
+  {
+    "id": "H44-T6",
+    "hizb": 44,
+    "thumun": 6,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "فاطر",
+    "ayah": 30,
+    "approx": true
+  },
+  {
+    "id": "H44-T7",
+    "hizb": 44,
+    "thumun": 7,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "فاطر",
+    "ayah": 41,
+    "approx": false
+  },
+  {
+    "id": "H44-T8",
+    "hizb": 44,
+    "thumun": 8,
+    "juz": 22,
+    "hizbName": "قل من يرزقكم",
+    "surah": "يس",
+    "ayah": 9,
+    "approx": true
+  },
+  {
+    "id": "H45-T1",
+    "hizb": 45,
+    "thumun": 1,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "يس",
+    "ayah": 28,
+    "approx": false
+  },
+  {
+    "id": "H45-T2",
+    "hizb": 45,
+    "thumun": 2,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "يس",
+    "ayah": 43,
+    "approx": true
+  },
+  {
+    "id": "H45-T3",
+    "hizb": 45,
+    "thumun": 3,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "يس",
+    "ayah": 60,
+    "approx": false
+  },
+  {
+    "id": "H45-T4",
+    "hizb": 45,
+    "thumun": 4,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "يس",
+    "ayah": 78,
+    "approx": true
+  },
+  {
+    "id": "H45-T5",
+    "hizb": 45,
+    "thumun": 5,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "الصافات",
+    "ayah": 22,
+    "approx": false
+  },
+  {
+    "id": "H45-T6",
+    "hizb": 45,
+    "thumun": 6,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "الصافات",
+    "ayah": 52,
+    "approx": true
+  },
+  {
+    "id": "H45-T7",
+    "hizb": 45,
+    "thumun": 7,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "الصافات",
+    "ayah": 83,
+    "approx": false
+  },
+  {
+    "id": "H45-T8",
+    "hizb": 45,
+    "thumun": 8,
+    "juz": 23,
+    "hizbName": "وما أنزلنا (يس)",
+    "surah": "الصافات",
+    "ayah": 113,
+    "approx": true
+  },
+  {
+    "id": "H46-T1",
+    "hizb": 46,
+    "thumun": 1,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "الصافات",
+    "ayah": 145,
+    "approx": false
+  },
+  {
+    "id": "H46-T2",
+    "hizb": 46,
+    "thumun": 2,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "الصافات",
+    "ayah": 181,
+    "approx": true
+  },
+  {
+    "id": "H46-T3",
+    "hizb": 46,
+    "thumun": 3,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "ص",
+    "ayah": 21,
+    "approx": false
+  },
+  {
+    "id": "H46-T4",
+    "hizb": 46,
+    "thumun": 4,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "ص",
+    "ayah": 31,
+    "approx": true
+  },
+  {
+    "id": "H46-T5",
+    "hizb": 46,
+    "thumun": 5,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "ص",
+    "ayah": 52,
+    "approx": false
+  },
+  {
+    "id": "H46-T6",
+    "hizb": 46,
+    "thumun": 6,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "ص",
+    "ayah": 81,
+    "approx": true
+  },
+  {
+    "id": "H46-T7",
+    "hizb": 46,
+    "thumun": 7,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "الزمر",
+    "ayah": 8,
+    "approx": false
+  },
+  {
+    "id": "H46-T8",
+    "hizb": 46,
+    "thumun": 8,
+    "juz": 23,
+    "hizbName": "فنبذناه",
+    "surah": "الزمر",
+    "ayah": 20,
+    "approx": true
+  },
+  {
+    "id": "H47-T1",
+    "hizb": 47,
+    "thumun": 1,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "الزمر",
+    "ayah": 32,
+    "approx": false
+  },
+  {
+    "id": "H47-T2",
+    "hizb": 47,
+    "thumun": 2,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "الزمر",
+    "ayah": 42,
+    "approx": true
+  },
+  {
+    "id": "H47-T3",
+    "hizb": 47,
+    "thumun": 3,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "الزمر",
+    "ayah": 53,
+    "approx": false
+  },
+  {
+    "id": "H47-T4",
+    "hizb": 47,
+    "thumun": 4,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "الزمر",
+    "ayah": 67,
+    "approx": true
+  },
+  {
+    "id": "H47-T5",
+    "hizb": 47,
+    "thumun": 5,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "غافر",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H47-T6",
+    "hizb": 47,
+    "thumun": 6,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "غافر",
+    "ayah": 10,
+    "approx": true
+  },
+  {
+    "id": "H47-T7",
+    "hizb": 47,
+    "thumun": 7,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "غافر",
+    "ayah": 21,
+    "approx": false
+  },
+  {
+    "id": "H47-T8",
+    "hizb": 47,
+    "thumun": 8,
+    "juz": 24,
+    "hizbName": "فمن أظلم",
+    "surah": "غافر",
+    "ayah": 29,
+    "approx": true
+  },
+  {
+    "id": "H48-T1",
+    "hizb": 48,
+    "thumun": 1,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "غافر",
+    "ayah": 41,
+    "approx": false
+  },
+  {
+    "id": "H48-T2",
+    "hizb": 48,
+    "thumun": 2,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "غافر",
+    "ayah": 53,
+    "approx": true
+  },
+  {
+    "id": "H48-T3",
+    "hizb": 48,
+    "thumun": 3,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "غافر",
+    "ayah": 66,
+    "approx": false
+  },
+  {
+    "id": "H48-T4",
+    "hizb": 48,
+    "thumun": 4,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "غافر",
+    "ayah": 79,
+    "approx": true
+  },
+  {
+    "id": "H48-T5",
+    "hizb": 48,
+    "thumun": 5,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "فصلت",
+    "ayah": 9,
+    "approx": false
+  },
+  {
+    "id": "H48-T6",
+    "hizb": 48,
+    "thumun": 6,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "فصلت",
+    "ayah": 16,
+    "approx": true
+  },
+  {
+    "id": "H48-T7",
+    "hizb": 48,
+    "thumun": 7,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "فصلت",
+    "ayah": 25,
+    "approx": false
+  },
+  {
+    "id": "H48-T8",
+    "hizb": 48,
+    "thumun": 8,
+    "juz": 24,
+    "hizbName": "ويا قوم ما لي",
+    "surah": "فصلت",
+    "ayah": 36,
+    "approx": true
+  },
+  {
+    "id": "H49-T1",
+    "hizb": 49,
+    "thumun": 1,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "فصلت",
+    "ayah": 47,
+    "approx": false
+  },
+  {
+    "id": "H49-T2",
+    "hizb": 49,
+    "thumun": 2,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الشورى",
+    "ayah": 4,
+    "approx": true
+  },
+  {
+    "id": "H49-T3",
+    "hizb": 49,
+    "thumun": 3,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الشورى",
+    "ayah": 13,
+    "approx": false
+  },
+  {
+    "id": "H49-T4",
+    "hizb": 49,
+    "thumun": 4,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الشورى",
+    "ayah": 18,
+    "approx": true
+  },
+  {
+    "id": "H49-T5",
+    "hizb": 49,
+    "thumun": 5,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الشورى",
+    "ayah": 27,
+    "approx": false
+  },
+  {
+    "id": "H49-T6",
+    "hizb": 49,
+    "thumun": 6,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الشورى",
+    "ayah": 40,
+    "approx": true
+  },
+  {
+    "id": "H49-T7",
+    "hizb": 49,
+    "thumun": 7,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الشورى",
+    "ayah": 51,
+    "approx": false
+  },
+  {
+    "id": "H49-T8",
+    "hizb": 49,
+    "thumun": 8,
+    "juz": 25,
+    "hizbName": "إليه يرد",
+    "surah": "الزخرف",
+    "ayah": 12,
+    "approx": true
+  },
+  {
+    "id": "H50-T1",
+    "hizb": 50,
+    "thumun": 1,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الزخرف",
+    "ayah": 24,
+    "approx": false
+  },
+  {
+    "id": "H50-T2",
+    "hizb": 50,
+    "thumun": 2,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الزخرف",
+    "ayah": 39,
+    "approx": true
+  },
+  {
+    "id": "H50-T3",
+    "hizb": 50,
+    "thumun": 3,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الزخرف",
+    "ayah": 57,
+    "approx": false
+  },
+  {
+    "id": "H50-T4",
+    "hizb": 50,
+    "thumun": 4,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الزخرف",
+    "ayah": 78,
+    "approx": true
+  },
+  {
+    "id": "H50-T5",
+    "hizb": 50,
+    "thumun": 5,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الدخان",
+    "ayah": 17,
+    "approx": false
+  },
+  {
+    "id": "H50-T6",
+    "hizb": 50,
+    "thumun": 6,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الدخان",
+    "ayah": 46,
+    "approx": true
+  },
+  {
+    "id": "H50-T7",
+    "hizb": 50,
+    "thumun": 7,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الجاثية",
+    "ayah": 12,
+    "approx": false
+  },
+  {
+    "id": "H50-T8",
+    "hizb": 50,
+    "thumun": 8,
+    "juz": 25,
+    "hizbName": "قل أولو جئتكم",
+    "surah": "الجاثية",
+    "ayah": 24,
+    "approx": true
+  },
+  {
+    "id": "H51-T1",
+    "hizb": 51,
+    "thumun": 1,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "الأحقاف",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H51-T2",
+    "hizb": 51,
+    "thumun": 2,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "الأحقاف",
+    "ayah": 12,
+    "approx": true
+  },
+  {
+    "id": "H51-T3",
+    "hizb": 51,
+    "thumun": 3,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "الأحقاف",
+    "ayah": 21,
+    "approx": false
+  },
+  {
+    "id": "H51-T4",
+    "hizb": 51,
+    "thumun": 4,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "الأحقاف",
+    "ayah": 32,
+    "approx": true
+  },
+  {
+    "id": "H51-T5",
+    "hizb": 51,
+    "thumun": 5,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "محمد",
+    "ayah": 10,
+    "approx": false
+  },
+  {
+    "id": "H51-T6",
+    "hizb": 51,
+    "thumun": 6,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "محمد",
+    "ayah": 19,
+    "approx": true
+  },
+  {
+    "id": "H51-T7",
+    "hizb": 51,
+    "thumun": 7,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "محمد",
+    "ayah": 33,
+    "approx": false
+  },
+  {
+    "id": "H51-T8",
+    "hizb": 51,
+    "thumun": 8,
+    "juz": 26,
+    "hizbName": "حم - الأحقاف",
+    "surah": "الفتح",
+    "ayah": 9,
+    "approx": true
+  },
+  {
+    "id": "H52-T1",
+    "hizb": 52,
+    "thumun": 1,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "الفتح",
+    "ayah": 18,
+    "approx": false
+  },
+  {
+    "id": "H52-T2",
+    "hizb": 52,
+    "thumun": 2,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "الفتح",
+    "ayah": 25,
+    "approx": true
+  },
+  {
+    "id": "H52-T3",
+    "hizb": 52,
+    "thumun": 3,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "الحجرات",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H52-T4",
+    "hizb": 52,
+    "thumun": 4,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "الحجرات",
+    "ayah": 9,
+    "approx": true
+  },
+  {
+    "id": "H52-T5",
+    "hizb": 52,
+    "thumun": 5,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "الحجرات",
+    "ayah": 14,
+    "approx": false
+  },
+  {
+    "id": "H52-T6",
+    "hizb": 52,
+    "thumun": 6,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "ق",
+    "ayah": 7,
+    "approx": true
+  },
+  {
+    "id": "H52-T7",
+    "hizb": 52,
+    "thumun": 7,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "ق",
+    "ayah": 27,
+    "approx": false
+  },
+  {
+    "id": "H52-T8",
+    "hizb": 52,
+    "thumun": 8,
+    "juz": 26,
+    "hizbName": "لقد رضي",
+    "surah": "الذاريات",
+    "ayah": 1,
+    "approx": true
+  },
+  {
+    "id": "H53-T1",
+    "hizb": 53,
+    "thumun": 1,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "الذاريات",
+    "ayah": 31,
+    "approx": false
+  },
+  {
+    "id": "H53-T2",
+    "hizb": 53,
+    "thumun": 2,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "الذاريات",
+    "ayah": 55,
+    "approx": true
+  },
+  {
+    "id": "H53-T3",
+    "hizb": 53,
+    "thumun": 3,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "الطور",
+    "ayah": 24,
+    "approx": false
+  },
+  {
+    "id": "H53-T4",
+    "hizb": 53,
+    "thumun": 4,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "الطور",
+    "ayah": 46,
+    "approx": true
+  },
+  {
+    "id": "H53-T5",
+    "hizb": 53,
+    "thumun": 5,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "النجم",
+    "ayah": 26,
+    "approx": false
+  },
+  {
+    "id": "H53-T6",
+    "hizb": 53,
+    "thumun": 6,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "النجم",
+    "ayah": 41,
+    "approx": true
+  },
+  {
+    "id": "H53-T7",
+    "hizb": 53,
+    "thumun": 7,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "القمر",
+    "ayah": 9,
+    "approx": false
+  },
+  {
+    "id": "H53-T8",
+    "hizb": 53,
+    "thumun": 8,
+    "juz": 27,
+    "hizbName": "قال فما خطبكم",
+    "surah": "القمر",
+    "ayah": 31,
+    "approx": true
+  },
+  {
+    "id": "H54-T1",
+    "hizb": 54,
+    "thumun": 1,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الرحمن",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H54-T2",
+    "hizb": 54,
+    "thumun": 2,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الرحمن",
+    "ayah": 39,
+    "approx": true
+  },
+  {
+    "id": "H54-T3",
+    "hizb": 54,
+    "thumun": 3,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الواقعة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H54-T4",
+    "hizb": 54,
+    "thumun": 4,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الواقعة",
+    "ayah": 45,
+    "approx": true
+  },
+  {
+    "id": "H54-T5",
+    "hizb": 54,
+    "thumun": 5,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الواقعة",
+    "ayah": 75,
+    "approx": false
+  },
+  {
+    "id": "H54-T6",
+    "hizb": 54,
+    "thumun": 6,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الحديد",
+    "ayah": 7,
+    "approx": true
+  },
+  {
+    "id": "H54-T7",
+    "hizb": 54,
+    "thumun": 7,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الحديد",
+    "ayah": 16,
+    "approx": false
+  },
+  {
+    "id": "H54-T8",
+    "hizb": 54,
+    "thumun": 8,
+    "juz": 27,
+    "hizbName": "الرحمن",
+    "surah": "الحديد",
+    "ayah": 23,
+    "approx": true
+  },
+  {
+    "id": "H55-T1",
+    "hizb": 55,
+    "thumun": 1,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "المجادلة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H55-T2",
+    "hizb": 55,
+    "thumun": 2,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "المجادلة",
+    "ayah": 8,
+    "approx": true
+  },
+  {
+    "id": "H55-T3",
+    "hizb": 55,
+    "thumun": 3,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "المجادلة",
+    "ayah": 14,
+    "approx": false
+  },
+  {
+    "id": "H55-T4",
+    "hizb": 55,
+    "thumun": 4,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "الحشر",
+    "ayah": 2,
+    "approx": true
+  },
+  {
+    "id": "H55-T5",
+    "hizb": 55,
+    "thumun": 5,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "الحشر",
+    "ayah": 11,
+    "approx": false
+  },
+  {
+    "id": "H55-T6",
+    "hizb": 55,
+    "thumun": 6,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "الحشر",
+    "ayah": 23,
+    "approx": true
+  },
+  {
+    "id": "H55-T7",
+    "hizb": 55,
+    "thumun": 7,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "الممتحنة",
+    "ayah": 7,
+    "approx": false
+  },
+  {
+    "id": "H55-T8",
+    "hizb": 55,
+    "thumun": 8,
+    "juz": 28,
+    "hizbName": "قد سمع",
+    "surah": "الصف",
+    "ayah": 2,
+    "approx": true
+  },
+  {
+    "id": "H56-T1",
+    "hizb": 56,
+    "thumun": 1,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "الجمعة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H56-T2",
+    "hizb": 56,
+    "thumun": 2,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "الجمعة",
+    "ayah": 8,
+    "approx": true
+  },
+  {
+    "id": "H56-T3",
+    "hizb": 56,
+    "thumun": 3,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "المنافقون",
+    "ayah": 4,
+    "approx": false
+  },
+  {
+    "id": "H56-T4",
+    "hizb": 56,
+    "thumun": 4,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "التغابن",
+    "ayah": 5,
+    "approx": true
+  },
+  {
+    "id": "H56-T5",
+    "hizb": 56,
+    "thumun": 5,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "الطلاق",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H56-T6",
+    "hizb": 56,
+    "thumun": 6,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "الطلاق",
+    "ayah": 6,
+    "approx": true
+  },
+  {
+    "id": "H56-T7",
+    "hizb": 56,
+    "thumun": 7,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "التحريم",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H56-T8",
+    "hizb": 56,
+    "thumun": 8,
+    "juz": 28,
+    "hizbName": "يسبح - الجمعة",
+    "surah": "التحريم",
+    "ayah": 8,
+    "approx": true
+  },
+  {
+    "id": "H57-T1",
+    "hizb": 57,
+    "thumun": 1,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "الملك",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H57-T2",
+    "hizb": 57,
+    "thumun": 2,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "الملك",
+    "ayah": 16,
+    "approx": true
+  },
+  {
+    "id": "H57-T3",
+    "hizb": 57,
+    "thumun": 3,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "القلم",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H57-T4",
+    "hizb": 57,
+    "thumun": 4,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "القلم",
+    "ayah": 32,
+    "approx": true
+  },
+  {
+    "id": "H57-T5",
+    "hizb": 57,
+    "thumun": 5,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "الحاقة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H57-T6",
+    "hizb": 57,
+    "thumun": 6,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "الحاقة",
+    "ayah": 31,
+    "approx": true
+  },
+  {
+    "id": "H57-T7",
+    "hizb": 57,
+    "thumun": 7,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "المعارج",
+    "ayah": 19,
+    "approx": false
+  },
+  {
+    "id": "H57-T8",
+    "hizb": 57,
+    "thumun": 8,
+    "juz": 29,
+    "hizbName": "تبارك - الملك",
+    "surah": "نوح",
+    "ayah": 4,
+    "approx": true
+  },
+  {
+    "id": "H58-T1",
+    "hizb": 58,
+    "thumun": 1,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "الجن",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H58-T2",
+    "hizb": 58,
+    "thumun": 2,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "الجن",
+    "ayah": 22,
+    "approx": true
+  },
+  {
+    "id": "H58-T3",
+    "hizb": 58,
+    "thumun": 3,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "المزمل",
+    "ayah": 20,
+    "approx": false
+  },
+  {
+    "id": "H58-T4",
+    "hizb": 58,
+    "thumun": 4,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "المدثر",
+    "ayah": 29,
+    "approx": true
+  },
+  {
+    "id": "H58-T5",
+    "hizb": 58,
+    "thumun": 5,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "القيامة",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H58-T6",
+    "hizb": 58,
+    "thumun": 6,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "القيامة",
+    "ayah": 39,
+    "approx": true
+  },
+  {
+    "id": "H58-T7",
+    "hizb": 58,
+    "thumun": 7,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "الانسان",
+    "ayah": 19,
+    "approx": false
+  },
+  {
+    "id": "H58-T8",
+    "hizb": 58,
+    "thumun": 8,
+    "juz": 29,
+    "hizbName": "قل أوحي",
+    "surah": "المرسلات",
+    "ayah": 15,
+    "approx": true
+  },
+  {
+    "id": "H59-T1",
+    "hizb": 59,
+    "thumun": 1,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "النبإ",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H59-T2",
+    "hizb": 59,
+    "thumun": 2,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "النازعات",
+    "ayah": 1,
+    "approx": true
+  },
+  {
+    "id": "H59-T3",
+    "hizb": 59,
+    "thumun": 3,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "عبس",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H59-T4",
+    "hizb": 59,
+    "thumun": 4,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "عبس",
+    "ayah": 38,
+    "approx": true
+  },
+  {
+    "id": "H59-T5",
+    "hizb": 59,
+    "thumun": 5,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "الإنفطار",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H59-T6",
+    "hizb": 59,
+    "thumun": 6,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "المطففين",
+    "ayah": 12,
+    "approx": true
+  },
+  {
+    "id": "H59-T7",
+    "hizb": 59,
+    "thumun": 7,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "الإنشقاق",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H59-T8",
+    "hizb": 59,
+    "thumun": 8,
+    "juz": 30,
+    "hizbName": "عم - النبأ",
+    "surah": "البروج",
+    "ayah": 8,
+    "approx": true
+  },
+  {
+    "id": "H60-T1",
+    "hizb": 60,
+    "thumun": 1,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "الأعلى",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H60-T2",
+    "hizb": 60,
+    "thumun": 2,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "الغاشية",
+    "ayah": 23,
+    "approx": true
+  },
+  {
+    "id": "H60-T3",
+    "hizb": 60,
+    "thumun": 3,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "البلد",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H60-T4",
+    "hizb": 60,
+    "thumun": 4,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "الشمس",
+    "ayah": 14,
+    "approx": true
+  },
+  {
+    "id": "H60-T5",
+    "hizb": 60,
+    "thumun": 5,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "الشرح",
+    "ayah": 1,
+    "approx": false
+  },
+  {
+    "id": "H60-T6",
+    "hizb": 60,
+    "thumun": 6,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "البينة",
+    "ayah": 1,
+    "approx": true
+  },
+  {
+    "id": "H60-T7",
+    "hizb": 60,
+    "thumun": 7,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "العاديات",
+    "ayah": 9,
+    "approx": false
+  },
+  {
+    "id": "H60-T8",
+    "hizb": 60,
+    "thumun": 8,
+    "juz": 30,
+    "hizbName": "سبح - الأعلى",
+    "surah": "قريش",
+    "ayah": 2,
+    "approx": true
+  }
+]
