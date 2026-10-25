@@ -57,8 +57,10 @@ describe('regularity', () => {
   });
 
   it('aujourd’hui est exclu de la fenêtre', () => {
-    const base = logFor([-1, -2]);
-    expect(regularity({ ...base, [TODAY]: { ...ok } }, TODAY, 4)).toBe(regularity(base, TODAY, 4));
+    // Jours -1 et -3 validés, trou en -2 : 2/3 sur les jours suivis (3/4 si aujourd'hui était compté).
+    const base = logFor([-1, -3]);
+    expect(regularity(base, TODAY, 4)).toBeCloseTo(2 / 3, 10);
+    expect(regularity({ ...base, [TODAY]: { ...ok } }, TODAY, 4)).toBeCloseTo(2 / 3, 10);
   });
 
   it('journal vide : 0 ; fenêtre configurable ; n <= 0 : 0', () => {
