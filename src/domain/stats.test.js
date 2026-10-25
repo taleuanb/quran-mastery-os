@@ -32,8 +32,8 @@ describe('streak', () => {
     expect(streak(log, TODAY, DEFAULT_PARAMS)).toBe(2);
   });
 
-  it('un jour avant la première entrée du journal termine la série', () => {
-    expect(streak(logFor([-1, -2]), TODAY, DEFAULT_PARAMS)).toBe(2);
+  it('la série se termine à la première entrée du journal, même avec une grâce illimitée', () => {
+    expect(streak(logFor([-1]), TODAY, { ...DEFAULT_PARAMS, graceDaysPerWeek: 99 })).toBe(1);
     expect(streak({}, TODAY, DEFAULT_PARAMS)).toBe(0);
   });
 
@@ -52,13 +52,19 @@ describe('streak', () => {
 describe('regularity', () => {
   it('27 jours validés sur 30 : 0.9', () => {
     const offsets = [];
-    for (let i = 0; i < 30; i++) if (![3, 10, 20].includes(i)) offsets.push(-i);
+    for (let i = 1; i <= 30; i++) if (![3, 10, 20].includes(i)) offsets.push(-i);
     expect(regularity(logFor(offsets), TODAY)).toBeCloseTo(0.9, 10);
   });
 
-  it('journal vide : 0 ; fenêtre configurable', () => {
+  it('aujourd’hui est exclu de la fenêtre', () => {
+    const base = logFor([-1, -2]);
+    expect(regularity({ ...base, [TODAY]: { ...ok } }, TODAY, 4)).toBe(regularity(base, TODAY, 4));
+  });
+
+  it('journal vide : 0 ; fenêtre configurable ; n <= 0 : 0', () => {
     expect(regularity({}, TODAY)).toBe(0);
-    expect(regularity(logFor([0, -1]), TODAY, 4)).toBe(0.5);
+    expect(regularity(logFor([-1, -2]), TODAY, 4)).toBe(0.5);
+    expect(regularity(logFor([-1]), TODAY, 0)).toBe(0);
   });
 });
 

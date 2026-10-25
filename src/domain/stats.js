@@ -43,15 +43,16 @@ export function streak(dayLog, today, p) {
 }
 
 /**
- * Part des `n` derniers jours (aujourd'hui compris) validés, de 0 à 1.
+ * Part des `n` jours précédant aujourd'hui (aujourd'hui exclu) validés, de 0 à 1.
  * @param {Object<string,{planned:number,done:number}>} dayLog
  * @param {string} today
  * @param {number} [n]
  * @returns {number}
  */
 export function regularity(dayLog, today, n = 30) {
+  if (n <= 0) return 0;
   let ok = 0;
-  for (let i = 0; i < n; i++) if (validated(dayLog[addDays(today, -i)])) ok++;
+  for (let i = 1; i <= n; i++) if (validated(dayLog[addDays(today, -i)])) ok++;
   return ok / n;
 }
 
