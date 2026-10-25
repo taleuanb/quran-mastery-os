@@ -13,9 +13,9 @@ Application mobile de suivi de mémorisation du Coran : révision espacée par h
 
 Stockage local (`localStorage`, clé `qmos.state`) : vos données ne quittent pas le téléphone ; seules les polices sont chargées depuis Google Fonts. Dans l'onglet Réglages, vous pouvez exporter une sauvegarde (fichier) et la réimporter, par exemple pour changer d'appareil.
 
-## Remplacer les thumuns approximatifs par le fichier exact
+## Référentiel des thumuns (Qalun)
 
-Le référentiel livré (`src/data/thumuns.json`) est approximatif pour les versets de départ des thumuns. Pour le remplacer par le fichier exact :
+`src/data/thumuns.json` contient les 480 thumuns du mushaf Qalun, avec la numérotation des versets de Qalun (bornes issues de [quran-meta](https://github.com/quran-center/quran-meta), relues dans `docs/thumuns-qalun-revue.html`). Pour le remplacer par un autre fichier :
 
 ```
 node scripts/import-thumuns.mjs <fichier.csv>
