@@ -11,7 +11,7 @@ Application mobile de suivi de mémorisation du Coran : révision espacée par h
 
 ## Vos données
 
-Les données restent sur le téléphone (`localStorage`, clé `qmos.state`) : aucun appel réseau, aucune donnée envoyée ailleurs. Dans l'onglet Réglages, vous pouvez exporter une sauvegarde (fichier) et la réimporter, par exemple pour changer d'appareil.
+Stockage local (`localStorage`, clé `qmos.state`) : vos données ne quittent pas le téléphone ; seules les polices sont chargées depuis Google Fonts. Dans l'onglet Réglages, vous pouvez exporter une sauvegarde (fichier) et la réimporter, par exemple pour changer d'appareil.
 
 ## Remplacer les thumuns approximatifs par le fichier exact
 
