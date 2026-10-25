@@ -89,7 +89,7 @@ Intervalle de départ 3 jours, plafond 30 jours.
 
 ## 8. Composition de la liste du jour
 
-1. **Part de base** : `ceil(thumuns_acquis / 8 / (30 / fréquence_par_mois × ... ))`, soit `hizbs_acquis_équivalents / durée_du_cycle_en_jours`, avec une durée de cycle de 15 jours pour 2 fois par mois. Exemple : 25 hizbs acquis donnent environ 2 hizbs de base par jour.
+1. **Part de base** : `ceil(hizbs_acquis_équivalents / durée_du_cycle_en_jours)`, où `hizbs_acquis_équivalents = thumuns_acquis / 8` et la durée du cycle est de 15 jours pour 2 fois par mois (30 jours pour 1 fois). Exemple : 25 hizbs acquis donnent `ceil(25 / 15) = 2` hizbs de base par jour.
 2. **Part ciblée** : tout le reste du quota. Avec 5 hizbs et 25 hizbs acquis, environ 3 hizbs pour le ciblé.
 3. Les thumuns ciblés échus sont triés par urgence : jours de retard × poids de difficulté (difficile > moyen > facile).
 4. **Regroupement par hizb** : la liste du jour est présentée hizb par hizb (au plus le quota). Un thumun ciblé d'un hizb déjà dans la liste ne consomme pas de place supplémentaire. Chaque hizb signale ses thumuns ciblés (« réviser surtout le thumun 3 »).
