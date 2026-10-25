@@ -4,6 +4,7 @@ import Toast from '../ui/components/Toast';
 import { t } from '../ui/strings.fr';
 
 const LONG_PRESS_MS = 450;
+const MOVE_TOLERANCE_PX = 10;
 const HIZBS = Array.from({ length: 60 }, (_, i) => i + 1);
 const FILTERS = ['all', 'full', 'part', 'fr', 'none'];
 
@@ -40,7 +41,12 @@ export default function Acquis({ state, dispatch, refs, today }) {
   // Infos de référentiel par hizb (nom, sourate), dérivées de `refs`.
   const info = useMemo(() => {
     const out = {};
-    for (const r of refs) if (r.thumun === 1) out[r.hizb] = { hizbName: r.hizbName, surah: r.surah };
+    for (const r of refs) {
+      const cur = out[r.hizb] ?? { hizbName: '', surah: '', surahs: [] };
+      if (r.thumun === 1) { cur.hizbName = r.hizbName; cur.surah = r.surah; }
+      if (!cur.surahs.includes(r.surah)) cur.surahs.push(r.surah);
+      out[r.hizb] = cur;
+    }
     return out;
   }, [refs]);
 
@@ -71,8 +77,8 @@ export default function Acquis({ state, dispatch, refs, today }) {
     if (filter === 'fr' ? r.f === 0 : filter !== 'all' && r.status !== filter) return false;
     if (!q) return true;
     if (/^\d+$/.test(q)) return h === Number(q);
-    const i = info[h] ?? { hizbName: '', surah: '' };
-    return `${i.hizbName} ${i.surah}`.toLowerCase().includes(q);
+    const i = info[h] ?? { hizbName: '', surahs: [] };
+    return `${i.hizbName} ${i.surahs.join(' ')}`.toLowerCase().includes(q);
   };
 
   const pickedList = Object.keys(picked).map(Number).sort((a, b) => a - b);
@@ -97,6 +103,7 @@ export default function Acquis({ state, dispatch, refs, today }) {
   const openSheet = (h) => setSheet({ hizb: h, initial: rows[h].states, draft: rows[h].states });
 
   const onPointerDown = (e) => {
+    if (e.button > 0 || e.isPrimary === false) return;
     const h = hizbOf(e.target);
     if (h == null) return;
     if (selMode) {
@@ -108,10 +115,16 @@ export default function Acquis({ state, dispatch, refs, today }) {
     clearPress();
     press.current.timer = setTimeout(() => { press.current.timer = null; openSheet(h); }, LONG_PRESS_MS);
     press.current.hizb = h;
+    press.current.x = e.clientX ?? 0;
+    press.current.y = e.clientY ?? 0;
   };
 
   const onPointerMove = (e) => {
-    if (press.current.timer) clearPress();
+    // Un micro-déplacement (tremblement, souris à 1 px) ne doit annuler ni l'appui long ni le tap.
+    if (press.current.timer
+      && Math.hypot((e.clientX ?? 0) - press.current.x, (e.clientY ?? 0) - press.current.y) > MOVE_TOLERANCE_PX) {
+      clearPress();
+    }
     if (!selMode || drag.current === null) return;
     const under = typeof document.elementFromPoint === 'function'
       ? document.elementFromPoint(e.clientX, e.clientY)

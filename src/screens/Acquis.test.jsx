@@ -13,10 +13,12 @@ function setup({ state = makeState(), refs = makeRefs() } = {}) {
   const utils = render(<Acquis state={state} dispatch={dispatch} refs={refs} today={TODAY} />);
   return { dispatch, ...utils };
 }
+// jsdom : isPrimary vaut false par défaut, un navigateur le met à true pour le pointeur principal.
+const down = (el, init = {}) => fireEvent.pointerDown(el, { isPrimary: true, ...init });
 const card = (h) => screen.getByTestId(`hz-${h}`);
 const cards = () => screen.queryAllByTestId(/^hz-/);
-const tap = (el) => { fireEvent.pointerDown(el); fireEvent.pointerUp(el); };
-const longPress = (el) => { fireEvent.pointerDown(el); act(() => { vi.advanceTimersByTime(450); }); };
+const tap = (el) => { down(el); fireEvent.pointerUp(el); };
+const longPress = (el) => { down(el); act(() => { vi.advanceTimersByTime(450); }); };
 const bulk = () => within(screen.getByRole('toolbar'));
 
 beforeEach(() => { vi.useFakeTimers(); });
@@ -65,10 +67,18 @@ describe('Acquis : tap', () => {
 });
 
 describe('Acquis : recherche et filtres', () => {
-  it('« يوسف » ne laisse que les hizbs dont la sourate correspond', () => {
+  it('« يوسف » ne laisse que les hizbs dont une sourate correspond', () => {
     setup({ refs: loadRefs() });
     fireEvent.change(screen.getByRole('searchbox'), { target: { value: ' يوسف ' } });
-    expect(cards().map((c) => c.dataset.h)).toEqual(['25']);
+    expect(cards().map((c) => c.dataset.h)).toEqual(['24', '25']);
+  });
+
+  it('la sourate de n’importe quel thumun du hizb compte : « البقرة » trouve le hizb 1', () => {
+    setup({ refs: loadRefs() });
+    fireEvent.change(screen.getByRole('searchbox'), { target: { value: 'البقرة' } });
+    const found = cards().map((c) => c.dataset.h);
+    expect(found).toContain('1');
+    expect(found).toEqual(['1', '2', '3', '4', '5']);
   });
 
   it('un numéro de hizb ne retient que ce hizb', () => {
@@ -121,19 +131,42 @@ describe('Acquis : appui long', () => {
     expect(dispatch).not.toHaveBeenCalled();
   });
 
-  it('un mouvement avant 450 ms annule l’appui long', () => {
+  it('un déplacement de plus de 10 px avant 450 ms annule l’appui long et le tap', () => {
     const { dispatch } = setup();
-    fireEvent.pointerDown(card(3));
-    fireEvent.pointerMove(card(3));
+    down(card(3), { clientX: 100, clientY: 100 });
+    fireEvent.pointerMove(card(3), { clientX: 100, clientY: 120 });
     act(() => { vi.advanceTimersByTime(600); });
     fireEvent.pointerUp(card(3));
     expect(screen.queryByRole('dialog')).toBeNull();
     expect(dispatch).not.toHaveBeenCalled();
   });
 
+  it('micro-mouvement puis relâche = tap ; l’appui long reste possible', () => {
+    const { dispatch } = setup();
+    down(card(3), { clientX: 100, clientY: 100 });
+    fireEvent.pointerMove(card(3), { clientX: 101, clientY: 102 });
+    fireEvent.pointerUp(card(3), { clientX: 101, clientY: 102 });
+    expect(dispatch).toHaveBeenCalledWith({ type: 'SET_ACQUIS', changes: all([3], 1), day: TODAY });
+    dispatch.mockClear();
+    down(card(4), { clientX: 100, clientY: 100 });
+    fireEvent.pointerMove(card(4), { clientX: 103, clientY: 99 });
+    act(() => { vi.advanceTimersByTime(450); });
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    expect(dispatch).not.toHaveBeenCalled();
+  });
+
+  it('un clic non principal (button > 0) est ignoré', () => {
+    const { dispatch } = setup();
+    down(card(3), { button: 2 });
+    fireEvent.pointerUp(card(3), { button: 2 });
+    act(() => { vi.advanceTimersByTime(600); });
+    expect(dispatch).not.toHaveBeenCalled();
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
   it('relâcher avant 450 ms est un tap, pas une feuille', () => {
     setup();
-    fireEvent.pointerDown(card(3));
+    down(card(3));
     act(() => { vi.advanceTimersByTime(300); });
     fireEvent.pointerUp(card(3));
     act(() => { vi.advanceTimersByTime(600); });
@@ -231,7 +264,7 @@ describe('Acquis : mode sélection', () => {
     setup();
     fireEvent.click(screen.getByRole('button', { name: /Mode sélection/ }));
     document.elementFromPoint = vi.fn((x) => card(x === 1 ? 5 : 6));
-    fireEvent.pointerDown(card(4));
+    down(card(4));
     fireEvent.pointerMove(card(4), { clientX: 1, clientY: 0 });
     fireEvent.pointerMove(card(4), { clientX: 2, clientY: 0 });
     fireEvent.pointerUp(card(4));
