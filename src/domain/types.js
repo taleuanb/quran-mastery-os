@@ -9,8 +9,11 @@
 /**
  * Enregistrement unique d'un jour (Ruling 24) : `hizbs` = plan ordonné du jour (posé par SET_DAY_PLAN),
  * `reviewed` = hizbs validés par REVIEW_HIZB (seule action qui compte comme « fait ») ;
- * `planned = hizbs.length`, `done = reviewed.length`. Les anciennes entrées sans listes valent [].
- * @typedef {{planned:number,done:number,hizbs?:number[],reviewed?:number[]}} DayRecord
+ * `planned = hizbs.length`, `done = reviewed.length`. `cards` (source, focus, urgence de chaque hizb) et `planKey`
+ * (jour + acquis + paramètres) figent le plan : tant que la clé ne change pas, Today le réaffiche sans recalcul.
+ * Les anciennes entrées sans listes valent [].
+ * @typedef {{hizb:number,source:'base'|'cible',focus:string[],urgent:boolean}} PlanCard
+ * @typedef {{planned:number,done:number,hizbs?:number[],reviewed?:number[],cards?:PlanCard[],planKey?:string}} DayRecord
  */
 /** @typedef {{schemaVersion:1,params:Params,thumuns:Object<string,ThumunState>,journal:Entry[],learnQueue:string[],dayLog:Object<string,DayRecord>,lastBackup:string|null,khatma:number}} AppState */
 

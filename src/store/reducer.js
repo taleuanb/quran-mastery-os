@@ -89,10 +89,13 @@ function dayRecord(state, day) {
   return { hizbs: log?.hizbs ?? [], reviewed: log?.reviewed ?? [] };
 }
 
-const withDayRecord = (state, day, hizbs, reviewed) => ({
-  ...state.dayLog,
-  [day]: { planned: hizbs.length, done: reviewed.length, hizbs, reviewed },
-});
+const withDayRecord = (state, day, hizbs, reviewed, extra = {}) => {
+  const { cards, planKey } = state.dayLog[day] ?? {};
+  return {
+    ...state.dayLog,
+    [day]: { planned: hizbs.length, done: reviewed.length, hizbs, reviewed, cards, planKey, ...extra },
+  };
+};
 
 /**
  * Applique `next` en mémorisant de quoi annuler (une seule profondeur). `keep` garde le point
@@ -182,7 +185,10 @@ export function reducer(state, action) {
         const at = old.indexOf(h);
         hizbs.splice(at < 0 ? hizbs.length : Math.min(at, hizbs.length), 0, h);
       }
-      return { ...state, dayLog: withDayRecord(state, action.day, hizbs, reviewed) };
+      // `cards` (source/focus/urgence de chaque hizb) et `key` (jour + acquis + paramètres) figent le plan :
+      // tant que la clé ne change pas, Today réaffiche cette liste telle quelle au lieu de la recalculer.
+      const extra = action.cards ? { cards: action.cards, planKey: action.key } : {};
+      return { ...state, dayLog: withDayRecord(state, action.day, hizbs, reviewed, extra) };
     }
 
     case 'MARK_BACKUP':

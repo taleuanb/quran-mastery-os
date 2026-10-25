@@ -44,17 +44,17 @@ describe('Today', () => {
     const { dispatch } = setup(baseState());
     const shown = checks().map((b) => Number(b.getAttribute('data-hizb')));
     expect(shown).toHaveLength(5);
-    expect(dispatch).toHaveBeenCalledWith({ type: 'SET_DAY_PLAN', day: TODAY, hizbs: shown });
+    expect(dispatch).toHaveBeenCalledWith(expect.objectContaining({ type: 'SET_DAY_PLAN', day: TODAY, hizbs: shown }));
+    const action = dispatch.mock.calls.map((c) => c[0]).find((a) => a.type === 'SET_DAY_PLAN');
+    expect(action.cards.map((c) => c.hizb)).toEqual(shown);
+    expect(action.key).toContain(TODAY);
   });
 
   it('ne dispatche pas SET_DAY_PLAN quand la liste est déjà celle de dayLog', () => {
-    const shown = (() => {
-      const { unmount } = setup(baseState());
-      const h = checks().map((b) => Number(b.getAttribute('data-hizb')));
-      unmount();
-      return h;
-    })();
-    const { dispatch } = setup(baseState({ dayLog: { [TODAY]: { planned: 5, done: 0, hizbs: shown, reviewed: [] } } }));
+    const api = {};
+    const first = render(<Harness initial={baseState()} api={api} />);
+    first.unmount();
+    const { dispatch } = setup(api.state);
     expect(dispatch).not.toHaveBeenCalledWith(expect.objectContaining({ type: 'SET_DAY_PLAN' }));
   });
 
@@ -76,7 +76,7 @@ describe('Today', () => {
     fireEvent.click(checks()[2]);
     expect(checks().map((b) => Number(b.getAttribute('data-hizb')))).toEqual(shown);
     expect(screen.getByText('1/5')).toBeInTheDocument();
-    expect(api.state.dayLog[TODAY]).toEqual({ planned: 5, done: 1, hizbs: shown, reviewed: [shown[2]] });
+    expect(api.state.dayLog[TODAY]).toMatchObject({ planned: 5, done: 1, hizbs: shown, reviewed: [shown[2]] });
   });
 
   it('au remontage, l’ordre et les faits sont relus dans dayLog (hizb relu gardé à sa place)', () => {
@@ -258,5 +258,33 @@ describe('Today', () => {
     fireEvent.click(b1);
     expect(screen.getAllByRole('status')).toHaveLength(1);
     expect(screen.getByRole('status')).toHaveTextContent(`Hizb ${b1.getAttribute('data-hizb')} validé`);
+  });
+
+  it('garde le plan du jour après remontage même si des ciblés non urgents restent à faire', () => {
+    // 40 hizbs de base + 2 ciblés échus non urgents (urgencyDays 30) : le plan frais change dès qu'on relit des hizbs.
+    const initial = {
+      ...makeState({
+        acquis: Array.from({ length: 40 }, (_, i) => i + 1),
+        cible: {
+          'H50-T1': { scores: [{ date: '2026-10-20', score: 4 }], interval: 3, due: TODAY },
+          'H51-T1': { scores: [{ date: '2026-10-20', score: 4 }], interval: 3, due: TODAY },
+        },
+        params: { urgencyDays: 30 },
+      }),
+      lastBackup: TODAY,
+    };
+    const api = {};
+    const first = render(<Harness initial={initial} api={api} />);
+    const listOf = () => screen.getAllByRole('button', { name: /tout va bien/ }).map((b) => b.getAttribute('aria-label'));
+    const before = listOf();
+    for (let i = 0; i < 3; i += 1) {
+      fireEvent.click(screen.getAllByRole('button', { name: /tout va bien/ }).filter((b) => !b.disabled && !b.getAttribute('aria-pressed'))[i] ?? checks()[i]);
+    }
+    const afterReviews = listOf();
+    first.unmount();
+    render(<Harness initial={api.state} api={api} />);
+    expect(listOf()).toEqual(afterReviews);
+    expect(afterReviews).toHaveLength(before.length);
+    expect(api.state.dayLog[TODAY].hizbs).toEqual(api.state.dayLog[TODAY].cards.map((c) => c.hizb));
   });
 });

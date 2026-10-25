@@ -143,11 +143,14 @@ export default function Today({ state, dispatch, refs, today, onNavigate }) {
   const doneCards = reviewed
     .map((hizb) => inPlan.get(hizb) ?? { hizb, source: journalSource(hizb), focus: [], urgent: false })
     .sort((x, y) => stored.indexOf(x.hizb) - stored.indexOf(y.hizb));
-  const cards = [...undone];
+  const fresh = [...undone];
   for (const d of doneCards) {
     const at = stored.indexOf(d.hizb);
-    cards.splice(at < 0 ? 0 : Math.min(at, cards.length), 0, d);
+    fresh.splice(at < 0 ? 0 : Math.min(at, fresh.length), 0, d);
   }
+  // Plan déjà enregistré pour cette clé (jour + acquis + paramètres) : réaffiché tel quel, sans recalcul.
+  const frozen = log && log.planKey === planKey && Array.isArray(log.cards) && log.cards.length > 0 ? log.cards : null;
+  const cards = frozen ?? fresh;
   const doneCount = doneCards.length;
   const total = cards.length;
   const listKey = cards.map((c) => c.hizb).join(',');
@@ -159,11 +162,16 @@ export default function Today({ state, dispatch, refs, today, onNavigate }) {
 
   // Persiste la liste affichée comme plan du jour (SET_DAY_PLAN garde `reviewed`).
   const storedKey = stored.join(',');
+  const storedPlanKey = log?.planKey;
   useEffect(() => {
-    if (storedKey !== listKey) {
-      dispatch({ type: 'SET_DAY_PLAN', day: today, hizbs: listKey ? listKey.split(',').map(Number) : [] });
+    if (storedKey !== listKey || storedPlanKey !== planKey) {
+      dispatch({
+        type: 'SET_DAY_PLAN', day: today, key: planKey,
+        hizbs: listKey ? listKey.split(',').map(Number) : [],
+        cards: cards.map(({ hizb, source, focus, urgent }) => ({ hizb, source, focus, urgent })),
+      });
     }
-  }, [storedKey, listKey, today, dispatch]);
+  }, [storedKey, listKey, storedPlanKey, planKey, today, dispatch]);
 
   const [sheetHizb, setSheetHizb] = useState(null);
   const [toast, setToast] = useState(null);
