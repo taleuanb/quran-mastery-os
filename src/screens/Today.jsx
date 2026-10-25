@@ -107,16 +107,21 @@ function LearnCard({ id, ref_, learned, onLearn }) {
 
 /**
  * Écran « Aujourd'hui » : série, progression, apprentissage et cartes de révision.
- * La liste du jour est figée au premier affichage (le plan recalculé après une validation
- * remplacerait sinon les hizbs faits par de nouveaux) ; les hizbs déjà relus aujourd'hui
- * (journal) y sont réintégrés comme faits.
+ * Le plan est figé tant que le jour, les thumuns acquis et les paramètres ne changent pas
+ * (le plan recalculé après une validation remplacerait sinon les hizbs faits par de nouveaux) ;
+ * les hizbs déjà relus aujourd'hui (journal) sont réintégrés comme faits. Le toast « Annuler »
+ * ne concerne que la dernière action notée depuis l'écran.
  */
 export default function Today({ state, dispatch, refs, today, onNavigate }) {
+  // Plan figé tant que le jour, l'ensemble des acquis et les paramètres ne changent pas.
+  const acquisIds = Object.keys(state.thumuns).filter((id) => state.thumuns[id].status === 'acquis').sort();
+  const planKey = `${today}|${acquisIds.join(',')}|${JSON.stringify(state.params)}`;
   const snap = useRef(null);
-  if (!snap.current || snap.current.day !== today) {
-    snap.current = { day: today, plan: buildDailyPlan(state, refs, today, state.params) };
+  if (!snap.current || snap.current.key !== planKey) {
+    snap.current = { key: planKey, plan: buildDailyPlan(state, refs, today, state.params) };
   }
   const plan = snap.current.plan;
+  const prevOrder = useRef([]);
 
   // Faits du jour, d'après le journal.
   const doneSource = new Map();
@@ -130,12 +135,21 @@ export default function Today({ state, dispatch, refs, today, onNavigate }) {
     }
   }
 
-  const target = state.dayLog[today]?.planned || plan.hizbs.length;
-  const inPlan = new Set(plan.hizbs.map((h) => h.hizb));
-  const extraDone = [...doneSource].filter(([h]) => !inPlan.has(h))
-    .map(([hizb, source]) => ({ hizb, source, focus: [], urgent: false }));
-  const cards = [...extraDone, ...plan.hizbs].slice(0, Math.max(target, doneSource.size));
-  const doneCount = cards.filter((c) => doneSource.has(c.hizb)).length;
+  // Liste = plan frais (hors faits, borné à sa taille moins les faits) + hizbs faits réintégrés
+  // à leur position précédente quand elle est connue.
+  const inPlan = new Map(plan.hizbs.map((h) => [h.hizb, h]));
+  const undone = plan.hizbs.filter((h) => !doneSource.has(h.hizb))
+    .slice(0, Math.max(0, plan.hizbs.length - doneSource.size));
+  const doneCards = [...doneSource]
+    .map(([hizb, source]) => inPlan.get(hizb) ?? { hizb, source, focus: [], urgent: false })
+    .sort((x, y) => prevOrder.current.indexOf(x.hizb) - prevOrder.current.indexOf(y.hizb));
+  const cards = [...undone];
+  for (const d of doneCards) {
+    const at = prevOrder.current.indexOf(d.hizb);
+    cards.splice(at < 0 ? 0 : Math.min(at, cards.length), 0, d);
+  }
+  prevOrder.current = cards.map((c) => c.hizb);
+  const doneCount = doneCards.length;
   const total = cards.length;
 
   const learnIds = [...learnedToday, ...plan.learn.filter((id) => !learnedToday.includes(id))]
@@ -204,7 +218,7 @@ export default function Today({ state, dispatch, refs, today, onNavigate }) {
               id={id}
               ref_={refOf(id)}
               learned={learnedToday.includes(id)}
-              onLearn={(lid, score) => dispatch({ type: 'LEARN', id: lid, score, day: today })}
+              onLearn={(lid, score) => { dispatch({ type: 'LEARN', id: lid, score, day: today }); setToast(null); }}
             />
           ))}
         </>

@@ -161,4 +161,47 @@ describe('Today', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Indiquer mes acquis' }));
     expect(onNavigate).toHaveBeenCalledWith('acquis');
   });
+
+  it('recalcule le plan quand les acquis changent (écran resté monté)', () => {
+    const empty = makeState({ acquis: [] });
+    const { rerender, dispatch, onNavigate } = setup(empty);
+    expect(screen.queryAllByRole('button', { name: /tout va bien/ })).toHaveLength(0);
+    rerender(<Today state={baseState()} dispatch={dispatch} refs={refs} today={TODAY} onNavigate={onNavigate} />);
+    expect(checks()).toHaveLength(5);
+    expect(screen.queryByText('Commencez par indiquer vos acquis')).toBeNull();
+  });
+
+  it('recalcule le plan quand dailyReviewHizbs change', () => {
+    const { rerender, dispatch, onNavigate } = setup(baseState());
+    expect(checks()).toHaveLength(5);
+    const fewer = { ...makeState({ acquis: ACQUIS, params: { dailyReviewHizbs: 3 } }), lastBackup: TODAY };
+    rerender(<Today state={fewer} dispatch={dispatch} refs={refs} today={TODAY} onNavigate={onNavigate} />);
+    expect(checks()).toHaveLength(3);
+  });
+
+  it('un planned stocké plus petit que le plan frais ne tronque pas la liste ; SET_PLANNED suit le total', () => {
+    const { dispatch } = setup(baseState({ dayLog: { [TODAY]: { planned: 3, done: 0 } } }));
+    expect(checks()).toHaveLength(5);
+    expect(dispatch).toHaveBeenCalledWith({ type: 'SET_PLANNED', day: TODAY, planned: 5 });
+  });
+
+  it('le toast Annuler disparaît dès qu’une autre action (apprentissage) est dispatchée', () => {
+    const { dispatch } = setup(baseState());
+    fireEvent.click(checks()[0]);
+    expect(screen.getByRole('status')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: "J'ai appris ce thumun" }));
+    fireEvent.click(screen.getByRole('button', { name: '3' }));
+    expect(dispatch).toHaveBeenCalledWith(expect.objectContaining({ type: 'LEARN' }));
+    expect(screen.queryByRole('status')).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Annuler' })).toBeNull();
+  });
+
+  it('le toast reflète la dernière validation (deux ✓ successifs)', () => {
+    setup(baseState());
+    const [b0, b1] = checks();
+    fireEvent.click(b0);
+    fireEvent.click(b1);
+    expect(screen.getAllByRole('status')).toHaveLength(1);
+    expect(screen.getByRole('status')).toHaveTextContent(`Hizb ${b1.getAttribute('data-hizb')} validé`);
+  });
 });
