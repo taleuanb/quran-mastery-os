@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import { reducer } from './reducer.js';
 import { useAppStore } from './useAppStore.js';
@@ -267,5 +267,43 @@ describe('useAppStore', () => {
     }
     act(() => result.current.dispatch({ type: 'KHATMA_INC' }));
     expect(result.current.saveError).toBe(false);
+  });
+});
+
+describe('useAppStore : jour courant rafraîchi', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2026, 9, 25, 3, 58)); // 03:58 locale : encore le 24
+  });
+  afterEach(() => vi.useRealTimers());
+
+  it('passe au jour suivant après 04:00 grâce au minuteur de 60 s', () => {
+    const { result } = renderHook(() => useAppStore(makeRefs()));
+    expect(result.current.today).toBe('2026-10-24');
+    act(() => vi.advanceTimersByTime(3 * 60 * 1000));
+    expect(result.current.today).toBe('2026-10-25');
+  });
+
+  it('se rafraîchit au retour au premier plan (visibilitychange) et au focus', () => {
+    const { result } = renderHook(() => useAppStore(makeRefs()));
+    vi.setSystemTime(new Date(2026, 9, 25, 9, 0));
+    act(() => document.dispatchEvent(new Event('visibilitychange')));
+    expect(result.current.today).toBe('2026-10-25');
+    vi.setSystemTime(new Date(2026, 9, 26, 9, 0));
+    act(() => window.dispatchEvent(new Event('focus')));
+    expect(result.current.today).toBe('2026-10-26');
+  });
+
+  it('retire ses écouteurs et son minuteur au démontage', () => {
+    const docOff = vi.spyOn(document, 'removeEventListener');
+    const winOff = vi.spyOn(window, 'removeEventListener');
+    const clear = vi.spyOn(globalThis, 'clearInterval');
+    const { unmount } = renderHook(() => useAppStore(makeRefs()));
+    unmount();
+    expect(docOff).toHaveBeenCalledWith('visibilitychange', expect.any(Function));
+    expect(winOff).toHaveBeenCalledWith('focus', expect.any(Function));
+    expect(clear).toHaveBeenCalled();
+    vi.restoreAllMocks();
   });
 });
