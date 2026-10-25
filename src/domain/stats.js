@@ -43,17 +43,27 @@ export function streak(dayLog, today, p) {
 }
 
 /**
- * Part des `n` jours précédant aujourd'hui (aujourd'hui exclu) validés, de 0 à 1.
+ * Part des jours validés parmi les `n` jours précédant aujourd'hui (aujourd'hui exclu), de 0 à 1.
+ * Les jours antérieurs à la première entrée du journal ne sont ni validés ni comptés ;
+ * 0 si aucun jour suivi n'est antérieur à aujourd'hui.
  * @param {Object<string,{planned:number,done:number}>} dayLog
  * @param {string} today
  * @param {number} [n]
  * @returns {number}
  */
 export function regularity(dayLog, today, n = 30) {
-  if (n <= 0) return 0;
+  const days = Object.keys(dayLog);
+  if (n <= 0 || days.length === 0) return 0;
+  const first = days.reduce((a, b) => (a < b ? a : b));
   let ok = 0;
-  for (let i = 1; i <= n; i++) if (validated(dayLog[addDays(today, -i)])) ok++;
-  return ok / n;
+  let tracked = 0;
+  for (let i = 1; i <= n; i++) {
+    const day = addDays(today, -i);
+    if (day < first) break;
+    tracked++;
+    if (validated(dayLog[day])) ok++;
+  }
+  return tracked === 0 ? 0 : ok / tracked;
 }
 
 /** Thumuns acquis, avec leur id. */

@@ -109,7 +109,7 @@ nav .pip{position:absolute;top:4px;right:calc(50% - 20px);width:9px;height:9px;b
 .trend{font-size:12px;font-weight:700}
 .set{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}.set:first-of-type{border-top:0}
 .set small{display:block;color:var(--muted);font-size:12px}
-.step{display:flex;align-items:center;gap:10px}.step button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface2);font-size:18px;font-weight:700}.step b{min-width:22px;text-align:center;font:700 18px var(--display)}
+.step{display:flex;align-items:center;gap:10px}.step button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface2);font-size:18px;font-weight:700}.step b{white-space:nowrap;min-width:22px;text-align:center;font:700 18px var(--display)}
 .ex{font-size:11px;color:var(--muted);text-align:center}
 
 /* agenda */

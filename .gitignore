@@ -19,3 +19,5 @@ dist-ssr/
 *.njsproj
 *.sln
 *.sw?
+# Captures du test de fumée
+smoke-shots/

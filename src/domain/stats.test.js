@@ -63,8 +63,20 @@ describe('regularity', () => {
 
   it('journal vide : 0 ; fenêtre configurable ; n <= 0 : 0', () => {
     expect(regularity({}, TODAY)).toBe(0);
-    expect(regularity(logFor([-1, -2]), TODAY, 4)).toBe(0.5);
+    expect(regularity(logFor([-1, -2, -5, -6]), TODAY, 4)).toBe(0.5);
     expect(regularity(logFor([-1]), TODAY, 0)).toBe(0);
+  });
+
+  it('ignore les jours antérieurs à la première entrée du journal (ni validés ni comptés)', () => {
+    // Suivi depuis 4 jours, tous validés : 4/4 et non 4/30.
+    expect(regularity(logFor([-1, -2, -3, -4]), TODAY)).toBe(1);
+    // Un jour manqué après la première entrée compte au dénominateur.
+    expect(regularity(logFor([-1, -3, -4]), TODAY)).toBe(0.75);
+  });
+
+  it('aucun jour suivi avant aujourd’hui : 0', () => {
+    expect(regularity({ [TODAY]: { ...ok } }, TODAY)).toBe(0);
+    expect(regularity({ [addDays(TODAY, 1)]: { ...ok } }, TODAY)).toBe(0);
   });
 });
 
