@@ -1,6 +1,6 @@
-# Quran Mastery OS : moteur de révision (spécification)
+# Quran Mastery OS : moteur de révision et interface (spécification)
 
-Date : 2026-10-25 · Statut : à relire par l'utilisateur · Périmètre : v1, usage personnel, un seul téléphone.
+Date : 2026-10-25 · Statut : version finale, à relire par l'utilisateur · Périmètre : v1, usage personnel, un seul téléphone.
 
 ## 1. Objectif
 
@@ -18,7 +18,7 @@ Notion et tout backend, synchronisation multi-appareils, comptes, notifications 
 
 ## 3. Unités et vocabulaire
 
-- **Thumun** : 1/8 de hizb. 480 au total, identifiés par `id` dans `atman_referentiel.json` (`J01-H01-T1/8`, avec `hizb`, `thumun`, `surah`, `ayah`). C'est l'unité de suivi.
+- **Thumun** : 1/8 de hizb. 480 au total, identifiés par `H01-T1` à `H60-T8` (hizb, numéro de thumun). C'est l'unité de suivi. Voir la section 18 pour l'origine des données.
 - **Hizb** : 8 thumuns. C'est l'unité d'affichage et de quota.
 - **Acquis** : thumun déjà mémorisé. **Non acquis** : pas encore mémorisé.
 - Chaque thumun s'affiche toujours avec son hizb et sa sourate.
@@ -117,10 +117,7 @@ Export et import d'un fichier JSON complet (données, journal, paramètres, `sch
 
 ## 13. Écrans
 
-1. **Aujourd'hui** : apprentissage, liste hizb par hizb, saisie des notes.
-2. **Initialisation des acquis** : grille de hizbs, détail par thumun.
-3. **Statistiques de rotation** : répartition facile/moyen/difficile, les 10 thumuns les plus fragiles, durée du cycle de base.
-4. **Paramètres** : tous ceux de la section 4, sauvegarde et restauration.
+Cinq écrans, détaillés en section 17 : Aujourd'hui, Agenda, Acquis, Statistiques, Réglages.
 
 ## 14. Trous fonctionnels trouvés en relisant, avec la décision proposée
 
@@ -132,11 +129,11 @@ Export et import d'un fichier JSON complet (données, journal, paramètres, `sch
 6. **Premier jour** : l'initialisation étale `last_reviewed`, sinon les 200 thumuns seraient tous échus le même jour.
 7. **Volume ciblé trop grand** : si le ciblé dépasse le quota plusieurs jours de suite, l'app l'indique (« N thumuns faibles en attente ») au lieu de les masquer.
 
-## 15. Questions ouvertes pour l'utilisateur
+## 15. Décisions prises sur les questions ouvertes
 
-1. **Rappel quotidien** : une vraie notification sur le téléphone nécessite une PWA installée, avec des limites selon le navigateur. En v1, le « rappel » est ce que l'app affiche à l'ouverture. Voulez-vous tenter les notifications locales en v2 ?
-2. **Khatma et lecture (Tilawah)** : l'interface actuelle a une jauge de khatma et un bouton « enregistrer la lecture de 5 ahzab ». Je propose de les garder comme simple compteur, sans lien avec le moteur. D'accord ?
-3. **Types de jour d'apprentissage** (préparation, mémorisation, consolidation du plan actuel) : je propose de les supprimer en v1 au profit du quota réglable. D'accord ?
+1. **Rappel quotidien** : en v1, le rappel est ce que l'app affiche à l'ouverture (écran Aujourd'hui, point doré sur l'onglet tant qu'il reste des hizbs). Pas de notification push. Notifications locales envisagées en v2.
+2. **Khatma et lecture (Tilawah)** : simple compteur, sans lien avec le moteur.
+3. **Types de jour d'apprentissage** (préparation, mémorisation, consolidation) : supprimés en v1, remplacés par le quota réglable et les jours de repos.
 
 ## 16. Tests attendus
 
@@ -146,3 +143,82 @@ Le moteur est une fonction pure (état + date + paramètres → liste du jour), 
 - calcul de la part de base pour 25 et pour 60 hizbs ;
 - absence de plusieurs jours, urgence, ciblé plus grand que le quota ;
 - annulation d'une saisie, export puis import.
+
+## 17. Interface (UX/UI)
+
+Maquette interactive de référence : `docs/design/maquette.html` (données d'exemple, aucun enregistrement).
+
+### 17.1 Principes
+
+- Mobile d'abord, une main, colonne unique de 440 px au plus. Cibles tactiles d'au moins 44 px.
+- Le cas courant se fait en un tap. Le détail est derrière un second geste (feuille du bas, appui long).
+- Chaque saisie est annulable pendant quelques secondes (bandeau « Annuler »).
+- Interface en **français** (sens gauche-droite). Contenu coranique en **arabe** (police Amiri) : noms de hizb, sourates, début de verset. Tous les libellés sont dans un seul fichier de textes pour permettre une version arabe plus tard.
+- Partout où un hizb ou un thumun apparaît dans un écran de travail, son nom arabe, sa sourate et son numéro (« الثمن 6/8 ») sont visibles. Seul l'Agenda n'affiche que des numéros, le détail s'ouvrant au toucher.
+
+### 17.2 Système visuel
+
+Mode clair et sombre automatiques (réglage du téléphone), mêmes jetons de couleur déclinés dans les deux modes.
+
+| Jeton | Clair | Sombre |
+|---|---|---|
+| Fond | `#F7F3EA` | `#0E1613` |
+| Surface | `#FFFFFF` | `#16211D` |
+| Texte | `#1B2420` | `#E9EFEA` |
+| Accent (base, actions) | `#1F6B4F` | `#4FC59A` |
+| Or (ciblé, repères) | `#A9772B` | `#D9AE62` |
+
+Échelle des notes 1 à 5 : rouge brique, orange, ocre, vert, bleu. Le chiffre est toujours écrit dans la pastille (la couleur ne porte jamais seule l'information). Polices : Bricolage Grotesque (titres et chiffres), Figtree (texte), Amiri (arabe). Respect de `prefers-reduced-motion`. Contraste texte/fond d'au moins 4,5:1.
+
+### 17.3 Navigation
+
+Barre d'onglets en bas, cinq entrées : Aujourd'hui, Agenda, Acquis, Stats, Réglages. Zone sûre en bas respectée. Un point doré sur « Aujourd'hui » signale des hizbs restants.
+
+### 17.4 Aujourd'hui
+
+- En-tête : date, série (avec jour de grâce).
+- Anneau de progression du jour (hizbs faits sur hizbs prévus) et la répartition base/ciblé.
+- Carte **Apprentissage** : thumun du jour (hizb, sourate, thumun, début de verset), bouton « J'ai appris ce thumun », puis note de 1 à 5.
+- **Liste de cartes** par hizb (base et ciblé mélangés) : numéro, nom arabe, sourate, badge base/ciblé, thumuns à surveiller. Le bouton ✓ valide le hizb (note 4 pour ses 8 thumuns). Toucher la carte ouvre la **feuille du bas** : 8 lignes de thumuns, chacune avec 5 pastilles de note.
+- Bandeau « Annuler » après chaque validation.
+
+### 17.5 Agenda
+
+Deux vues, commutables (Semaine par défaut).
+
+**Semaine** (7 jours à partir d'aujourd'hui, navigation par semaine) :
+- Bande des 7 jours (fait, partiel, manqué, aujourd'hui, à venir), totaux (hizbs, thumuns à apprendre) et régularité sur 30 jours.
+- Une ligne par jour avec uniquement des numéros : hizbs de **base** (plein, ferme), hizbs **ciblés** (pointillé or, prévision), thumun à apprendre (`26·2/8`), ou « repos apprentissage ».
+- Statut à droite : ✓, ✕, « 3/5 », progression pour aujourd'hui, nombre de hizbs prévus pour l'avenir.
+- Toucher un jour ouvre le détail (noms, sourates, type).
+- Règle de prévision : la base est une rotation ordonnée, donc ferme. Le ciblé dépend des notes futures, donc toujours présenté comme prévision, avec une mention en bas de l'écran.
+
+**Mois** : calendrier en grille (lundi en premier), jours passés colorés (complet, partiel, manqué), aujourd'hui cerclé, barre de charge prévue sur les jours à venir. Dessous : série en cours, taux de jours complets, durée du cycle de base. Navigation de mois en mois.
+
+### 17.6 Acquis
+
+- En-tête : anneau (part des 480 thumuns acquis), hizbs acquis, partiels et fragiles.
+- Recherche par numéro de hizb, nom, sourate ou début de verset. Filtres : Tous, Acquis, Partiels, Fragiles, Non acquis.
+- Grille de 60 hizbs groupée par juz (barre de progression par juz). Chaque carte : numéro, nom arabe, sourate, badge d'état, jauge de remplissage.
+- Un tap acquiert ou retire un hizb entier. Un **appui long** ouvre le détail des 8 thumuns avec trois états : Non, Acquis, Fragile.
+- **Mode sélection** (bouton) : glissement sur plusieurs hizbs, puis action groupée (Acquis ou Retirer) dans une barre d'actions. Hors de ce mode, le défilement reste libre.
+- Raccourci « Hizbs 1 à 12 » pour la saisie initiale.
+
+### 17.7 Statistiques
+
+Trois blocs : chiffres clés (cycle de base, thumuns difficiles, série), répartition facile/moyen/difficile, carte du Coran (60 hizbs colorés par solidité ou par ancienneté, commutable), puis les 10 thumuns les plus fragiles (note, tendance, hizb, nom, sourate).
+
+### 17.8 Réglages
+
+Quotas (hizbs de révision par jour, nouveaux thumuns par jour), fréquence de rotation de base, plafond d'intervalle, jours de repos et tous les paramètres de la section 4. Sauvegarde : export et import JSON, date de la dernière sauvegarde.
+
+## 18. Données de référence : les 480 thumuns
+
+Constat : `atman_referentiel.json` n'est correct que pour ses 8 premières lignes, qui correspondent en réalité à des quarts de hizb (1:1, 2:26, 2:44, 2:60, 2:75, 2:92, 2:106, 2:124). Les 472 autres lignes contiennent « البقرة, verset 1 ». `classfication coran.csv` contient les 60 noms de hizbs et leur sourate de départ, qui sont utilisables.
+
+Décision :
+1. Le modèle de données garde le hizb et le numéro de thumun comme identifiants stables (`H01-T1` à `H60-T8`).
+2. La sourate affichée pour un hizb vient de `classfication coran.csv`.
+3. Les 240 quarts de hizb proviennent d'une source fiable (Tanzil ou Tarteel QUL). Chaque quart est coupé en deux thumuns au verset le plus proche de la moitié du texte. Ces débuts de thumun sont marqués « approximatifs » dans les données.
+4. L'utilisateur fournira le fichier exact des thumuns. Il remplace l'approximation par un import unique (colonnes : id, hizb, thumun, sourate, verset de départ). Aucun autre changement de code n'est nécessaire, car les identifiants restent les mêmes.
+5. Le référentiel actuel `atman_referentiel.json` est remplacé, pas corrigé à la main.
