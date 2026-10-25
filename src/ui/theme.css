@@ -171,3 +171,18 @@ nav .pip{position:absolute;top:4px;right:calc(50% - 20px);width:9px;height:9px;b
 nav button{min-height:48px;justify-content:center}
 .btn:disabled{opacity:.5;cursor:default}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* écran stats et réglages */
+.flist{list-style:none;margin:0;padding:0}
+.rowbtn{width:100%;min-height:48px;border:0;background:none;text-align:start;color:var(--fg)}
+.rowbtn .grow b,.rowbtn .grow .sub{display:block}
+.btn.small{padding:10px 14px;min-height:44px}
+.step button:disabled{opacity:.4;cursor:default}
+.days7{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;background:var(--surface2);border-radius:12px;padding:3px}
+.days7 button{border:0;background:none;min-height:44px;border-radius:9px;font-weight:600;font-size:13px;color:var(--muted)}
+.days7 button.on{background:var(--accent);color:var(--accent-fg)}
+.advtoggle{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;border:0;background:none;text-align:start;font-weight:600}
+.advtoggle small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+.errmsg{color:var(--s1-text);font-weight:600;padding:8px 0}
+.confirm{border-top:1px solid var(--line);padding-top:12px}.confirm p{margin:0 0 10px}
+.picker{margin-top:10px}.picker select{flex:1;min-width:0;min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);color:var(--fg);padding:0 8px;font:inherit}
