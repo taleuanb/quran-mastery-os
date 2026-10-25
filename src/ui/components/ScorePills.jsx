@@ -12,7 +12,7 @@ export default function ScorePills({ value = null, onChange, size = 'md' }) {
     <div className={`scores${size === 'sm' ? ' sm' : ''}`} role="group" aria-label={t('score.group')}>
       {SCORES.map((n) => {
         const selected = value === n;
-        const cls = ['sc', selected ? 'sel' : value != null ? 'off' : ''].filter(Boolean).join(' ');
+        const cls = selected ? 'sc sel' : 'sc';
         return (
           <button
             key={n}
