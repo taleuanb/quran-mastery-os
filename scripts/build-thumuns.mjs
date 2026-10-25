@@ -39,9 +39,16 @@ export function countLetters(text) {
 
 /**
  * Coquilles connues du CSV (lettres latines mêlées à l'arabe) : « قال رجلan » (H12, 5 lignes sur 8, les 3
- * autres portent déjà « قال رجلان ») et « أولm يروا » (H30, 8 lignes). Corrigées ici plutôt que dans le CSV.
+ * autres portent déjà « قال رجلان ») et « أولm يروا » (H30, 8 lignes) ; fautes d'orthographe de H28 (alif final
+ * manquant), H38 (hamza sur waw) et H46 (dal au lieu de dhal). Corrigées ici plutôt que dans le CSV.
  */
-const CSV_NAME_FIXES = { 'قال رجلan': 'قال رجلان', 'أولm يروا': 'أولم يروا' };
+const CSV_NAME_FIXES = {
+  'قال رجلan': 'قال رجلان',
+  'أولm يروا': 'أولم يروا',
+  'وقال الله لا تتخذو': 'وقال الله لا تتخذوا',
+  'قالوا أنومن': 'قالوا أنؤمن',
+  'فنبدناه': 'فنبذناه',
+};
 
 /** Noms de hizb depuis le CSV : nom le plus fréquent par hizb, après correction des coquilles connues. */
 export function hizbNamesFromCsv(csvText) {

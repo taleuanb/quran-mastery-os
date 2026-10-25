@@ -60,8 +60,7 @@ function setAcquis(state, { changes, day }) {
     lastByHizb[h] = addDays(day, -cycle + Math.floor((i * cycle) / sorted.length));
   });
   for (const id of baseIds) thumuns[id] = seededThumun(1, day, lastByHizb[hizbOf(id)], state.journal.length);
-  const { _undo, ...rest } = state;
-  return { ...rest, thumuns };
+  return { thumuns };
 }
 
 /** Applique une série de notes et mémorise de quoi annuler (une seule profondeur). */
@@ -95,10 +94,14 @@ const withDayRecord = (state, day, hizbs, reviewed) => ({
   [day]: { planned: hizbs.length, done: reviewed.length, hizbs, reviewed },
 });
 
-const withUndo = (state, next) => ({
+/**
+ * Applique `next` en mémorisant de quoi annuler (une seule profondeur). `keep` garde le point
+ * d'annulation déjà posé : une saisie faite de plusieurs actions s'annule d'un seul UNDO.
+ */
+const withUndo = (state, next, keep = false) => ({
   ...state,
   ...next,
-  _undo: { thumuns: state.thumuns, journal: state.journal, dayLog: state.dayLog },
+  _undo: keep && state._undo ? state._undo : { thumuns: state.thumuns, journal: state.journal, dayLog: state.dayLog },
 });
 
 /** Reconstruit un thumun depuis son seed puis rejoue ses entrées de journal. */
@@ -131,7 +134,7 @@ function editEntry(state, { entryId, score }) {
 export function reducer(state, action) {
   switch (action.type) {
     case 'SET_ACQUIS':
-      return setAcquis(state, action);
+      return withUndo(state, setAcquis(state, action), action.keepUndo);
 
     case 'REVIEW_HIZB': {
       const { hizb, day, overrides = {} } = action;
@@ -153,7 +156,7 @@ export function reducer(state, action) {
       return withUndo(state, scored(state, action.day, [{ id: action.id, score: action.score, pilier: 'hifdh' }]));
 
     case 'MARK_FORGOTTEN':
-      return withUndo(state, scored(state, action.day, [{ id: action.id, score: 1, pilier: 'revision' }]));
+      return withUndo(state, scored(state, action.day, [{ id: action.id, score: 1, pilier: 'revision' }]), action.keepUndo);
 
     case 'UNDO': {
       if (!state._undo) return state;

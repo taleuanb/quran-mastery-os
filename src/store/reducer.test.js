@@ -54,6 +54,24 @@ describe('SET_ACQUIS', () => {
     }
     expect(s.thumuns['H01-T1'].lastReviewed < s.thumuns['H03-T1'].lastReviewed).toBe(true);
   });
+
+  it('annulable : retirer un hizb avec historique puis UNDO restaure thumuns, journal et dayLog', () => {
+    let before = reducer(fresh(), { type: 'SET_ACQUIS', changes: allAt(3, 1), day: DAY });
+    before = reducer(before, { type: 'REVIEW_HIZB', hizb: 3, day: DAY, overrides: { 'H03-T2': 2 } });
+    const removed = reducer(before, { type: 'SET_ACQUIS', changes: allAt(3, 0), day: DAY });
+    expect(removed.thumuns['H03-T2'].status).toBe('non_acquis');
+    expect(removed._undo).toBeDefined();
+    const undone = reducer(removed, { type: 'UNDO' });
+    expect(persisted(undone)).toEqual(persisted(before));
+  });
+
+  it('keepUndo : une saisie en plusieurs actions s’annule d’un seul UNDO', () => {
+    const before = reducer(fresh(), { type: 'SET_ACQUIS', changes: allAt(3, 1), day: DAY });
+    let s = reducer(before, { type: 'SET_ACQUIS', changes: { 'H04-T1': 1 }, day: DAY });
+    s = reducer(s, { type: 'MARK_FORGOTTEN', id: 'H03-T2', day: DAY, keepUndo: true });
+    s = reducer(s, { type: 'MARK_FORGOTTEN', id: 'H03-T5', day: DAY, keepUndo: true });
+    expect(persisted(reducer(s, { type: 'UNDO' }))).toEqual(persisted(before));
+  });
 });
 
 describe('REVIEW_HIZB', () => {

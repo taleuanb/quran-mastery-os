@@ -34,6 +34,13 @@ describe('referential', () => {
     expect(hizbInfo(60)).toMatchObject({ hizb: 60, juz: 30, surah: 'الأعلى' })
   })
 
+  it('noms de hizb corrigés : H28, H38, H46 (8 thumuns chacun)', () => {
+    const fixed = { 28: 'وقال الله لا تتخذوا', 38: 'قالوا أنؤمن', 46: 'فنبذناه' }
+    for (const [h, name] of Object.entries(fixed)) {
+      expect(refsOfHizb(Number(h)).map((r) => r.hizbName)).toEqual(Array(8).fill(name))
+    }
+  })
+
   it('le nom du hizb est le même pour les 8 thumuns de chaque hizb', () => {
     for (let h = 1; h <= 60; h++) {
       const names = new Set(refsOfHizb(h).map((r) => r.hizbName))

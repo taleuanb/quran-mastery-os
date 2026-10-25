@@ -11,10 +11,10 @@ const FILTERS = ['all', 'full', 'part', 'fr', 'none'];
 const pad2 = (n) => String(n).padStart(2, '0');
 const thumunIds = (hizb) => Array.from({ length: 8 }, (_, i) => `H${pad2(hizb)}-T${i + 1}`);
 
-/** Affichage d'un thumun : 0 non acquis, 1 acquis, 2 fragile (acquis en piste cible ou fragile au départ). */
+/** Affichage d'un thumun : 0 non acquis, 1 acquis, 2 fragile (acquis en piste cible). */
 function displayState(th) {
   if (!th || th.status !== 'acquis') return 0;
-  return th.fragileInitial || th.track === 'cible' ? 2 : 1;
+  return th.track === 'cible' ? 2 : 1;
 }
 
 const hizbStatus = (a) => (a === 8 ? 'full' : a === 0 ? 'none' : 'part');
@@ -96,8 +96,14 @@ export default function Acquis({ state, dispatch, refs, today }) {
     return next;
   });
 
+  // Chaque saisie est annulable (spec 17.1, Ruling 25) : toast « Annuler » → UNDO.
+  const notify = (message) => setToast((prev) => ({ key: (prev?.key ?? 0) + 1, message }));
+  const undo = () => { dispatch({ type: 'UNDO' }); setToast(null); };
+
   const toggleHizb = (h) => {
-    dispatch({ type: 'SET_ACQUIS', changes: changesFor([h], rows[h].a === 8 ? 0 : 1), day: today });
+    const remove = rows[h].a === 8;
+    dispatch({ type: 'SET_ACQUIS', changes: changesFor([h], remove ? 0 : 1), day: today });
+    notify(t(remove ? 'acquis.toast.removed' : 'acquis.toast.added', { hizb: h }));
   };
 
   const openSheet = (h) => setSheet({ hizb: h, initial: rows[h].states, draft: rows[h].states });
@@ -155,12 +161,15 @@ export default function Acquis({ state, dispatch, refs, today }) {
 
   const applyBulk = (value) => {
     dispatch({ type: 'SET_ACQUIS', changes: changesFor(pickedList, value), day: today });
+    notify(pickedList.length === 1
+      ? t(value ? 'acquis.toast.added' : 'acquis.toast.removed', { hizb: pickedList[0] })
+      : t(value ? 'acquis.toast.bulkAdded' : 'acquis.toast.bulkRemoved', { n: pickedList.length }));
     setPicked({});
   };
 
   const quickFill = () => {
     dispatch({ type: 'SET_ACQUIS', changes: changesFor(HIZBS.slice(0, 12), 1), day: today });
-    setToast((prev) => ({ key: (prev?.key ?? 0) + 1, message: t('acquis.quick.done') }));
+    notify(t('acquis.quick.done'));
   };
 
   // ---- feuille des 8 thumuns ----
@@ -177,8 +186,13 @@ export default function Acquis({ state, dispatch, refs, today }) {
       if (to === 0 || from === 0) changes[id] = to;
       else if (to === 2) forgotten.push(id); // déjà acquis : le reducer ignore SET_ACQUIS, l'oubli passe par MARK_FORGOTTEN
     });
-    if (Object.keys(changes).length) dispatch({ type: 'SET_ACQUIS', changes, day: today });
-    forgotten.forEach((id) => dispatch({ type: 'MARK_FORGOTTEN', id, day: today }));
+    // Une seule saisie : les actions après la première gardent son point d'annulation.
+    const actions = [
+      ...(Object.keys(changes).length ? [{ type: 'SET_ACQUIS', changes, day: today }] : []),
+      ...forgotten.map((id) => ({ type: 'MARK_FORGOTTEN', id, day: today })),
+    ];
+    actions.forEach((a, i) => dispatch(i === 0 ? a : { ...a, keepUndo: true }));
+    if (actions.length) notify(t('acquis.toast.saved', { hizb: sheet.hizb }));
     setSheet(null);
   };
 
@@ -310,7 +324,7 @@ export default function Acquis({ state, dispatch, refs, today }) {
         </div>
       )}
 
-      {toast && <Toast key={toast.key} message={toast.message} />}
+      {toast && <Toast key={toast.key} message={toast.message} actionLabel={t('common.cancel')} onAction={undo} />}
 
       <BottomSheet
         open={!!sheet}

@@ -114,10 +114,73 @@ describe('Acquis : recherche et filtres', () => {
     expect(cards()).toHaveLength(60);
   });
 
+  it('un thumun fragile au départ mais revenu en base n’est plus fragile', () => {
+    const state = makeState({ acquis: [1] });
+    state.thumuns['H01-T3'] = { ...state.thumuns['H01-T3'], fragileInitial: true, track: 'base' };
+    setup({ state });
+    expect(within(card(1)).getByText('Acquis')).toBeInTheDocument();
+    expect(screen.getByText('1 hizbs acquis')).toBeInTheDocument();
+    expect(screen.getByText('0 partiels · 0 fragiles')).toBeInTheDocument();
+  });
+
   it('un thumun de la piste cible compte comme fragile (badge)', () => {
     const state = makeState({ acquis: [1], cible: { 'H01-T1': {}, 'H01-T2': {} } });
     setup({ state });
     expect(within(card(1)).getByText('2 fragiles')).toBeInTheDocument();
+  });
+});
+
+describe('Acquis : annulation (Ruling 25)', () => {
+  const undoButton = () => screen.getByRole('button', { name: 'Annuler' });
+
+  it('tap qui retire un hizb : toast « Annuler » → UNDO', () => {
+    const { dispatch } = setup({ state: makeState({ acquis: [3] }) });
+    tap(card(3));
+    expect(screen.getByRole('status')).toHaveTextContent('Hizb 3 retiré');
+    fireEvent.click(undoButton());
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'UNDO' });
+    expect(screen.queryByRole('status')).toBeNull();
+  });
+
+  it('tap qui acquiert un hizb : toast « Annuler »', () => {
+    setup();
+    tap(card(3));
+    expect(screen.getByRole('status')).toHaveTextContent('Hizb 3 acquis');
+    expect(undoButton()).toBeInTheDocument();
+  });
+
+  it('action groupée et raccourci : toast « Annuler » → UNDO', () => {
+    const { dispatch } = setup();
+    fireEvent.click(screen.getByRole('button', { name: 'Mode sélection : off' }));
+    down(card(2));
+    fireEvent.pointerUp(card(2));
+    down(card(4));
+    fireEvent.pointerUp(card(4));
+    fireEvent.click(bulk().getByRole('button', { name: 'Retirer' }));
+    expect(screen.getByRole('status')).toHaveTextContent('2 hizbs retirés');
+    fireEvent.click(undoButton());
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'UNDO' });
+    fireEvent.click(screen.getByRole('button', { name: 'Hizbs 1 à 12' }));
+    fireEvent.click(undoButton());
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'UNDO' });
+  });
+
+  it('feuille : SET_ACQUIS puis MARK_FORGOTTEN (keepUndo) annulés d’un seul UNDO', () => {
+    const { dispatch } = setup({ state: makeState({ acquis: [3] }) });
+    longPress(card(3));
+    const rows = screen.getAllByRole('group', { name: /Thumun/ });
+    fireEvent.click(within(rows[0]).getByRole('button', { name: 'Non' }));
+    fireEvent.click(within(rows[2]).getByRole('button', { name: 'Fragile' }));
+    fireEvent.click(within(rows[4]).getByRole('button', { name: 'Fragile' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Enregistrer' }));
+    expect(dispatch.mock.calls.map((c) => c[0])).toEqual([
+      { type: 'SET_ACQUIS', changes: { 'H03-T1': 0 }, day: TODAY },
+      { type: 'MARK_FORGOTTEN', id: 'H03-T3', day: TODAY, keepUndo: true },
+      { type: 'MARK_FORGOTTEN', id: 'H03-T5', day: TODAY, keepUndo: true },
+    ]);
+    expect(screen.getByRole('status')).toHaveTextContent('Hizb 3 enregistré');
+    fireEvent.click(undoButton());
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'UNDO' });
   });
 });
 
