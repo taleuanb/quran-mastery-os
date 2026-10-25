@@ -16,8 +16,8 @@
     "juz": 1,
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
-    "ayah": 15,
-    "approx": true
+    "ayah": 13,
+    "approx": false
   },
   {
     "id": "H01-T3",
@@ -26,7 +26,7 @@
     "juz": 1,
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
-    "ayah": 26,
+    "ayah": 25,
     "approx": false
   },
   {
@@ -37,7 +37,7 @@
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
     "ayah": 33,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H01-T5",
@@ -46,7 +46,7 @@
     "juz": 1,
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
-    "ayah": 44,
+    "ayah": 43,
     "approx": false
   },
   {
@@ -57,7 +57,7 @@
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
     "ayah": 53,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H01-T7",
@@ -66,7 +66,7 @@
     "juz": 1,
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
-    "ayah": 60,
+    "ayah": 59,
     "approx": false
   },
   {
@@ -77,7 +77,7 @@
     "hizbName": "الفاتحة - الفاتحة",
     "surah": "البقرة",
     "ayah": 66,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H02-T1",
@@ -96,8 +96,8 @@
     "juz": 1,
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
-    "ayah": 85,
-    "approx": true
+    "ayah": 84,
+    "approx": false
   },
   {
     "id": "H02-T3",
@@ -106,7 +106,7 @@
     "juz": 1,
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
-    "ayah": 92,
+    "ayah": 91,
     "approx": false
   },
   {
@@ -116,8 +116,8 @@
     "juz": 1,
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
-    "ayah": 100,
-    "approx": true
+    "ayah": 101,
+    "approx": false
   },
   {
     "id": "H02-T5",
@@ -126,7 +126,7 @@
     "juz": 1,
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
-    "ayah": 106,
+    "ayah": 105,
     "approx": false
   },
   {
@@ -137,7 +137,7 @@
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
     "ayah": 114,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H02-T7",
@@ -146,7 +146,7 @@
     "juz": 1,
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
-    "ayah": 124,
+    "ayah": 123,
     "approx": false
   },
   {
@@ -156,8 +156,8 @@
     "juz": 1,
     "hizbName": "وإذا لقوا",
     "surah": "البقرة",
-    "ayah": 133,
-    "approx": true
+    "ayah": 132,
+    "approx": false
   },
   {
     "id": "H03-T1",
@@ -166,7 +166,7 @@
     "juz": 2,
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
-    "ayah": 142,
+    "ayah": 141,
     "approx": false
   },
   {
@@ -177,7 +177,7 @@
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
     "ayah": 147,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H03-T3",
@@ -186,7 +186,7 @@
     "juz": 2,
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
-    "ayah": 158,
+    "ayah": 157,
     "approx": false
   },
   {
@@ -197,7 +197,7 @@
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
     "ayah": 167,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H03-T5",
@@ -206,7 +206,7 @@
     "juz": 2,
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
-    "ayah": 177,
+    "ayah": 176,
     "approx": false
   },
   {
@@ -217,7 +217,7 @@
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
     "ayah": 184,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H03-T7",
@@ -226,7 +226,7 @@
     "juz": 2,
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
-    "ayah": 189,
+    "ayah": 188,
     "approx": false
   },
   {
@@ -237,7 +237,7 @@
     "hizbName": "سيقول السفهاء",
     "surah": "البقرة",
     "ayah": 196,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H04-T1",
@@ -246,7 +246,7 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 203,
+    "ayah": 201,
     "approx": false
   },
   {
@@ -256,8 +256,8 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 213,
-    "approx": true
+    "ayah": 211,
+    "approx": false
   },
   {
     "id": "H04-T3",
@@ -266,7 +266,7 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 219,
+    "ayah": 217,
     "approx": false
   },
   {
@@ -276,8 +276,8 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 227,
-    "approx": true
+    "ayah": 226,
+    "approx": false
   },
   {
     "id": "H04-T5",
@@ -286,7 +286,7 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 233,
+    "ayah": 231,
     "approx": false
   },
   {
@@ -296,8 +296,8 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 235,
-    "approx": true
+    "ayah": 234,
+    "approx": false
   },
   {
     "id": "H04-T7",
@@ -306,7 +306,7 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 243,
+    "ayah": 241,
     "approx": false
   },
   {
@@ -316,8 +316,8 @@
     "juz": 2,
     "hizbName": "واذكروا الله",
     "surah": "البقرة",
-    "ayah": 248,
-    "approx": true
+    "ayah": 246,
+    "approx": false
   },
   {
     "id": "H05-T1",
@@ -326,7 +326,7 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
-    "ayah": 253,
+    "ayah": 251,
     "approx": false
   },
   {
@@ -336,8 +336,8 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
-    "ayah": 258,
-    "approx": true
+    "ayah": 257,
+    "approx": false
   },
   {
     "id": "H05-T3",
@@ -346,7 +346,7 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
-    "ayah": 263,
+    "ayah": 262,
     "approx": false
   },
   {
@@ -357,7 +357,7 @@
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
     "ayah": 266,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H05-T5",
@@ -366,7 +366,7 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
-    "ayah": 272,
+    "ayah": 271,
     "approx": false
   },
   {
@@ -376,8 +376,8 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
-    "ayah": 279,
-    "approx": true
+    "ayah": 281,
+    "approx": false
   },
   {
     "id": "H05-T7",
@@ -386,7 +386,7 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "البقرة",
-    "ayah": 283,
+    "ayah": 282,
     "approx": false
   },
   {
@@ -396,8 +396,8 @@
     "juz": 3,
     "hizbName": "تلك الرسل",
     "surah": "آل عمران",
-    "ayah": 6,
-    "approx": true
+    "ayah": 5,
+    "approx": false
   },
   {
     "id": "H06-T1",
@@ -416,8 +416,8 @@
     "juz": 3,
     "hizbName": "قل أؤنبئكم",
     "surah": "آل عمران",
-    "ayah": 23,
-    "approx": true
+    "ayah": 26,
+    "approx": false
   },
   {
     "id": "H06-T3",
@@ -437,7 +437,7 @@
     "hizbName": "قل أؤنبئكم",
     "surah": "آل عمران",
     "ayah": 42,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H06-T5",
@@ -446,7 +446,7 @@
     "juz": 3,
     "hizbName": "قل أؤنبئكم",
     "surah": "آل عمران",
-    "ayah": 52,
+    "ayah": 51,
     "approx": false
   },
   {
@@ -456,8 +456,8 @@
     "juz": 3,
     "hizbName": "قل أؤنبئكم",
     "surah": "آل عمران",
-    "ayah": 64,
-    "approx": true
+    "ayah": 63,
+    "approx": false
   },
   {
     "id": "H06-T7",
@@ -466,7 +466,7 @@
     "juz": 3,
     "hizbName": "قل أؤنبئكم",
     "surah": "آل عمران",
-    "ayah": 75,
+    "ayah": 74,
     "approx": false
   },
   {
@@ -476,8 +476,8 @@
     "juz": 3,
     "hizbName": "قل أؤنبئكم",
     "surah": "آل عمران",
-    "ayah": 81,
-    "approx": true
+    "ayah": 82,
+    "approx": false
   },
   {
     "id": "H07-T1",
@@ -486,7 +486,7 @@
     "juz": 4,
     "hizbName": "لن تنالوا البر",
     "surah": "آل عمران",
-    "ayah": 93,
+    "ayah": 91,
     "approx": false
   },
   {
@@ -496,8 +496,8 @@
     "juz": 4,
     "hizbName": "لن تنالوا البر",
     "surah": "آل عمران",
-    "ayah": 103,
-    "approx": true
+    "ayah": 104,
+    "approx": false
   },
   {
     "id": "H07-T3",
@@ -516,8 +516,8 @@
     "juz": 4,
     "hizbName": "لن تنالوا البر",
     "surah": "آل عمران",
-    "ayah": 120,
-    "approx": true
+    "ayah": 121,
+    "approx": false
   },
   {
     "id": "H07-T5",
@@ -537,7 +537,7 @@
     "hizbName": "لن تنالوا البر",
     "surah": "آل عمران",
     "ayah": 144,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H07-T7",
@@ -556,8 +556,8 @@
     "juz": 4,
     "hizbName": "لن تنالوا البر",
     "surah": "آل عمران",
-    "ayah": 159,
-    "approx": true
+    "ayah": 160,
+    "approx": false
   },
   {
     "id": "H08-T1",
@@ -577,7 +577,7 @@
     "hizbName": "يستبشرون بنعمة",
     "surah": "آل عمران",
     "ayah": 179,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H08-T3",
@@ -596,8 +596,8 @@
     "juz": 4,
     "hizbName": "يستبشرون بنعمة",
     "surah": "آل عمران",
-    "ayah": 193,
-    "approx": true
+    "ayah": 195,
+    "approx": false
   },
   {
     "id": "H08-T5",
@@ -606,7 +606,7 @@
     "juz": 4,
     "hizbName": "يستبشرون بنعمة",
     "surah": "النساء",
-    "ayah": 1,
+    "ayah": 6,
     "approx": false
   },
   {
@@ -616,8 +616,8 @@
     "juz": 4,
     "hizbName": "يستبشرون بنعمة",
     "surah": "النساء",
-    "ayah": 6,
-    "approx": true
+    "ayah": 11,
+    "approx": false
   },
   {
     "id": "H08-T7",
@@ -626,7 +626,7 @@
     "juz": 4,
     "hizbName": "يستبشرون بنعمة",
     "surah": "النساء",
-    "ayah": 12,
+    "ayah": 13,
     "approx": false
   },
   {
@@ -636,8 +636,8 @@
     "juz": 4,
     "hizbName": "يستبشرون بنعمة",
     "surah": "النساء",
-    "ayah": 18,
-    "approx": true
+    "ayah": 19,
+    "approx": false
   },
   {
     "id": "H09-T1",
@@ -656,8 +656,8 @@
     "juz": 5,
     "hizbName": "والمحصنات من النساء",
     "surah": "النساء",
-    "ayah": 29,
-    "approx": true
+    "ayah": 31,
+    "approx": false
   },
   {
     "id": "H09-T3",
@@ -677,7 +677,7 @@
     "hizbName": "والمحصنات من النساء",
     "surah": "النساء",
     "ayah": 46,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H09-T5",
@@ -686,7 +686,7 @@
     "juz": 5,
     "hizbName": "والمحصنات من النساء",
     "surah": "النساء",
-    "ayah": 58,
+    "ayah": 57,
     "approx": false
   },
   {
@@ -696,8 +696,8 @@
     "juz": 5,
     "hizbName": "والمحصنات من النساء",
     "surah": "النساء",
-    "ayah": 64,
-    "approx": true
+    "ayah": 63,
+    "approx": false
   },
   {
     "id": "H09-T7",
@@ -706,7 +706,7 @@
     "juz": 5,
     "hizbName": "والمحصنات من النساء",
     "surah": "النساء",
-    "ayah": 74,
+    "ayah": 73,
     "approx": false
   },
   {
@@ -716,8 +716,8 @@
     "juz": 5,
     "hizbName": "والمحصنات من النساء",
     "surah": "النساء",
-    "ayah": 79,
-    "approx": true
+    "ayah": 77,
+    "approx": false
   },
   {
     "id": "H10-T1",
@@ -726,7 +726,7 @@
     "juz": 5,
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
-    "ayah": 88,
+    "ayah": 86,
     "approx": false
   },
   {
@@ -737,7 +737,7 @@
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
     "ayah": 92,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H10-T3",
@@ -746,7 +746,7 @@
     "juz": 5,
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
-    "ayah": 100,
+    "ayah": 99,
     "approx": false
   },
   {
@@ -757,7 +757,7 @@
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
     "ayah": 104,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H10-T5",
@@ -766,7 +766,7 @@
     "juz": 5,
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
-    "ayah": 114,
+    "ayah": 113,
     "approx": false
   },
   {
@@ -776,8 +776,8 @@
     "juz": 5,
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
-    "ayah": 125,
-    "approx": true
+    "ayah": 122,
+    "approx": false
   },
   {
     "id": "H10-T7",
@@ -786,7 +786,7 @@
     "juz": 5,
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
-    "ayah": 135,
+    "ayah": 129,
     "approx": false
   },
   {
@@ -796,8 +796,8 @@
     "juz": 5,
     "hizbName": "الله لا إله إلا هو",
     "surah": "النساء",
-    "ayah": 140,
-    "approx": true
+    "ayah": 137,
+    "approx": false
   },
   {
     "id": "H11-T1",
@@ -806,7 +806,7 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "النساء",
-    "ayah": 148,
+    "ayah": 147,
     "approx": false
   },
   {
@@ -816,8 +816,8 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "النساء",
-    "ayah": 155,
-    "approx": true
+    "ayah": 158,
+    "approx": false
   },
   {
     "id": "H11-T3",
@@ -826,7 +826,7 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "النساء",
-    "ayah": 163,
+    "ayah": 165,
     "approx": false
   },
   {
@@ -837,7 +837,7 @@
     "hizbName": "لا يحب الله الجهر",
     "surah": "النساء",
     "ayah": 171,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H11-T5",
@@ -846,7 +846,7 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "المائدة",
-    "ayah": 1,
+    "ayah": 4,
     "approx": false
   },
   {
@@ -856,8 +856,8 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "المائدة",
-    "ayah": 5,
-    "approx": true
+    "ayah": 7,
+    "approx": false
   },
   {
     "id": "H11-T7",
@@ -866,7 +866,7 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "المائدة",
-    "ayah": 12,
+    "ayah": 13,
     "approx": false
   },
   {
@@ -876,8 +876,8 @@
     "juz": 6,
     "hizbName": "لا يحب الله الجهر",
     "surah": "المائدة",
-    "ayah": 17,
-    "approx": true
+    "ayah": 19,
+    "approx": false
   },
   {
     "id": "H12-T1",
@@ -886,7 +886,7 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 27,
+    "ayah": 25,
     "approx": false
   },
   {
@@ -896,8 +896,8 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 33,
-    "approx": true
+    "ayah": 34,
+    "approx": false
   },
   {
     "id": "H12-T3",
@@ -906,7 +906,7 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 41,
+    "ayah": 43,
     "approx": false
   },
   {
@@ -916,8 +916,8 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 45,
-    "approx": true
+    "ayah": 47,
+    "approx": false
   },
   {
     "id": "H12-T5",
@@ -936,8 +936,8 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 59,
-    "approx": true
+    "ayah": 61,
+    "approx": false
   },
   {
     "id": "H12-T7",
@@ -946,7 +946,7 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 67,
+    "ayah": 69,
     "approx": false
   },
   {
@@ -956,8 +956,8 @@
     "juz": 6,
     "hizbName": "قال رجلان",
     "surah": "المائدة",
-    "ayah": 73,
-    "approx": true
+    "ayah": 77,
+    "approx": false
   },
   {
     "id": "H13-T1",
@@ -966,7 +966,7 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "المائدة",
-    "ayah": 82,
+    "ayah": 84,
     "approx": false
   },
   {
@@ -976,8 +976,8 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "المائدة",
-    "ayah": 90,
-    "approx": true
+    "ayah": 92,
+    "approx": false
   },
   {
     "id": "H13-T3",
@@ -986,7 +986,7 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "المائدة",
-    "ayah": 97,
+    "ayah": 99,
     "approx": false
   },
   {
@@ -996,8 +996,8 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "المائدة",
-    "ayah": 104,
-    "approx": true
+    "ayah": 108,
+    "approx": false
   },
   {
     "id": "H13-T5",
@@ -1006,7 +1006,7 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "المائدة",
-    "ayah": 109,
+    "ayah": 113,
     "approx": false
   },
   {
@@ -1015,9 +1015,9 @@
     "thumun": 6,
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
-    "surah": "المائدة",
-    "ayah": 117,
-    "approx": true
+    "surah": "الأنعام",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H13-T7",
@@ -1026,7 +1026,7 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "الأنعام",
-    "ayah": 13,
+    "ayah": 14,
     "approx": false
   },
   {
@@ -1036,8 +1036,8 @@
     "juz": 7,
     "hizbName": "لتجدن أشد الناس",
     "surah": "الأنعام",
-    "ayah": 25,
-    "approx": true
+    "ayah": 26,
+    "approx": false
   },
   {
     "id": "H14-T1",
@@ -1046,7 +1046,7 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 36,
+    "ayah": 37,
     "approx": false
   },
   {
@@ -1056,8 +1056,8 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 48,
-    "approx": true
+    "ayah": 51,
+    "approx": false
   },
   {
     "id": "H14-T3",
@@ -1066,7 +1066,7 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 59,
+    "ayah": 60,
     "approx": false
   },
   {
@@ -1076,8 +1076,8 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 68,
-    "approx": true
+    "ayah": 70,
+    "approx": false
   },
   {
     "id": "H14-T5",
@@ -1086,7 +1086,7 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 74,
+    "ayah": 81,
     "approx": false
   },
   {
@@ -1096,8 +1096,8 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 87,
-    "approx": true
+    "ayah": 92,
+    "approx": false
   },
   {
     "id": "H14-T7",
@@ -1106,7 +1106,7 @@
     "juz": 7,
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
-    "ayah": 95,
+    "ayah": 96,
     "approx": false
   },
   {
@@ -1117,7 +1117,7 @@
     "hizbName": "إنما يستجيب",
     "surah": "الأنعام",
     "ayah": 101,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H15-T1",
@@ -1126,7 +1126,7 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 111,
+    "ayah": 112,
     "approx": false
   },
   {
@@ -1136,8 +1136,8 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 119,
-    "approx": true
+    "ayah": 121,
+    "approx": false
   },
   {
     "id": "H15-T3",
@@ -1146,7 +1146,7 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 127,
+    "ayah": 128,
     "approx": false
   },
   {
@@ -1156,8 +1156,8 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 135,
-    "approx": true
+    "ayah": 137,
+    "approx": false
   },
   {
     "id": "H15-T5",
@@ -1166,7 +1166,7 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 141,
+    "ayah": 142,
     "approx": false
   },
   {
@@ -1176,8 +1176,8 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 145,
-    "approx": true
+    "ayah": 146,
+    "approx": false
   },
   {
     "id": "H15-T7",
@@ -1186,7 +1186,7 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 151,
+    "ayah": 152,
     "approx": false
   },
   {
@@ -1196,8 +1196,8 @@
     "juz": 8,
     "hizbName": "ولو أننا نزلنا",
     "surah": "الأنعام",
-    "ayah": 157,
-    "approx": true
+    "ayah": 159,
+    "approx": false
   },
   {
     "id": "H16-T1",
@@ -1216,8 +1216,8 @@
     "juz": 8,
     "hizbName": "فما كان",
     "surah": "الأعراف",
-    "ayah": 20,
-    "approx": true
+    "ayah": 18,
+    "approx": false
   },
   {
     "id": "H16-T3",
@@ -1226,7 +1226,7 @@
     "juz": 8,
     "hizbName": "فما كان",
     "surah": "الأعراف",
-    "ayah": 31,
+    "ayah": 28,
     "approx": false
   },
   {
@@ -1236,8 +1236,8 @@
     "juz": 8,
     "hizbName": "فما كان",
     "surah": "الأعراف",
-    "ayah": 38,
-    "approx": true
+    "ayah": 36,
+    "approx": false
   },
   {
     "id": "H16-T5",
@@ -1246,7 +1246,7 @@
     "juz": 8,
     "hizbName": "فما كان",
     "surah": "الأعراف",
-    "ayah": 47,
+    "ayah": 46,
     "approx": false
   },
   {
@@ -1257,7 +1257,7 @@
     "hizbName": "فما كان",
     "surah": "الأعراف",
     "ayah": 54,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H16-T7",
@@ -1266,7 +1266,7 @@
     "juz": 8,
     "hizbName": "فما كان",
     "surah": "الأعراف",
-    "ayah": 65,
+    "ayah": 64,
     "approx": false
   },
   {
@@ -1276,8 +1276,8 @@
     "juz": 8,
     "hizbName": "فما كان",
     "surah": "الأعراف",
-    "ayah": 75,
-    "approx": true
+    "ayah": 74,
+    "approx": false
   },
   {
     "id": "H17-T1",
@@ -1286,7 +1286,7 @@
     "juz": 9,
     "hizbName": "قال الملأ",
     "surah": "الأعراف",
-    "ayah": 88,
+    "ayah": 87,
     "approx": false
   },
   {
@@ -1297,7 +1297,7 @@
     "hizbName": "قال الملأ",
     "surah": "الأعراف",
     "ayah": 99,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H17-T3",
@@ -1306,7 +1306,7 @@
     "juz": 9,
     "hizbName": "قال الملأ",
     "surah": "الأعراف",
-    "ayah": 117,
+    "ayah": 116,
     "approx": false
   },
   {
@@ -1317,7 +1317,7 @@
     "hizbName": "قال الملأ",
     "surah": "الأعراف",
     "ayah": 131,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H17-T5",
@@ -1337,7 +1337,7 @@
     "hizbName": "قال الملأ",
     "surah": "الأعراف",
     "ayah": 148,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H17-T7",
@@ -1356,8 +1356,8 @@
     "juz": 9,
     "hizbName": "قال الملأ",
     "surah": "الأعراف",
-    "ayah": 161,
-    "approx": true
+    "ayah": 163,
+    "approx": false
   },
   {
     "id": "H18-T1",
@@ -1376,8 +1376,8 @@
     "juz": 9,
     "hizbName": "وإذ نتقنا",
     "surah": "الأعراف",
-    "ayah": 179,
-    "approx": true
+    "ayah": 180,
+    "approx": false
   },
   {
     "id": "H18-T3",
@@ -1386,7 +1386,7 @@
     "juz": 9,
     "hizbName": "وإذ نتقنا",
     "surah": "الأعراف",
-    "ayah": 189,
+    "ayah": 188,
     "approx": false
   },
   {
@@ -1396,8 +1396,8 @@
     "juz": 9,
     "hizbName": "وإذ نتقنا",
     "surah": "الأعراف",
-    "ayah": 197,
-    "approx": true
+    "ayah": 199,
+    "approx": false
   },
   {
     "id": "H18-T5",
@@ -1406,7 +1406,7 @@
     "juz": 9,
     "hizbName": "وإذ نتقنا",
     "surah": "الأنفال",
-    "ayah": 1,
+    "ayah": 5,
     "approx": false
   },
   {
@@ -1416,8 +1416,8 @@
     "juz": 9,
     "hizbName": "وإذ نتقنا",
     "surah": "الأنفال",
-    "ayah": 11,
-    "approx": true
+    "ayah": 12,
+    "approx": false
   },
   {
     "id": "H18-T7",
@@ -1436,8 +1436,8 @@
     "juz": 9,
     "hizbName": "وإذ نتقنا",
     "surah": "الأنفال",
-    "ayah": 31,
-    "approx": true
+    "ayah": 32,
+    "approx": false
   },
   {
     "id": "H19-T1",
@@ -1456,8 +1456,8 @@
     "juz": 10,
     "hizbName": "واعلموا",
     "surah": "الأنفال",
-    "ayah": 48,
-    "approx": true
+    "ayah": 50,
+    "approx": false
   },
   {
     "id": "H19-T3",
@@ -1476,8 +1476,8 @@
     "juz": 10,
     "hizbName": "واعلموا",
     "surah": "الأنفال",
-    "ayah": 70,
-    "approx": true
+    "ayah": 73,
+    "approx": false
   },
   {
     "id": "H19-T5",
@@ -1486,7 +1486,7 @@
     "juz": 10,
     "hizbName": "واعلموا",
     "surah": "التوبة",
-    "ayah": 1,
+    "ayah": 5,
     "approx": false
   },
   {
@@ -1496,8 +1496,8 @@
     "juz": 10,
     "hizbName": "واعلموا",
     "surah": "التوبة",
-    "ayah": 9,
-    "approx": true
+    "ayah": 12,
+    "approx": false
   },
   {
     "id": "H19-T7",
@@ -1516,8 +1516,8 @@
     "juz": 10,
     "hizbName": "واعلموا",
     "surah": "التوبة",
-    "ayah": 26,
-    "approx": true
+    "ayah": 25,
+    "approx": false
   },
   {
     "id": "H20-T1",
@@ -1536,8 +1536,8 @@
     "juz": 10,
     "hizbName": "يا أيها الذين",
     "surah": "التوبة",
-    "ayah": 38,
-    "approx": true
+    "ayah": 40,
+    "approx": false
   },
   {
     "id": "H20-T3",
@@ -1556,8 +1556,8 @@
     "juz": 10,
     "hizbName": "يا أيها الذين",
     "surah": "التوبة",
-    "ayah": 52,
-    "approx": true
+    "ayah": 54,
+    "approx": false
   },
   {
     "id": "H20-T5",
@@ -1566,7 +1566,7 @@
     "juz": 10,
     "hizbName": "يا أيها الذين",
     "surah": "التوبة",
-    "ayah": 60,
+    "ayah": 61,
     "approx": false
   },
   {
@@ -1576,8 +1576,8 @@
     "juz": 10,
     "hizbName": "يا أيها الذين",
     "surah": "التوبة",
-    "ayah": 69,
-    "approx": true
+    "ayah": 70,
+    "approx": false
   },
   {
     "id": "H20-T7",
@@ -1586,7 +1586,7 @@
     "juz": 10,
     "hizbName": "يا أيها الذين",
     "surah": "التوبة",
-    "ayah": 75,
+    "ayah": 76,
     "approx": false
   },
   {
@@ -1596,8 +1596,8 @@
     "juz": 10,
     "hizbName": "يا أيها الذين",
     "surah": "التوبة",
-    "ayah": 84,
-    "approx": true
+    "ayah": 85,
+    "approx": false
   },
   {
     "id": "H21-T1",
@@ -1606,7 +1606,7 @@
     "juz": 11,
     "hizbName": "إنما السبيل",
     "surah": "التوبة",
-    "ayah": 93,
+    "ayah": 94,
     "approx": false
   },
   {
@@ -1616,8 +1616,8 @@
     "juz": 11,
     "hizbName": "إنما السبيل",
     "surah": "التوبة",
-    "ayah": 101,
-    "approx": true
+    "ayah": 102,
+    "approx": false
   },
   {
     "id": "H21-T3",
@@ -1626,7 +1626,7 @@
     "juz": 11,
     "hizbName": "إنما السبيل",
     "surah": "التوبة",
-    "ayah": 111,
+    "ayah": 112,
     "approx": false
   },
   {
@@ -1636,8 +1636,8 @@
     "juz": 11,
     "hizbName": "إنما السبيل",
     "surah": "التوبة",
-    "ayah": 116,
-    "approx": true
+    "ayah": 118,
+    "approx": false
   },
   {
     "id": "H21-T5",
@@ -1646,7 +1646,7 @@
     "juz": 11,
     "hizbName": "إنما السبيل",
     "surah": "التوبة",
-    "ayah": 122,
+    "ayah": 124,
     "approx": false
   },
   {
@@ -1656,8 +1656,8 @@
     "juz": 11,
     "hizbName": "إنما السبيل",
     "surah": "يونس",
-    "ayah": 2,
-    "approx": true
+    "ayah": 3,
+    "approx": false
   },
   {
     "id": "H21-T7",
@@ -1677,7 +1677,7 @@
     "hizbName": "إنما السبيل",
     "surah": "يونس",
     "ayah": 19,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H22-T1",
@@ -1697,7 +1697,7 @@
     "hizbName": "للذين أحسنوا",
     "surah": "يونس",
     "ayah": 37,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H22-T3",
@@ -1706,7 +1706,7 @@
     "juz": 11,
     "hizbName": "للذين أحسنوا",
     "surah": "يونس",
-    "ayah": 53,
+    "ayah": 49,
     "approx": false
   },
   {
@@ -1717,7 +1717,7 @@
     "hizbName": "للذين أحسنوا",
     "surah": "يونس",
     "ayah": 61,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H22-T5",
@@ -1736,8 +1736,8 @@
     "juz": 11,
     "hizbName": "للذين أحسنوا",
     "surah": "يونس",
-    "ayah": 79,
-    "approx": true
+    "ayah": 83,
+    "approx": false
   },
   {
     "id": "H22-T7",
@@ -1746,7 +1746,7 @@
     "juz": 11,
     "hizbName": "للذين أحسنوا",
     "surah": "يونس",
-    "ayah": 90,
+    "ayah": 93,
     "approx": false
   },
   {
@@ -1756,8 +1756,8 @@
     "juz": 11,
     "hizbName": "للذين أحسنوا",
     "surah": "يونس",
-    "ayah": 102,
-    "approx": true
+    "ayah": 104,
+    "approx": false
   },
   {
     "id": "H23-T1",
@@ -1777,7 +1777,7 @@
     "hizbName": "وما من دابة",
     "surah": "هود",
     "ayah": 15,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H23-T3",
@@ -1796,8 +1796,8 @@
     "juz": 12,
     "hizbName": "وما من دابة",
     "surah": "هود",
-    "ayah": 31,
-    "approx": true
+    "ayah": 32,
+    "approx": false
   },
   {
     "id": "H23-T5",
@@ -1817,7 +1817,7 @@
     "hizbName": "وما من دابة",
     "surah": "هود",
     "ayah": 50,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H23-T7",
@@ -1836,8 +1836,8 @@
     "juz": 12,
     "hizbName": "وما من دابة",
     "surah": "هود",
-    "ayah": 71,
-    "approx": true
+    "ayah": 73,
+    "approx": false
   },
   {
     "id": "H24-T1",
@@ -1846,7 +1846,7 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "هود",
-    "ayah": 84,
+    "ayah": 83,
     "approx": false
   },
   {
@@ -1856,8 +1856,8 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "هود",
-    "ayah": 93,
-    "approx": true
+    "ayah": 94,
+    "approx": false
   },
   {
     "id": "H24-T3",
@@ -1866,7 +1866,7 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "هود",
-    "ayah": 108,
+    "ayah": 105,
     "approx": false
   },
   {
@@ -1876,8 +1876,8 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "هود",
-    "ayah": 118,
-    "approx": true
+    "ayah": 119,
+    "approx": false
   },
   {
     "id": "H24-T5",
@@ -1886,7 +1886,7 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "يوسف",
-    "ayah": 7,
+    "ayah": 10,
     "approx": false
   },
   {
@@ -1896,8 +1896,8 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "يوسف",
-    "ayah": 19,
-    "approx": true
+    "ayah": 22,
+    "approx": false
   },
   {
     "id": "H24-T7",
@@ -1906,7 +1906,7 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "يوسف",
-    "ayah": 30,
+    "ayah": 33,
     "approx": false
   },
   {
@@ -1916,8 +1916,8 @@
     "juz": 12,
     "hizbName": "وإلى مدين",
     "surah": "يوسف",
-    "ayah": 40,
-    "approx": true
+    "ayah": 43,
+    "approx": false
   },
   {
     "id": "H25-T1",
@@ -1936,8 +1936,8 @@
     "juz": 13,
     "hizbName": "وما أبرئ",
     "surah": "يوسف",
-    "ayah": 65,
-    "approx": true
+    "ayah": 67,
+    "approx": false
   },
   {
     "id": "H25-T3",
@@ -1957,7 +1957,7 @@
     "hizbName": "وما أبرئ",
     "surah": "يوسف",
     "ayah": 88,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H25-T5",
@@ -1977,7 +1977,7 @@
     "hizbName": "وما أبرئ",
     "surah": "يوسف",
     "ayah": 110,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H25-T7",
@@ -1996,8 +1996,8 @@
     "juz": 13,
     "hizbName": "وما أبرئ",
     "surah": "الرعد",
-    "ayah": 14,
-    "approx": true
+    "ayah": 17,
+    "approx": false
   },
   {
     "id": "H26-T1",
@@ -2006,7 +2006,7 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "الرعد",
-    "ayah": 19,
+    "ayah": 21,
     "approx": false
   },
   {
@@ -2016,8 +2016,8 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "الرعد",
-    "ayah": 28,
-    "approx": true
+    "ayah": 31,
+    "approx": false
   },
   {
     "id": "H26-T3",
@@ -2026,7 +2026,7 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "الرعد",
-    "ayah": 35,
+    "ayah": 36,
     "approx": false
   },
   {
@@ -2037,7 +2037,7 @@
     "hizbName": "أفمن يعلم",
     "surah": "ابراهيم",
     "ayah": 1,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H26-T5",
@@ -2046,7 +2046,7 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "ابراهيم",
-    "ayah": 10,
+    "ayah": 13,
     "approx": false
   },
   {
@@ -2056,8 +2056,8 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "ابراهيم",
-    "ayah": 19,
-    "approx": true
+    "ayah": 22,
+    "approx": false
   },
   {
     "id": "H26-T7",
@@ -2066,7 +2066,7 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "ابراهيم",
-    "ayah": 28,
+    "ayah": 30,
     "approx": false
   },
   {
@@ -2076,8 +2076,8 @@
     "juz": 13,
     "hizbName": "أفمن يعلم",
     "surah": "ابراهيم",
-    "ayah": 39,
-    "approx": true
+    "ayah": 41,
+    "approx": false
   },
   {
     "id": "H27-T1",
@@ -2096,8 +2096,8 @@
     "juz": 14,
     "hizbName": "الحجر",
     "surah": "الحجر",
-    "ayah": 22,
-    "approx": true
+    "ayah": 26,
+    "approx": false
   },
   {
     "id": "H27-T3",
@@ -2116,8 +2116,8 @@
     "juz": 14,
     "hizbName": "الحجر",
     "surah": "الحجر",
-    "ayah": 74,
-    "approx": true
+    "ayah": 80,
+    "approx": false
   },
   {
     "id": "H27-T5",
@@ -2137,7 +2137,7 @@
     "hizbName": "الحجر",
     "surah": "النحل",
     "ayah": 15,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H27-T7",
@@ -2157,7 +2157,7 @@
     "hizbName": "الحجر",
     "surah": "النحل",
     "ayah": 38,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H28-T1",
@@ -2176,8 +2176,8 @@
     "juz": 14,
     "hizbName": "وقال الله لا تتخذوا",
     "surah": "النحل",
-    "ayah": 64,
-    "approx": true
+    "ayah": 63,
+    "approx": false
   },
   {
     "id": "H28-T3",
@@ -2186,7 +2186,7 @@
     "juz": 14,
     "hizbName": "وقال الله لا تتخذوا",
     "surah": "النحل",
-    "ayah": 75,
+    "ayah": 71,
     "approx": false
   },
   {
@@ -2196,8 +2196,8 @@
     "juz": 14,
     "hizbName": "وقال الله لا تتخذوا",
     "surah": "النحل",
-    "ayah": 81,
-    "approx": true
+    "ayah": 79,
+    "approx": false
   },
   {
     "id": "H28-T5",
@@ -2216,8 +2216,8 @@
     "juz": 14,
     "hizbName": "وقال الله لا تتخذوا",
     "surah": "النحل",
-    "ayah": 99,
-    "approx": true
+    "ayah": 98,
+    "approx": false
   },
   {
     "id": "H28-T7",
@@ -2236,8 +2236,8 @@
     "juz": 14,
     "hizbName": "وقال الله لا تتخذوا",
     "surah": "النحل",
-    "ayah": 119,
-    "approx": true
+    "ayah": 120,
+    "approx": false
   },
   {
     "id": "H29-T1",
@@ -2257,7 +2257,7 @@
     "hizbName": "الإسراء",
     "surah": "الإسراء",
     "ayah": 11,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H29-T3",
@@ -2277,7 +2277,7 @@
     "hizbName": "الإسراء",
     "surah": "الإسراء",
     "ayah": 36,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H29-T5",
@@ -2296,8 +2296,8 @@
     "juz": 15,
     "hizbName": "الإسراء",
     "surah": "الإسراء",
-    "ayah": 60,
-    "approx": true
+    "ayah": 61,
+    "approx": false
   },
   {
     "id": "H29-T7",
@@ -2317,7 +2317,7 @@
     "hizbName": "الإسراء",
     "surah": "الإسراء",
     "ayah": 85,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H30-T1",
@@ -2335,9 +2335,9 @@
     "thumun": 2,
     "juz": 15,
     "hizbName": "أولم يروا",
-    "surah": "الإسراء",
-    "ayah": 111,
-    "approx": true
+    "surah": "الكهف",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H30-T3",
@@ -2356,8 +2356,8 @@
     "juz": 15,
     "hizbName": "أولم يروا",
     "surah": "الكهف",
-    "ayah": 22,
-    "approx": true
+    "ayah": 23,
+    "approx": false
   },
   {
     "id": "H30-T5",
@@ -2376,8 +2376,8 @@
     "juz": 15,
     "hizbName": "أولم يروا",
     "surah": "الكهف",
-    "ayah": 43,
-    "approx": true
+    "ayah": 44,
+    "approx": false
   },
   {
     "id": "H30-T7",
@@ -2386,7 +2386,7 @@
     "juz": 15,
     "hizbName": "أولم يروا",
     "surah": "الكهف",
-    "ayah": 51,
+    "ayah": 53,
     "approx": false
   },
   {
@@ -2396,8 +2396,8 @@
     "juz": 15,
     "hizbName": "أولم يروا",
     "surah": "الكهف",
-    "ayah": 60,
-    "approx": true
+    "ayah": 63,
+    "approx": false
   },
   {
     "id": "H31-T1",
@@ -2406,7 +2406,7 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "الكهف",
-    "ayah": 75,
+    "ayah": 74,
     "approx": false
   },
   {
@@ -2416,8 +2416,8 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "الكهف",
-    "ayah": 86,
-    "approx": true
+    "ayah": 82,
+    "approx": false
   },
   {
     "id": "H31-T3",
@@ -2426,7 +2426,7 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "الكهف",
-    "ayah": 99,
+    "ayah": 95,
     "approx": false
   },
   {
@@ -2436,8 +2436,8 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "مريم",
-    "ayah": 4,
-    "approx": true
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H31-T5",
@@ -2446,7 +2446,7 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "مريم",
-    "ayah": 22,
+    "ayah": 21,
     "approx": false
   },
   {
@@ -2456,8 +2456,8 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "مريم",
-    "ayah": 41,
-    "approx": true
+    "ayah": 40,
+    "approx": false
   },
   {
     "id": "H31-T7",
@@ -2476,8 +2476,8 @@
     "juz": 16,
     "hizbName": "قال ألم أقل لك",
     "surah": "مريم",
-    "ayah": 75,
-    "approx": true
+    "ayah": 78,
+    "approx": false
   },
   {
     "id": "H32-T1",
@@ -2496,8 +2496,8 @@
     "juz": 16,
     "hizbName": "طه",
     "surah": "طه",
-    "ayah": 33,
-    "approx": true
+    "ayah": 24,
+    "approx": false
   },
   {
     "id": "H32-T3",
@@ -2506,7 +2506,7 @@
     "juz": 16,
     "hizbName": "طه",
     "surah": "طه",
-    "ayah": 55,
+    "ayah": 54,
     "approx": false
   },
   {
@@ -2517,7 +2517,7 @@
     "hizbName": "طه",
     "surah": "طه",
     "ayah": 71,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H32-T5",
@@ -2526,7 +2526,7 @@
     "juz": 16,
     "hizbName": "طه",
     "surah": "طه",
-    "ayah": 83,
+    "ayah": 81,
     "approx": false
   },
   {
@@ -2536,8 +2536,8 @@
     "juz": 16,
     "hizbName": "طه",
     "surah": "طه",
-    "ayah": 96,
-    "approx": true
+    "ayah": 93,
+    "approx": false
   },
   {
     "id": "H32-T7",
@@ -2546,7 +2546,7 @@
     "juz": 16,
     "hizbName": "طه",
     "surah": "طه",
-    "ayah": 111,
+    "ayah": 108,
     "approx": false
   },
   {
@@ -2556,8 +2556,8 @@
     "juz": 16,
     "hizbName": "طه",
     "surah": "طه",
-    "ayah": 124,
-    "approx": true
+    "ayah": 126,
+    "approx": false
   },
   {
     "id": "H33-T1",
@@ -2576,8 +2576,8 @@
     "juz": 17,
     "hizbName": "الأنبياء",
     "surah": "الأنبياء",
-    "ayah": 15,
-    "approx": true
+    "ayah": 16,
+    "approx": false
   },
   {
     "id": "H33-T3",
@@ -2586,7 +2586,7 @@
     "juz": 17,
     "hizbName": "الأنبياء",
     "surah": "الأنبياء",
-    "ayah": 29,
+    "ayah": 30,
     "approx": false
   },
   {
@@ -2596,8 +2596,8 @@
     "juz": 17,
     "hizbName": "الأنبياء",
     "surah": "الأنبياء",
-    "ayah": 40,
-    "approx": true
+    "ayah": 42,
+    "approx": false
   },
   {
     "id": "H33-T5",
@@ -2616,8 +2616,8 @@
     "juz": 17,
     "hizbName": "الأنبياء",
     "surah": "الأنبياء",
-    "ayah": 70,
-    "approx": true
+    "ayah": 73,
+    "approx": false
   },
   {
     "id": "H33-T7",
@@ -2626,7 +2626,7 @@
     "juz": 17,
     "hizbName": "الأنبياء",
     "surah": "الأنبياء",
-    "ayah": 83,
+    "ayah": 86,
     "approx": false
   },
   {
@@ -2636,8 +2636,8 @@
     "juz": 17,
     "hizbName": "الأنبياء",
     "surah": "الأنبياء",
-    "ayah": 97,
-    "approx": true
+    "ayah": 100,
+    "approx": false
   },
   {
     "id": "H34-T1",
@@ -2656,8 +2656,8 @@
     "juz": 17,
     "hizbName": "الحج",
     "surah": "الحج",
-    "ayah": 10,
-    "approx": true
+    "ayah": 11,
+    "approx": false
   },
   {
     "id": "H34-T3",
@@ -2676,8 +2676,8 @@
     "juz": 17,
     "hizbName": "الحج",
     "surah": "الحج",
-    "ayah": 29,
-    "approx": true
+    "ayah": 28,
+    "approx": false
   },
   {
     "id": "H34-T5",
@@ -2686,7 +2686,7 @@
     "juz": 17,
     "hizbName": "الحج",
     "surah": "الحج",
-    "ayah": 38,
+    "ayah": 36,
     "approx": false
   },
   {
@@ -2696,8 +2696,8 @@
     "juz": 17,
     "hizbName": "الحج",
     "surah": "الحج",
-    "ayah": 48,
-    "approx": true
+    "ayah": 47,
+    "approx": false
   },
   {
     "id": "H34-T7",
@@ -2706,7 +2706,7 @@
     "juz": 17,
     "hizbName": "الحج",
     "surah": "الحج",
-    "ayah": 60,
+    "ayah": 58,
     "approx": false
   },
   {
@@ -2716,8 +2716,8 @@
     "juz": 17,
     "hizbName": "الحج",
     "surah": "الحج",
-    "ayah": 71,
-    "approx": true
+    "ayah": 68,
+    "approx": false
   },
   {
     "id": "H35-T1",
@@ -2736,8 +2736,8 @@
     "juz": 18,
     "hizbName": "المؤمنون",
     "surah": "المؤمنون",
-    "ayah": 23,
-    "approx": true
+    "ayah": 21,
+    "approx": false
   },
   {
     "id": "H35-T3",
@@ -2756,8 +2756,8 @@
     "juz": 18,
     "hizbName": "المؤمنون",
     "surah": "المؤمنون",
-    "ayah": 55,
-    "approx": true
+    "ayah": 58,
+    "approx": false
   },
   {
     "id": "H35-T5",
@@ -2766,7 +2766,7 @@
     "juz": 18,
     "hizbName": "المؤمنون",
     "surah": "المؤمنون",
-    "ayah": 75,
+    "ayah": 76,
     "approx": false
   },
   {
@@ -2776,8 +2776,8 @@
     "juz": 18,
     "hizbName": "المؤمنون",
     "surah": "المؤمنون",
-    "ayah": 97,
-    "approx": true
+    "ayah": 98,
+    "approx": false
   },
   {
     "id": "H35-T7",
@@ -2785,8 +2785,8 @@
     "thumun": 7,
     "juz": 18,
     "hizbName": "المؤمنون",
-    "surah": "النور",
-    "ayah": 1,
+    "surah": "المؤمنون",
+    "ayah": 116,
     "approx": false
   },
   {
@@ -2796,8 +2796,8 @@
     "juz": 18,
     "hizbName": "المؤمنون",
     "surah": "النور",
-    "ayah": 10,
-    "approx": true
+    "ayah": 11,
+    "approx": false
   },
   {
     "id": "H36-T1",
@@ -2817,7 +2817,7 @@
     "hizbName": "يا أيها الذين آمنوا (النور)",
     "surah": "النور",
     "ayah": 30,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H36-T3",
@@ -2837,7 +2837,7 @@
     "hizbName": "يا أيها الذين آمنوا (النور)",
     "surah": "النور",
     "ayah": 42,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H36-T5",
@@ -2846,7 +2846,7 @@
     "juz": 18,
     "hizbName": "يا أيها الذين آمنوا (النور)",
     "surah": "النور",
-    "ayah": 53,
+    "ayah": 51,
     "approx": false
   },
   {
@@ -2856,8 +2856,8 @@
     "juz": 18,
     "hizbName": "يا أيها الذين آمنوا (النور)",
     "surah": "النور",
-    "ayah": 60,
-    "approx": true
+    "ayah": 58,
+    "approx": false
   },
   {
     "id": "H36-T7",
@@ -2865,8 +2865,8 @@
     "thumun": 7,
     "juz": 18,
     "hizbName": "يا أيها الذين آمنوا (النور)",
-    "surah": "الفرقان",
-    "ayah": 1,
+    "surah": "النور",
+    "ayah": 61,
     "approx": false
   },
   {
@@ -2877,7 +2877,7 @@
     "hizbName": "يا أيها الذين آمنوا (النور)",
     "surah": "الفرقان",
     "ayah": 10,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H37-T1",
@@ -2896,8 +2896,8 @@
     "juz": 19,
     "hizbName": "وقال الذين (الفرقان)",
     "surah": "الفرقان",
-    "ayah": 36,
-    "approx": true
+    "ayah": 32,
+    "approx": false
   },
   {
     "id": "H37-T3",
@@ -2906,7 +2906,7 @@
     "juz": 19,
     "hizbName": "وقال الذين (الفرقان)",
     "surah": "الفرقان",
-    "ayah": 53,
+    "ayah": 45,
     "approx": false
   },
   {
@@ -2916,8 +2916,8 @@
     "juz": 19,
     "hizbName": "وقال الذين (الفرقان)",
     "surah": "الفرقان",
-    "ayah": 65,
-    "approx": true
+    "ayah": 61,
+    "approx": false
   },
   {
     "id": "H37-T5",
@@ -2936,8 +2936,8 @@
     "juz": 19,
     "hizbName": "وقال الذين (الفرقان)",
     "surah": "الشعراء",
-    "ayah": 27,
-    "approx": true
+    "ayah": 22,
+    "approx": false
   },
   {
     "id": "H37-T7",
@@ -2946,7 +2946,7 @@
     "juz": 19,
     "hizbName": "وقال الذين (الفرقان)",
     "surah": "الشعراء",
-    "ayah": 52,
+    "ayah": 50,
     "approx": false
   },
   {
@@ -2956,8 +2956,8 @@
     "juz": 19,
     "hizbName": "وقال الذين (الفرقان)",
     "surah": "الشعراء",
-    "ayah": 80,
-    "approx": true
+    "ayah": 78,
+    "approx": false
   },
   {
     "id": "H38-T1",
@@ -2977,7 +2977,7 @@
     "hizbName": "قالوا أنؤمن",
     "surah": "الشعراء",
     "ayah": 146,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H38-T3",
@@ -2996,8 +2996,8 @@
     "juz": 19,
     "hizbName": "قالوا أنؤمن",
     "surah": "الشعراء",
-    "ayah": 203,
-    "approx": true
+    "ayah": 208,
+    "approx": false
   },
   {
     "id": "H38-T5",
@@ -3006,7 +3006,7 @@
     "juz": 19,
     "hizbName": "قالوا أنؤمن",
     "surah": "النمل",
-    "ayah": 1,
+    "ayah": 6,
     "approx": false
   },
   {
@@ -3016,8 +3016,8 @@
     "juz": 19,
     "hizbName": "قالوا أنؤمن",
     "surah": "النمل",
-    "ayah": 15,
-    "approx": true
+    "ayah": 18,
+    "approx": false
   },
   {
     "id": "H38-T7",
@@ -3036,8 +3036,8 @@
     "juz": 19,
     "hizbName": "قالوا أنؤمن",
     "surah": "النمل",
-    "ayah": 41,
-    "approx": true
+    "ayah": 42,
+    "approx": false
   },
   {
     "id": "H39-T1",
@@ -3046,7 +3046,7 @@
     "juz": 20,
     "hizbName": "فما كان (النمل)",
     "surah": "النمل",
-    "ayah": 56,
+    "ayah": 58,
     "approx": false
   },
   {
@@ -3056,8 +3056,8 @@
     "juz": 20,
     "hizbName": "فما كان (النمل)",
     "surah": "النمل",
-    "ayah": 65,
-    "approx": true
+    "ayah": 69,
+    "approx": false
   },
   {
     "id": "H39-T3",
@@ -3066,7 +3066,7 @@
     "juz": 20,
     "hizbName": "فما كان (النمل)",
     "surah": "النمل",
-    "ayah": 82,
+    "ayah": 84,
     "approx": false
   },
   {
@@ -3075,9 +3075,9 @@
     "thumun": 4,
     "juz": 20,
     "hizbName": "فما كان (النمل)",
-    "surah": "النمل",
-    "ayah": 93,
-    "approx": true
+    "surah": "القصص",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H39-T5",
@@ -3086,7 +3086,7 @@
     "juz": 20,
     "hizbName": "فما كان (النمل)",
     "surah": "القصص",
-    "ayah": 12,
+    "ayah": 11,
     "approx": false
   },
   {
@@ -3096,8 +3096,8 @@
     "juz": 20,
     "hizbName": "فما كان (النمل)",
     "surah": "القصص",
-    "ayah": 20,
-    "approx": true
+    "ayah": 19,
+    "approx": false
   },
   {
     "id": "H39-T7",
@@ -3116,8 +3116,8 @@
     "juz": 20,
     "hizbName": "فما كان (النمل)",
     "surah": "القصص",
-    "ayah": 39,
-    "approx": true
+    "ayah": 38,
+    "approx": false
   },
   {
     "id": "H40-T1",
@@ -3136,8 +3136,8 @@
     "juz": 20,
     "hizbName": "ولقد وصلنا",
     "surah": "القصص",
-    "ayah": 62,
-    "approx": true
+    "ayah": 61,
+    "approx": false
   },
   {
     "id": "H40-T3",
@@ -3156,8 +3156,8 @@
     "juz": 20,
     "hizbName": "ولقد وصلنا",
     "surah": "القصص",
-    "ayah": 81,
-    "approx": true
+    "ayah": 83,
+    "approx": false
   },
   {
     "id": "H40-T5",
@@ -3166,7 +3166,7 @@
     "juz": 20,
     "hizbName": "ولقد وصلنا",
     "surah": "العنكبوت",
-    "ayah": 1,
+    "ayah": 7,
     "approx": false
   },
   {
@@ -3176,8 +3176,8 @@
     "juz": 20,
     "hizbName": "ولقد وصلنا",
     "surah": "العنكبوت",
-    "ayah": 14,
-    "approx": true
+    "ayah": 15,
+    "approx": false
   },
   {
     "id": "H40-T7",
@@ -3186,7 +3186,7 @@
     "juz": 20,
     "hizbName": "ولقد وصلنا",
     "surah": "العنكبوت",
-    "ayah": 26,
+    "ayah": 25,
     "approx": false
   },
   {
@@ -3197,7 +3197,7 @@
     "hizbName": "ولقد وصلنا",
     "surah": "العنكبوت",
     "ayah": 36,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H41-T1",
@@ -3216,8 +3216,8 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "العنكبوت",
-    "ayah": 57,
-    "approx": true
+    "ayah": 60,
+    "approx": false
   },
   {
     "id": "H41-T3",
@@ -3226,7 +3226,7 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "الروم",
-    "ayah": 1,
+    "ayah": 8,
     "approx": false
   },
   {
@@ -3236,8 +3236,8 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "الروم",
-    "ayah": 19,
-    "approx": true
+    "ayah": 21,
+    "approx": false
   },
   {
     "id": "H41-T5",
@@ -3246,7 +3246,7 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "الروم",
-    "ayah": 31,
+    "ayah": 30,
     "approx": false
   },
   {
@@ -3256,8 +3256,8 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "الروم",
-    "ayah": 42,
-    "approx": true
+    "ayah": 40,
+    "approx": false
   },
   {
     "id": "H41-T7",
@@ -3266,7 +3266,7 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "الروم",
-    "ayah": 54,
+    "ayah": 53,
     "approx": false
   },
   {
@@ -3276,8 +3276,8 @@
     "juz": 21,
     "hizbName": "ولا تجادلوا",
     "surah": "لقمان",
-    "ayah": 10,
-    "approx": true
+    "ayah": 11,
+    "approx": false
   },
   {
     "id": "H42-T1",
@@ -3286,7 +3286,7 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "لقمان",
-    "ayah": 22,
+    "ayah": 21,
     "approx": false
   },
   {
@@ -3296,8 +3296,8 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "لقمان",
-    "ayah": 32,
-    "approx": true
+    "ayah": 31,
+    "approx": false
   },
   {
     "id": "H42-T3",
@@ -3316,8 +3316,8 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "السجدة",
-    "ayah": 20,
-    "approx": true
+    "ayah": 23,
+    "approx": false
   },
   {
     "id": "H42-T5",
@@ -3326,7 +3326,7 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "الأحزاب",
-    "ayah": 1,
+    "ayah": 6,
     "approx": false
   },
   {
@@ -3336,8 +3336,8 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "الأحزاب",
-    "ayah": 8,
-    "approx": true
+    "ayah": 13,
+    "approx": false
   },
   {
     "id": "H42-T7",
@@ -3346,7 +3346,7 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "الأحزاب",
-    "ayah": 18,
+    "ayah": 20,
     "approx": false
   },
   {
@@ -3356,8 +3356,8 @@
     "juz": 21,
     "hizbName": "ومن يسلم",
     "surah": "الأحزاب",
-    "ayah": 23,
-    "approx": true
+    "ayah": 28,
+    "approx": false
   },
   {
     "id": "H43-T1",
@@ -3376,8 +3376,8 @@
     "juz": 22,
     "hizbName": "ومن يقنت",
     "surah": "الأحزاب",
-    "ayah": 38,
-    "approx": true
+    "ayah": 40,
+    "approx": false
   },
   {
     "id": "H43-T3",
@@ -3396,8 +3396,8 @@
     "juz": 22,
     "hizbName": "ومن يقنت",
     "surah": "الأحزاب",
-    "ayah": 53,
-    "approx": true
+    "ayah": 55,
+    "approx": false
   },
   {
     "id": "H43-T5",
@@ -3416,8 +3416,8 @@
     "juz": 22,
     "hizbName": "ومن يقنت",
     "surah": "الأحزاب",
-    "ayah": 73,
-    "approx": true
+    "ayah": 72,
+    "approx": false
   },
   {
     "id": "H43-T7",
@@ -3426,7 +3426,7 @@
     "juz": 22,
     "hizbName": "ومن يقنت",
     "surah": "سبإ",
-    "ayah": 10,
+    "ayah": 7,
     "approx": false
   },
   {
@@ -3436,8 +3436,8 @@
     "juz": 22,
     "hizbName": "ومن يقنت",
     "surah": "سبإ",
-    "ayah": 16,
-    "approx": true
+    "ayah": 15,
+    "approx": false
   },
   {
     "id": "H44-T1",
@@ -3457,7 +3457,7 @@
     "hizbName": "قل من يرزقكم",
     "surah": "سبإ",
     "ayah": 34,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H44-T3",
@@ -3476,8 +3476,8 @@
     "juz": 22,
     "hizbName": "قل من يرزقكم",
     "surah": "فاطر",
-    "ayah": 6,
-    "approx": true
+    "ayah": 5,
+    "approx": false
   },
   {
     "id": "H44-T5",
@@ -3496,8 +3496,8 @@
     "juz": 22,
     "hizbName": "قل من يرزقكم",
     "surah": "فاطر",
-    "ayah": 30,
-    "approx": true
+    "ayah": 31,
+    "approx": false
   },
   {
     "id": "H44-T7",
@@ -3506,7 +3506,7 @@
     "juz": 22,
     "hizbName": "قل من يرزقكم",
     "surah": "فاطر",
-    "ayah": 41,
+    "ayah": 40,
     "approx": false
   },
   {
@@ -3516,8 +3516,8 @@
     "juz": 22,
     "hizbName": "قل من يرزقكم",
     "surah": "يس",
-    "ayah": 9,
-    "approx": true
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H45-T1",
@@ -3526,7 +3526,7 @@
     "juz": 23,
     "hizbName": "وما أنزلنا (يس)",
     "surah": "يس",
-    "ayah": 28,
+    "ayah": 27,
     "approx": false
   },
   {
@@ -3536,8 +3536,8 @@
     "juz": 23,
     "hizbName": "وما أنزلنا (يس)",
     "surah": "يس",
-    "ayah": 43,
-    "approx": true
+    "ayah": 44,
+    "approx": false
   },
   {
     "id": "H45-T3",
@@ -3546,7 +3546,7 @@
     "juz": 23,
     "hizbName": "وما أنزلنا (يس)",
     "surah": "يس",
-    "ayah": 60,
+    "ayah": 59,
     "approx": false
   },
   {
@@ -3556,8 +3556,8 @@
     "juz": 23,
     "hizbName": "وما أنزلنا (يس)",
     "surah": "يس",
-    "ayah": 78,
-    "approx": true
+    "ayah": 76,
+    "approx": false
   },
   {
     "id": "H45-T5",
@@ -3576,8 +3576,8 @@
     "juz": 23,
     "hizbName": "وما أنزلنا (يس)",
     "surah": "الصافات",
-    "ayah": 52,
-    "approx": true
+    "ayah": 51,
+    "approx": false
   },
   {
     "id": "H45-T7",
@@ -3596,8 +3596,8 @@
     "juz": 23,
     "hizbName": "وما أنزلنا (يس)",
     "surah": "الصافات",
-    "ayah": 113,
-    "approx": true
+    "ayah": 114,
+    "approx": false
   },
   {
     "id": "H46-T1",
@@ -3615,9 +3615,9 @@
     "thumun": 2,
     "juz": 23,
     "hizbName": "فنبذناه",
-    "surah": "الصافات",
-    "ayah": 181,
-    "approx": true
+    "surah": "ص",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H46-T3",
@@ -3626,7 +3626,7 @@
     "juz": 23,
     "hizbName": "فنبذناه",
     "surah": "ص",
-    "ayah": 21,
+    "ayah": 20,
     "approx": false
   },
   {
@@ -3636,8 +3636,8 @@
     "juz": 23,
     "hizbName": "فنبذناه",
     "surah": "ص",
-    "ayah": 31,
-    "approx": true
+    "ayah": 29,
+    "approx": false
   },
   {
     "id": "H46-T5",
@@ -3646,7 +3646,7 @@
     "juz": 23,
     "hizbName": "فنبذناه",
     "surah": "ص",
-    "ayah": 52,
+    "ayah": 51,
     "approx": false
   },
   {
@@ -3656,8 +3656,8 @@
     "juz": 23,
     "hizbName": "فنبذناه",
     "surah": "ص",
-    "ayah": 81,
-    "approx": true
+    "ayah": 83,
+    "approx": false
   },
   {
     "id": "H46-T7",
@@ -3666,7 +3666,7 @@
     "juz": 23,
     "hizbName": "فنبذناه",
     "surah": "الزمر",
-    "ayah": 8,
+    "ayah": 9,
     "approx": false
   },
   {
@@ -3676,8 +3676,8 @@
     "juz": 23,
     "hizbName": "فنبذناه",
     "surah": "الزمر",
-    "ayah": 20,
-    "approx": true
+    "ayah": 18,
+    "approx": false
   },
   {
     "id": "H47-T1",
@@ -3686,7 +3686,7 @@
     "juz": 24,
     "hizbName": "فمن أظلم",
     "surah": "الزمر",
-    "ayah": 32,
+    "ayah": 31,
     "approx": false
   },
   {
@@ -3696,8 +3696,8 @@
     "juz": 24,
     "hizbName": "فمن أظلم",
     "surah": "الزمر",
-    "ayah": 42,
-    "approx": true
+    "ayah": 40,
+    "approx": false
   },
   {
     "id": "H47-T3",
@@ -3706,7 +3706,7 @@
     "juz": 24,
     "hizbName": "فمن أظلم",
     "surah": "الزمر",
-    "ayah": 53,
+    "ayah": 50,
     "approx": false
   },
   {
@@ -3716,8 +3716,8 @@
     "juz": 24,
     "hizbName": "فمن أظلم",
     "surah": "الزمر",
-    "ayah": 67,
-    "approx": true
+    "ayah": 64,
+    "approx": false
   },
   {
     "id": "H47-T5",
@@ -3736,8 +3736,8 @@
     "juz": 24,
     "hizbName": "فمن أظلم",
     "surah": "غافر",
-    "ayah": 10,
-    "approx": true
+    "ayah": 9,
+    "approx": false
   },
   {
     "id": "H47-T7",
@@ -3756,8 +3756,8 @@
     "juz": 24,
     "hizbName": "فمن أظلم",
     "surah": "غافر",
-    "ayah": 29,
-    "approx": true
+    "ayah": 30,
+    "approx": false
   },
   {
     "id": "H48-T1",
@@ -3777,7 +3777,7 @@
     "hizbName": "ويا قوم ما لي",
     "surah": "غافر",
     "ayah": 53,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H48-T3",
@@ -3796,8 +3796,8 @@
     "juz": 24,
     "hizbName": "ويا قوم ما لي",
     "surah": "غافر",
-    "ayah": 79,
-    "approx": true
+    "ayah": 78,
+    "approx": false
   },
   {
     "id": "H48-T5",
@@ -3806,7 +3806,7 @@
     "juz": 24,
     "hizbName": "ويا قوم ما لي",
     "surah": "فصلت",
-    "ayah": 9,
+    "ayah": 8,
     "approx": false
   },
   {
@@ -3817,7 +3817,7 @@
     "hizbName": "ويا قوم ما لي",
     "surah": "فصلت",
     "ayah": 16,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H48-T7",
@@ -3836,8 +3836,8 @@
     "juz": 24,
     "hizbName": "ويا قوم ما لي",
     "surah": "فصلت",
-    "ayah": 36,
-    "approx": true
+    "ayah": 37,
+    "approx": false
   },
   {
     "id": "H49-T1",
@@ -3846,7 +3846,7 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "فصلت",
-    "ayah": 47,
+    "ayah": 46,
     "approx": false
   },
   {
@@ -3856,8 +3856,8 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "الشورى",
-    "ayah": 4,
-    "approx": true
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H49-T3",
@@ -3866,7 +3866,7 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "الشورى",
-    "ayah": 13,
+    "ayah": 11,
     "approx": false
   },
   {
@@ -3876,8 +3876,8 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "الشورى",
-    "ayah": 18,
-    "approx": true
+    "ayah": 19,
+    "approx": false
   },
   {
     "id": "H49-T5",
@@ -3886,7 +3886,7 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "الشورى",
-    "ayah": 27,
+    "ayah": 31,
     "approx": false
   },
   {
@@ -3897,7 +3897,7 @@
     "hizbName": "إليه يرد",
     "surah": "الشورى",
     "ayah": 40,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H49-T7",
@@ -3906,7 +3906,7 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "الشورى",
-    "ayah": 51,
+    "ayah": 48,
     "approx": false
   },
   {
@@ -3916,8 +3916,8 @@
     "juz": 25,
     "hizbName": "إليه يرد",
     "surah": "الزخرف",
-    "ayah": 12,
-    "approx": true
+    "ayah": 11,
+    "approx": false
   },
   {
     "id": "H50-T1",
@@ -3926,7 +3926,7 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الزخرف",
-    "ayah": 24,
+    "ayah": 23,
     "approx": false
   },
   {
@@ -3936,8 +3936,8 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الزخرف",
-    "ayah": 39,
-    "approx": true
+    "ayah": 42,
+    "approx": false
   },
   {
     "id": "H50-T3",
@@ -3946,7 +3946,7 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الزخرف",
-    "ayah": 57,
+    "ayah": 63,
     "approx": false
   },
   {
@@ -3956,8 +3956,8 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الزخرف",
-    "ayah": 78,
-    "approx": true
+    "ayah": 84,
+    "approx": false
   },
   {
     "id": "H50-T5",
@@ -3966,7 +3966,7 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الدخان",
-    "ayah": 17,
+    "ayah": 24,
     "approx": false
   },
   {
@@ -3976,8 +3976,8 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الدخان",
-    "ayah": 46,
-    "approx": true
+    "ayah": 48,
+    "approx": false
   },
   {
     "id": "H50-T7",
@@ -3986,7 +3986,7 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الجاثية",
-    "ayah": 12,
+    "ayah": 10,
     "approx": false
   },
   {
@@ -3996,8 +3996,8 @@
     "juz": 25,
     "hizbName": "قل أولو جئتكم",
     "surah": "الجاثية",
-    "ayah": 24,
-    "approx": true
+    "ayah": 22,
+    "approx": false
   },
   {
     "id": "H51-T1",
@@ -4016,8 +4016,8 @@
     "juz": 26,
     "hizbName": "حم - الأحقاف",
     "surah": "الأحقاف",
-    "ayah": 12,
-    "approx": true
+    "ayah": 14,
+    "approx": false
   },
   {
     "id": "H51-T3",
@@ -4026,7 +4026,7 @@
     "juz": 26,
     "hizbName": "حم - الأحقاف",
     "surah": "الأحقاف",
-    "ayah": 21,
+    "ayah": 20,
     "approx": false
   },
   {
@@ -4037,7 +4037,7 @@
     "hizbName": "حم - الأحقاف",
     "surah": "الأحقاف",
     "ayah": 32,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H51-T5",
@@ -4046,7 +4046,7 @@
     "juz": 26,
     "hizbName": "حم - الأحقاف",
     "surah": "محمد",
-    "ayah": 10,
+    "ayah": 11,
     "approx": false
   },
   {
@@ -4056,8 +4056,8 @@
     "juz": 26,
     "hizbName": "حم - الأحقاف",
     "surah": "محمد",
-    "ayah": 19,
-    "approx": true
+    "ayah": 21,
+    "approx": false
   },
   {
     "id": "H51-T7",
@@ -4066,7 +4066,7 @@
     "juz": 26,
     "hizbName": "حم - الأحقاف",
     "surah": "محمد",
-    "ayah": 33,
+    "ayah": 34,
     "approx": false
   },
   {
@@ -4076,8 +4076,8 @@
     "juz": 26,
     "hizbName": "حم - الأحقاف",
     "surah": "الفتح",
-    "ayah": 9,
-    "approx": true
+    "ayah": 8,
+    "approx": false
   },
   {
     "id": "H52-T1",
@@ -4096,8 +4096,8 @@
     "juz": 26,
     "hizbName": "لقد رضي",
     "surah": "الفتح",
-    "ayah": 25,
-    "approx": true
+    "ayah": 27,
+    "approx": false
   },
   {
     "id": "H52-T3",
@@ -4117,7 +4117,7 @@
     "hizbName": "لقد رضي",
     "surah": "الحجرات",
     "ayah": 9,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H52-T5",
@@ -4136,8 +4136,8 @@
     "juz": 26,
     "hizbName": "لقد رضي",
     "surah": "ق",
-    "ayah": 7,
-    "approx": true
+    "ayah": 6,
+    "approx": false
   },
   {
     "id": "H52-T7",
@@ -4157,7 +4157,7 @@
     "hizbName": "لقد رضي",
     "surah": "الذاريات",
     "ayah": 1,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H53-T1",
@@ -4176,8 +4176,8 @@
     "juz": 27,
     "hizbName": "قال فما خطبكم",
     "surah": "الذاريات",
-    "ayah": 55,
-    "approx": true
+    "ayah": 56,
+    "approx": false
   },
   {
     "id": "H53-T3",
@@ -4186,7 +4186,7 @@
     "juz": 27,
     "hizbName": "قال فما خطبكم",
     "surah": "الطور",
-    "ayah": 24,
+    "ayah": 22,
     "approx": false
   },
   {
@@ -4196,8 +4196,8 @@
     "juz": 27,
     "hizbName": "قال فما خطبكم",
     "surah": "الطور",
-    "ayah": 46,
-    "approx": true
+    "ayah": 42,
+    "approx": false
   },
   {
     "id": "H53-T5",
@@ -4216,8 +4216,8 @@
     "juz": 27,
     "hizbName": "قال فما خطبكم",
     "surah": "النجم",
-    "ayah": 41,
-    "approx": true
+    "ayah": 55,
+    "approx": false
   },
   {
     "id": "H53-T7",
@@ -4226,7 +4226,7 @@
     "juz": 27,
     "hizbName": "قال فما خطبكم",
     "surah": "القمر",
-    "ayah": 9,
+    "ayah": 18,
     "approx": false
   },
   {
@@ -4236,8 +4236,8 @@
     "juz": 27,
     "hizbName": "قال فما خطبكم",
     "surah": "القمر",
-    "ayah": 31,
-    "approx": true
+    "ayah": 41,
+    "approx": false
   },
   {
     "id": "H54-T1",
@@ -4256,8 +4256,8 @@
     "juz": 27,
     "hizbName": "الرحمن",
     "surah": "الرحمن",
-    "ayah": 39,
-    "approx": true
+    "ayah": 31,
+    "approx": false
   },
   {
     "id": "H54-T3",
@@ -4265,8 +4265,8 @@
     "thumun": 3,
     "juz": 27,
     "hizbName": "الرحمن",
-    "surah": "الواقعة",
-    "ayah": 1,
+    "surah": "الرحمن",
+    "ayah": 59,
     "approx": false
   },
   {
@@ -4276,8 +4276,8 @@
     "juz": 27,
     "hizbName": "الرحمن",
     "surah": "الواقعة",
-    "ayah": 45,
-    "approx": true
+    "ayah": 29,
+    "approx": false
   },
   {
     "id": "H54-T5",
@@ -4286,7 +4286,7 @@
     "juz": 27,
     "hizbName": "الرحمن",
     "surah": "الواقعة",
-    "ayah": 75,
+    "ayah": 78,
     "approx": false
   },
   {
@@ -4297,7 +4297,7 @@
     "hizbName": "الرحمن",
     "surah": "الحديد",
     "ayah": 7,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H54-T7",
@@ -4306,7 +4306,7 @@
     "juz": 27,
     "hizbName": "الرحمن",
     "surah": "الحديد",
-    "ayah": 16,
+    "ayah": 15,
     "approx": false
   },
   {
@@ -4316,8 +4316,8 @@
     "juz": 27,
     "hizbName": "الرحمن",
     "surah": "الحديد",
-    "ayah": 23,
-    "approx": true
+    "ayah": 21,
+    "approx": false
   },
   {
     "id": "H55-T1",
@@ -4337,7 +4337,7 @@
     "hizbName": "قد سمع",
     "surah": "المجادلة",
     "ayah": 8,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H55-T3",
@@ -4356,8 +4356,8 @@
     "juz": 28,
     "hizbName": "قد سمع",
     "surah": "الحشر",
-    "ayah": 2,
-    "approx": true
+    "ayah": 5,
+    "approx": false
   },
   {
     "id": "H55-T5",
@@ -4375,9 +4375,9 @@
     "thumun": 6,
     "juz": 28,
     "hizbName": "قد سمع",
-    "surah": "الحشر",
-    "ayah": 23,
-    "approx": true
+    "surah": "الممتحنة",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H55-T7",
@@ -4396,8 +4396,8 @@
     "juz": 28,
     "hizbName": "قد سمع",
     "surah": "الصف",
-    "ayah": 2,
-    "approx": true
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H56-T1",
@@ -4416,8 +4416,8 @@
     "juz": 28,
     "hizbName": "يسبح - الجمعة",
     "surah": "الجمعة",
-    "ayah": 8,
-    "approx": true
+    "ayah": 9,
+    "approx": false
   },
   {
     "id": "H56-T3",
@@ -4426,7 +4426,7 @@
     "juz": 28,
     "hizbName": "يسبح - الجمعة",
     "surah": "المنافقون",
-    "ayah": 4,
+    "ayah": 9,
     "approx": false
   },
   {
@@ -4436,8 +4436,8 @@
     "juz": 28,
     "hizbName": "يسبح - الجمعة",
     "surah": "التغابن",
-    "ayah": 5,
-    "approx": true
+    "ayah": 7,
+    "approx": false
   },
   {
     "id": "H56-T5",
@@ -4445,8 +4445,8 @@
     "thumun": 5,
     "juz": 28,
     "hizbName": "يسبح - الجمعة",
-    "surah": "الطلاق",
-    "ayah": 1,
+    "surah": "التغابن",
+    "ayah": 14,
     "approx": false
   },
   {
@@ -4457,7 +4457,7 @@
     "hizbName": "يسبح - الجمعة",
     "surah": "الطلاق",
     "ayah": 6,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H56-T7",
@@ -4465,8 +4465,8 @@
     "thumun": 7,
     "juz": 28,
     "hizbName": "يسبح - الجمعة",
-    "surah": "التحريم",
-    "ayah": 1,
+    "surah": "الطلاق",
+    "ayah": 12,
     "approx": false
   },
   {
@@ -4477,7 +4477,7 @@
     "hizbName": "يسبح - الجمعة",
     "surah": "التحريم",
     "ayah": 8,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H57-T1",
@@ -4496,8 +4496,8 @@
     "juz": 29,
     "hizbName": "تبارك - الملك",
     "surah": "الملك",
-    "ayah": 16,
-    "approx": true
+    "ayah": 20,
+    "approx": false
   },
   {
     "id": "H57-T3",
@@ -4506,7 +4506,7 @@
     "juz": 29,
     "hizbName": "تبارك - الملك",
     "surah": "القلم",
-    "ayah": 1,
+    "ayah": 19,
     "approx": false
   },
   {
@@ -4516,8 +4516,8 @@
     "juz": 29,
     "hizbName": "تبارك - الملك",
     "surah": "القلم",
-    "ayah": 32,
-    "approx": true
+    "ayah": 48,
+    "approx": false
   },
   {
     "id": "H57-T5",
@@ -4526,7 +4526,7 @@
     "juz": 29,
     "hizbName": "تبارك - الملك",
     "surah": "الحاقة",
-    "ayah": 1,
+    "ayah": 38,
     "approx": false
   },
   {
@@ -4535,9 +4535,9 @@
     "thumun": 6,
     "juz": 29,
     "hizbName": "تبارك - الملك",
-    "surah": "الحاقة",
-    "ayah": 31,
-    "approx": true
+    "surah": "المعارج",
+    "ayah": 19,
+    "approx": false
   },
   {
     "id": "H57-T7",
@@ -4546,7 +4546,7 @@
     "juz": 29,
     "hizbName": "تبارك - الملك",
     "surah": "المعارج",
-    "ayah": 19,
+    "ayah": 40,
     "approx": false
   },
   {
@@ -4556,8 +4556,8 @@
     "juz": 29,
     "hizbName": "تبارك - الملك",
     "surah": "نوح",
-    "ayah": 4,
-    "approx": true
+    "ayah": 15,
+    "approx": false
   },
   {
     "id": "H58-T1",
@@ -4576,8 +4576,8 @@
     "juz": 29,
     "hizbName": "قل أوحي",
     "surah": "الجن",
-    "ayah": 22,
-    "approx": true
+    "ayah": 18,
+    "approx": false
   },
   {
     "id": "H58-T3",
@@ -4586,7 +4586,7 @@
     "juz": 29,
     "hizbName": "قل أوحي",
     "surah": "المزمل",
-    "ayah": 20,
+    "ayah": 18,
     "approx": false
   },
   {
@@ -4596,8 +4596,8 @@
     "juz": 29,
     "hizbName": "قل أوحي",
     "surah": "المدثر",
-    "ayah": 29,
-    "approx": true
+    "ayah": 31,
+    "approx": false
   },
   {
     "id": "H58-T5",
@@ -4615,9 +4615,9 @@
     "thumun": 6,
     "juz": 29,
     "hizbName": "قل أوحي",
-    "surah": "القيامة",
-    "ayah": 39,
-    "approx": true
+    "surah": "الانسان",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H58-T7",
@@ -4636,8 +4636,8 @@
     "juz": 29,
     "hizbName": "قل أوحي",
     "surah": "المرسلات",
-    "ayah": 15,
-    "approx": true
+    "ayah": 16,
+    "approx": false
   },
   {
     "id": "H59-T1",
@@ -4657,7 +4657,7 @@
     "hizbName": "عم - النبأ",
     "surah": "النازعات",
     "ayah": 1,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H59-T3",
@@ -4665,8 +4665,8 @@
     "thumun": 3,
     "juz": 30,
     "hizbName": "عم - النبأ",
-    "surah": "عبس",
-    "ayah": 1,
+    "surah": "النازعات",
+    "ayah": 41,
     "approx": false
   },
   {
@@ -4676,8 +4676,8 @@
     "juz": 30,
     "hizbName": "عم - النبأ",
     "surah": "عبس",
-    "ayah": 38,
-    "approx": true
+    "ayah": 33,
+    "approx": false
   },
   {
     "id": "H59-T5",
@@ -4685,8 +4685,8 @@
     "thumun": 5,
     "juz": 30,
     "hizbName": "عم - النبأ",
-    "surah": "الإنفطار",
-    "ayah": 1,
+    "surah": "التكوير",
+    "ayah": 15,
     "approx": false
   },
   {
@@ -4696,8 +4696,8 @@
     "juz": 30,
     "hizbName": "عم - النبأ",
     "surah": "المطففين",
-    "ayah": 12,
-    "approx": true
+    "ayah": 7,
+    "approx": false
   },
   {
     "id": "H59-T7",
@@ -4706,7 +4706,7 @@
     "juz": 30,
     "hizbName": "عم - النبأ",
     "surah": "الإنشقاق",
-    "ayah": 1,
+    "ayah": 16,
     "approx": false
   },
   {
@@ -4716,8 +4716,8 @@
     "juz": 30,
     "hizbName": "عم - النبأ",
     "surah": "البروج",
-    "ayah": 8,
-    "approx": true
+    "ayah": 12,
+    "approx": false
   },
   {
     "id": "H60-T1",
@@ -4736,8 +4736,8 @@
     "juz": 30,
     "hizbName": "سبح - الأعلى",
     "surah": "الغاشية",
-    "ayah": 23,
-    "approx": true
+    "ayah": 17,
+    "approx": false
   },
   {
     "id": "H60-T3",
@@ -4755,9 +4755,9 @@
     "thumun": 4,
     "juz": 30,
     "hizbName": "سبح - الأعلى",
-    "surah": "الشمس",
-    "ayah": 14,
-    "approx": true
+    "surah": "الليل",
+    "ayah": 1,
+    "approx": false
   },
   {
     "id": "H60-T5",
@@ -4775,9 +4775,9 @@
     "thumun": 6,
     "juz": 30,
     "hizbName": "سبح - الأعلى",
-    "surah": "البينة",
+    "surah": "القدر",
     "ayah": 1,
-    "approx": true
+    "approx": false
   },
   {
     "id": "H60-T7",
@@ -4795,8 +4795,8 @@
     "thumun": 8,
     "juz": 30,
     "hizbName": "سبح - الأعلى",
-    "surah": "قريش",
-    "ayah": 2,
-    "approx": true
+    "surah": "الفيل",
+    "ayah": 1,
+    "approx": false
   }
 ]

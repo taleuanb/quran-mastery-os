@@ -17,13 +17,13 @@ describe('referential', () => {
     expect(refs.every((r) => r.hizb === 26)).toBe(true)
   })
 
-  it('débuts de quart connus (fiables)', () => {
+  it('débuts de thumun connus (numérotation Qalun)', () => {
     expect(refById('H01-T1')).toMatchObject({ surah: 'الفاتحة', ayah: 1, approx: false })
-    expect(refById('H01-T3')).toMatchObject({ surah: 'البقرة', ayah: 26, approx: false })
-    expect(refById('H01-T7')).toMatchObject({ surah: 'البقرة', ayah: 60, approx: false })
+    expect(refById('H01-T3')).toMatchObject({ surah: 'البقرة', ayah: 25, approx: false })
+    expect(refById('H01-T7')).toMatchObject({ surah: 'البقرة', ayah: 59, approx: false })
     expect(refById('H02-T1')).toMatchObject({ surah: 'البقرة', ayah: 75, approx: false })
     expect(refById('H25-T1')).toMatchObject({ surah: 'يوسف', ayah: 53, hizbName: 'وما أبرئ', approx: false })
-    expect(refById('H26-T1')).toMatchObject({ surah: 'الرعد', ayah: 19, approx: false })
+    expect(refById('H26-T1')).toMatchObject({ surah: 'الرعد', ayah: 21, approx: false })
     expect(refById('H60-T1')).toMatchObject({ surah: 'الأعلى', ayah: 1, approx: false })
   })
 
@@ -49,10 +49,8 @@ describe('referential', () => {
     }
   })
 
-  it('thumuns pairs approximatifs, impairs fiables', () => {
-    for (const r of loadRefs()) {
-      expect(r.approx).toBe(r.thumun % 2 === 0)
-    }
+  it('aucun thumun approximatif (bornes Qalun complètes)', () => {
+    for (const r of loadRefs()) expect(r.approx, r.id).toBe(false)
   })
 
   it('chaque verset pair est strictement entre les deux débuts de quart voisins', () => {
