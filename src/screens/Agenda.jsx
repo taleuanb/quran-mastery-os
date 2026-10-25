@@ -59,7 +59,7 @@ function Chips({ info, past }) {
       {info.learn.map((l) => (
         <i key={`l-${l.hizb}-${l.thumun}`} className="c l">{`${l.hizb}·${l.thumun}/8`}</i>
       ))}
-      {info.learn.length === 0 && <span className="rest">{t('agenda.rest')}</span>}
+      {info.learn.length === 0 && info.rest && <span className="rest">{t('agenda.rest')}</span>}
     </>
   );
 }
@@ -67,6 +67,7 @@ function Chips({ info, past }) {
 function Status({ info }) {
   const { state } = info.status;
   if (state === 'done') return <span className="ok" role="img" aria-label={t('agenda.status.complete')}>✓</span>;
+  if (state === 'neutral') return <span className="neutral" role="img" aria-label={t('agenda.status.neutral')}>–</span>;
   if (state === 'miss') return <span className="mi" role="img" aria-label={t('agenda.status.missed')}>✕</span>;
   if (state === 'part') return <span className="pt">{`${info.status.done}/${info.status.planned}`}</span>;
   if (state === 'today') {
@@ -85,13 +86,14 @@ function Status({ info }) {
   );
 }
 
-const STATE_CLASS = { done: 'done', part: 'part', miss: 'miss', today: 'today', future: '' };
+const STATE_CLASS = { done: 'done', part: 'part', miss: 'miss', neutral: '', today: 'today', future: '' };
 
 function statusText(info) {
   const { state } = info.status;
   if (state === 'done') return t('agenda.status.complete');
   if (state === 'part') return `${t('agenda.status.partial')} ${info.status.done}/${info.status.planned}`;
   if (state === 'miss') return t('agenda.status.missed');
+  if (state === 'neutral') return t('agenda.status.neutral');
   if (state === 'today') return `${t('agenda.status.today')} ${info.status.done}/${info.status.planned}`;
   return t('agenda.status.future');
 }
@@ -118,6 +120,12 @@ export default function Agenda({ state, refs, today }) {
   const monthLast = addDays(monthFirst, monthLen - 1);
   const lastShown = view === 'week' ? weekLast : monthLast;
   const horizon = Math.max(0, diffDays(lastShown, today) + 1);
+
+  // Avant la première entrée de dayLog (ou sans aucune entrée), un jour passé n'est ni complet ni manqué.
+  const firstLogDay = useMemo(
+    () => Object.keys(state.dayLog).reduce((a, b) => (a < b ? a : b), null),
+    [state.dayLog],
+  );
 
   const plans = useMemo(
     () => (horizon > 0 ? forecast(state, refs, today, horizon, p) : []),
@@ -156,13 +164,11 @@ export default function Agenda({ state, refs, today }) {
     } else {
       const planned = log?.planned ?? 0;
       const done = log?.done ?? 0;
-      status = {
-        state: planned > 0 && done >= planned ? 'done' : done > 0 && done < planned ? 'part' : 'miss',
-        done,
-        planned,
-      };
+      let st = planned > 0 && done >= planned ? 'done' : done > 0 && done < planned ? 'part' : 'miss';
+      if (firstLogDay === null || day < firstLogDay) st = 'neutral';
+      status = { state: st, done, planned };
     }
-    return { day, kind, hizbs, learn, status };
+    return { day, kind, hizbs, learn, status, rest: p.restDays.includes(weekday(day)) };
   }
 
   const openDay = (day) => setSelected(day);
@@ -233,7 +239,7 @@ export default function Agenda({ state, refs, today }) {
   function renderMonth() {
     const lead = (weekday(monthFirst) + 6) % 7; // lundi en premier
     const days = Array.from({ length: monthLen }, (_, i) => dayInfo(addDays(monthFirst, i)));
-    const past = days.filter((d) => d.kind === 'past');
+    const past = days.filter((d) => d.kind === 'past' && d.status.state !== 'neutral');
     const complete = past.filter((d) => d.status.state === 'done').length;
     const pct = past.length ? `${Math.round((complete / past.length) * 100)}%` : '—';
     const cycle = actualCycleDays(state, today);
@@ -262,6 +268,7 @@ export default function Agenda({ state, refs, today }) {
                 small = <div className="ld" style={{ '--p': load }}><i /></div>;
               } else if (st === 'done') small = <small>✓</small>;
               else if (st === 'miss') small = <small>✕</small>;
+              else if (st === 'neutral') small = null;
               else small = <small>{`${d.status.done}/${d.status.planned}`}</small>;
               return (
                 <button
@@ -301,7 +308,7 @@ export default function Agenda({ state, refs, today }) {
   }
 
   const learnSummary = (info) => {
-    if (info.learn.length === 0) return t('agenda.sheet.learnNone');
+    if (info.learn.length === 0) return t(info.rest ? 'agenda.sheet.learnNone' : 'agenda.sheet.learnZero');
     return info.learn.length === 1
       ? t('agenda.sheet.learnOne')
       : t('agenda.sheet.learnMany', { n: info.learn.length });

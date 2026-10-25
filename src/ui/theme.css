@@ -186,3 +186,4 @@ nav button{min-height:48px;justify-content:center}
 .c.mk.miss{background:color-mix(in srgb,var(--s1) 16%,var(--surface));color:var(--s1-text)}
 .mc{font:inherit;color:var(--fg)}
 .mc.today small{color:var(--fg)}
+.ds .neutral{color:var(--muted);font-weight:700}

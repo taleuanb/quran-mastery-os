@@ -131,6 +131,65 @@ describe('Agenda, vue semaine', () => {
     expect(rs[4].querySelector('.ds .mi')).not.toBeNull();
     // un jour sans journal : aucune puce de hizb
     expect(rs[0].querySelectorAll('.c.b, .c.g')).toHaveLength(0);
+    // avant la première entrée de dayLog (J-3) : neutre, ni ✓ ni ✕
+    for (const r of rs.slice(0, 4)) {
+      expect(r.querySelector('.ds .mi')).toBeNull();
+      expect(r.querySelector('.ds .ok')).toBeNull();
+      expect(r.querySelector('.ds .neutral')).not.toBeNull();
+    }
+    // repos d'apprentissage selon restDays seulement : J-4 = lundi... J-2 = vendredi sans hifdh : rien ; J-3 = jeudi : repos
+    expect(within(rs[5]).queryByText('repos apprentissage')).toBeNull(); // vendredi, non repos
+    expect(within(rs[4]).getByText('repos apprentissage')).toBeInTheDocument(); // jeudi
+    expect(within(rs[6]).queryByText('repos apprentissage')).toBeNull(); // samedi mais apprentissage fait
+  });
+
+  it("aujourd'hui : union du plan et du journal, le thumun déjà appris remplace le suivant", () => {
+    const state = futureCibleState({
+      journal: [
+        { id: 'a', date: TODAY, thumunId: 'H29-T1', pilier: 'revision', score: 4, source: 'base' },
+        { id: 'b', date: TODAY, thumunId: 'H26-T2', pilier: 'hifdh', score: 4, source: 'hifdh' },
+      ],
+    });
+    const { container } = renderAgenda(state);
+    const today = rows(container)[0];
+    const planOnly = rows(renderAgenda(futureCibleState()).container)[0];
+    const nums = (r) => [...r.querySelectorAll('.c.b, .c.g')].map((e) => e.textContent);
+    expect(nums(today)).toContain('29');
+    expect(nums(today).length).toBeGreaterThanOrEqual(nums(planOnly).length);
+    for (const n of nums(planOnly)) expect(nums(today)).toContain(n);
+    expect([...today.querySelectorAll('.c.l')].map((e) => e.textContent)).toEqual(['26·2/8']);
+  });
+
+  it('jours passés avant le premier dayLog : neutres (semaine et mois), hors du % de jours complets', () => {
+    const d = (n) => addDays(TODAY, n);
+    const state = futureCibleState({
+      dayLog: { [d(-3)]: { planned: 5, done: 5 }, [d(-2)]: { planned: 5, done: 5 }, [d(-1)]: { planned: 5, done: 0 } },
+    });
+    const { container } = renderAgenda(state);
+    fireEvent.click(screen.getByRole('button', { name: 'Semaine précédente' }));
+    const rs = rows(container);
+    expect(rs[2].querySelector('.ds .neutral')).not.toBeNull(); // J-5
+    expect(rs[3].querySelector('.ds .neutral')).not.toBeNull(); // J-4
+    expect(rs[4].querySelector('.ds .ok')).not.toBeNull(); // J-3
+    expect(rs[6].querySelector('.ds .mi')).not.toBeNull(); // J-1 : dans le suivi, manqué
+    expect(container.querySelectorAll('.strip i.miss')).toHaveLength(1);
+    fireEvent.click(screen.getByRole('button', { name: 'Semaine suivante' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Mois' }));
+    const cell = (n) => [...container.querySelectorAll('.mc:not(.off)')][n - 1];
+    for (const n of [5, 20, 21]) {
+      expect(cell(n).classList.contains('miss')).toBe(false);
+      expect(cell(n).querySelector('small')).toBeNull();
+    }
+    expect(cell(24).classList.contains('miss')).toBe(true);
+    const values = [...container.querySelectorAll('.sums b')].map((b) => b.textContent);
+    expect(values[1]).toBe('67%'); // 2 complets sur 3 jours suivis
+  });
+
+  it('sans aucune entrée de dayLog, aucun jour passé n’est manqué', () => {
+    const { container } = renderAgenda(futureCibleState());
+    fireEvent.click(screen.getByRole('button', { name: 'Mois' }));
+    expect(container.querySelectorAll('.mc.miss')).toHaveLength(0);
+    expect([...container.querySelectorAll('.sums b')][1].textContent).toBe('—');
   });
 
   it('flèche suivante puis précédente revient à la semaine courante', () => {
@@ -177,6 +236,7 @@ describe('Agenda, vue mois', () => {
       dayLog: {
         '2026-10-24': { planned: 5, done: 5 },
         '2026-10-23': { planned: 5, done: 2 },
+        '2026-10-22': { planned: 5, done: 0 },
       },
     });
     const { container } = renderAgenda(state);
@@ -201,6 +261,23 @@ describe('Agenda, vue mois', () => {
     const values = [...container.querySelectorAll('.sums b')].map((b) => b.textContent);
     expect(values[1]).toBe('50%'); // 12 jours complets sur 24 jours passés
     expect(values[2]).toBe('—');
+  });
+
+  it('cycle de base en jours quand il est connu ; cellule partielle d/p', () => {
+    const journal = [];
+    for (let i = 1; i <= 14; i++) {
+      for (const h of [2 * i - 1, 2 * i]) {
+        journal.push({ id: `j${i}-${h}`, date: addDays(TODAY, -i), thumunId: `H${String(h).padStart(2, '0')}-T1`, pilier: 'revision', score: 4, source: 'base' });
+      }
+    }
+    const state = futureCibleState({ journal, dayLog: { '2026-10-23': { planned: 5, done: 2 } } });
+    const { container } = renderAgenda(state);
+    fireEvent.click(screen.getByRole('button', { name: 'Mois' }));
+    const values = [...container.querySelectorAll('.sums b')].map((b) => b.textContent);
+    expect(values[2]).toBe('15 j'); // 30 hizbs / (28 hizbs sur 14 jours)
+    const cell23 = [...container.querySelectorAll('.mc:not(.off)')][22];
+    expect(cell23.classList.contains('part')).toBe(true);
+    expect(cell23.querySelector('small').textContent).toBe('2/5');
   });
 
   it('toucher un jour du mois ouvre le détail ; mois suivant avance', () => {
