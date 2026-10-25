@@ -186,3 +186,15 @@ nav button{min-height:48px;justify-content:center}
 .errmsg{color:var(--s1-text);font-weight:600;padding:8px 0}
 .confirm{border-top:1px solid var(--line);padding-top:12px}.confirm p{margin:0 0 10px}
 .picker{margin-top:10px}.picker select{flex:1;min-width:0;min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);color:var(--fg);padding:0 8px;font:inherit}
+/* écran aujourd'hui */
+.tiles{display:flex;flex-direction:column;gap:10px}
+.tile{padding:0;gap:0}
+.tile-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;align-items:stretch;text-align:start;background:none;border:0;padding:14px;color:inherit;min-height:64px;font:inherit}
+.tile .check{margin-inline-end:14px;color:var(--fg);cursor:pointer}
+.tile-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tile.done{opacity:1}
+.tile.done .check{color:var(--accent-fg)}
+.banner{display:flex;align-items:center;gap:12px;background:var(--gold-soft);color:var(--fg);border:1px solid var(--gold);border-radius:14px;padding:10px 14px;font-size:14px}
+.empty-state{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.empty-state p{margin:0}
+fieldset.plain{border:0;margin:0;padding:0;min-width:0;flex:1}
